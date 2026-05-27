@@ -45,15 +45,39 @@ src: ./pages/02-extracao/01-boundaries.md
 ---
 
 ---
+src: ./pages/02-extracao/01b-teste-falha.md
+---
+
+---
+src: ./pages/02-extracao/01c-estruturas.md
+---
+
+---
+src: ./pages/02-extracao/01d-reteste.md
+---
+
+---
+src: ./pages/02-extracao/01e-teste-p2.md
+---
+
+---
+src: ./pages/02-extracao/01e2-evento-visual.md
+---
+
+---
+src: ./pages/02-extracao/01f-eventos.md
+---
+
+---
+src: ./pages/02-extracao/01g-teste-p2-passa.md
+---
+
+---
 src: ./pages/02-extracao/02-caso-shop.md
 ---
 
 ---
 src: ./pages/02-extracao/03-resultado.md
----
-
----
-src: ./pages/02-extracao/04-estruturas.md
 ---
 
 ---

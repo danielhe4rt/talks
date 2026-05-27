@@ -123,5 +123,5 @@ um do outro... eles não pertencem ao mesmo módulo.
 </v-click>
 
 <!--
-"Essa é a regra de ouro: se dois pedaços de código não sabem da existência um do outro, eles não deveriam morar juntos. Catálogo não importa nenhuma classe de checkout. Checkout não importa nenhuma classe de catálogo. Eles se comunicam por um EVENTO — OrderPlaced. Achei meu boundary."
+"Essa é a regra de ouro: se dois pedaços de código não sabem da existência um do outro, eles não deveriam morar juntos. Catálogo não importa nenhuma classe de checkout. Checkout não importa nenhuma classe de catálogo. Não tem import direto entre eles. Achei meu boundary."
 -->

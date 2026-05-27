@@ -11,9 +11,9 @@ layout: section
 
 ---
 
-# O Teste da Deleção&trade;
+# O Teste da Deleção™
 
-<div class="text-lg">
+<div class="text-lg mt-4">
 
 Pega uma funcionalidade do seu sistema. <br>
 Imagina que você deleta **TODOS** os arquivos dela.
@@ -22,23 +22,30 @@ Imagina que você deleta **TODOS** os arquivos dela.
 
 <v-clicks>
 
-<div class="mt-6 p-4 bg-gray-800/50 rounded-lg border border-gray-600/30">
-<span class="text-yellow-400 font-bold">Pergunta 1:</span> Você consegue <span class="text-yellow-400">listar todos os arquivos</span>?<br>
-<span class="opacity-60 ml-4">→ Se não consegue, você não tem boundary.</span>
+<div class="mt-8 p-4 bg-yellow-900/20 rounded-lg border border-yellow-500/30">
+<span class="text-yellow-400 font-bold text-lg">1.</span> Você consegue <span class="text-yellow-400 font-bold">listar todos os arquivos</span>?
 </div>
 
-<div class="mt-3 p-4 bg-gray-800/50 rounded-lg border border-gray-600/30">
-<span class="text-orange-400 font-bold">Pergunta 2:</span> Quanto do sistema <span class="text-orange-400">quebra</span>?<br>
-<span class="opacity-60 ml-4">→ Se quebra TUDO, seu código é um bolo. Não um sistema modular.</span>
+<div class="mt-3 p-4 bg-orange-900/20 rounded-lg border border-orange-500/30">
+<span class="text-orange-400 font-bold text-lg">2.</span> Quanto do sistema <span class="text-orange-400 font-bold">quebra</span>?
 </div>
 
-<div class="mt-3 p-4 bg-gray-800/50 rounded-lg border border-gray-600/30">
-<span class="text-red-400 font-bold">Pergunta 3:</span> Algum desses arquivos é <span class="text-red-400">usado por outra feature</span>?<br>
-<span class="opacity-60 ml-4">→ Se sim, ali tem um acoplamento pra resolver.</span>
+<div class="mt-3 p-4 bg-red-900/20 rounded-lg border border-red-500/30">
+<span class="text-red-400 font-bold text-lg">3.</span> Algum desses arquivos é <span class="text-red-400 font-bold">usado por outra feature</span>?
 </div>
 
 </v-clicks>
 
+<v-click>
+
+<div class="mt-6 text-center text-lg opacity-70">
+Vamos rodar esse teste no nosso legadão?
+</div>
+
+</v-click>
+
 <!--
-"Eu chamo isso de Teste da Deleção. Pega o processamento de pedido do exemplo anterior. Se eu deletar tudo que é de pedido — service, job, model, enum, evento, listener, observer — o resto do sistema continua funcionando? Se a resposta é 'não sei', você tem um problema. Se a resposta é 'quebra tudo', você tem um GRANDE problema."
+"Eu chamo isso de Teste da Deleção. É simples: pega uma funcionalidade — tipo processamento de pagamento — e imagina que deleta TUDO que é dela. 3 perguntas. Se alguma falha, você tem um problema de boundary."
+
+[click] "Vamos rodar esse teste no nosso legadão e ver o que acontece?"
 -->
