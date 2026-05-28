@@ -51,117 +51,36 @@
       </div>
     </div>
 
-    <!-- 4 act cards -->
-    <div class="acts">
-      <div class="act-card" style="--card-delay: 0.4s">
-        <div class="card-head">
-          <span class="card-num">01</span>
-          <span class="card-dots">
-            <span class="card-dot" />
-            <span class="card-dot" />
-            <span class="card-dot" />
-          </span>
-          <span class="card-eta">~5min</span>
-        </div>
-        <div class="card-title">O LEGADÃO</div>
-        <div class="card-rule" />
-        <div class="card-tags">
-          <span class="tag">legadão</span>
-          <span class="tag">meme</span>
-          <span class="tag">virada</span>
-        </div>
-        <div class="card-hook">
-          <span class="hook-mark">▶</span>
-          quem aqui já mexeu num projeto assim?
-        </div>
-      </div>
-
-      <div class="act-arrow" style="--arrow-delay: 0.5s">▶</div>
-
-      <div class="act-card" style="--card-delay: 0.55s">
-        <div class="card-head">
-          <span class="card-num">02</span>
-          <span class="card-dots">
-            <span class="card-dot" />
-            <span class="card-dot" />
-            <span class="card-dot" />
-          </span>
-          <span class="card-eta">~12min</span>
-        </div>
-        <div class="card-title">EXTRAÇÃO</div>
-        <div class="card-rule" />
-        <div class="card-tags">
-          <span class="tag">boundaries</span>
-          <span class="tag g g-a">teste da deleção™</span>
-          <span class="tag">4 estruturas</span>
-        </div>
-        <div class="card-hook">
-          <span class="hook-mark">▶</span>
-          como achar os limites
-        </div>
-      </div>
-
-      <div class="act-arrow" style="--arrow-delay: 0.65s">▶</div>
-
-      <div class="act-card" style="--card-delay: 0.7s">
-        <div class="card-head">
-          <span class="card-num">03</span>
-          <span class="card-dots">
-            <span class="card-dot" />
-            <span class="card-dot" />
-            <span class="card-dot" />
-          </span>
-          <span class="card-eta">~15min</span>
-        </div>
-        <div class="card-title">IMPLEMENTAÇÃO</div>
-        <div class="card-rule" />
-        <div class="card-tags">
-          <span class="tag">modular</span>
-          <span class="tag">before/after</span>
-          <span class="tag g g-b">erros reais</span>
-          <span class="tag">padrões</span>
-        </div>
-        <div class="card-hook">
-          <span class="hook-mark">▶</span>
-          o caminho real, errando junto
-        </div>
-      </div>
-
-      <div class="act-arrow" style="--arrow-delay: 0.8s">▶</div>
-
-      <div class="act-card act-card--final" style="--card-delay: 0.85s">
-        <div class="card-head">
-          <span class="card-num">04</span>
-          <span class="card-dots">
-            <span class="card-dot" />
-            <span class="card-dot" />
-            <span class="card-dot" />
-          </span>
-          <span class="card-eta">~8min</span>
-        </div>
-        <div class="card-title">FECHAMENTO</div>
-        <div class="card-rule" />
-        <div class="card-tags">
-          <span class="tag">antes/depois</span>
-          <span class="tag g g-c">4 regras</span>
-          <span class="tag">CTA</span>
-        </div>
-        <div class="card-hook">
-          <span class="hook-mark">▶</span>
-          o que levar pra casa
-        </div>
-      </div>
-    </div>
+    <!-- 4 acts: TOC list -->
+    <ol class="acts">
+      <li class="act" style="--act-delay: 0.4s">
+        <span class="act-num">01</span>
+        <span class="act-title">O LEGADÃO</span>
+        <span class="act-leader" />
+        <span class="act-eta">~5 min</span>
+      </li>
+      <li class="act" style="--act-delay: 0.5s">
+        <span class="act-num">02</span>
+        <span class="act-title">EXTRAÇÃO</span>
+        <span class="act-leader" />
+        <span class="act-eta">~12 min</span>
+      </li>
+      <li class="act" style="--act-delay: 0.6s">
+        <span class="act-num">03</span>
+        <span class="act-title">IMPLEMENTAÇÃO</span>
+        <span class="act-leader" />
+        <span class="act-eta">~15 min</span>
+      </li>
+      <li class="act act--final" style="--act-delay: 0.7s">
+        <span class="act-num">04</span>
+        <span class="act-title">FECHAMENTO</span>
+        <span class="act-leader" />
+        <span class="act-eta">~8 min</span>
+      </li>
+    </ol>
 
     <!-- footer -->
     <div class="footer-bar">
-      <div class="footer-left">
-        <div class="footer-name">
-          DANIEL REIS
-          <span class="footer-aka">a.k.a <b>@danielhe4rt</b></span>
-        </div>
-        <div class="footer-sub">tech lead @ 3pontos · senior swe @ scopeyonsite</div>
-      </div>
       <div class="footer-right">
         <span class="prompt-label">press</span>
         <kbd class="key">SPACE</kbd>
@@ -364,160 +283,78 @@
 .summary-label { color: var(--bone); }
 .summary-sep { color: var(--dim); opacity: 0.6; }
 
-/* -------- acts grid -------- */
+/* -------- acts TOC list -------- */
 .acts {
   position: relative;
   flex: 1;
-  display: grid;
-  grid-template-columns: 1fr 0.6rem 1fr 0.6rem 1fr 0.6rem 1fr;
-  gap: 0;
-  align-items: stretch;
-  margin-top: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
   min-height: 0;
 }
 
-.act-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: 0.85rem 0.95rem 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background:
-    linear-gradient(180deg, rgba(20, 20, 24, 0.55), rgba(10, 10, 12, 0.75)),
-    radial-gradient(ellipse at 100% 0%, rgba(255, 45, 32, 0.05), transparent 60%);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.04),
-    0 18px 30px -20px rgba(0, 0, 0, 0.7);
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% calc(100% - 14px),
-    calc(100% - 14px) 100%,
-    0 100%
-  );
-  animation: card-in 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-  animation-delay: var(--card-delay, 0.4s);
-}
-.act-card--final {
-  background:
-    linear-gradient(180deg, rgba(255, 45, 32, 0.06), rgba(10, 10, 12, 0.75)),
-    radial-gradient(ellipse at 100% 0%, rgba(255, 45, 32, 0.12), transparent 60%);
-  border-color: rgba(255, 45, 32, 0.3);
+.act {
+  display: grid;
+  grid-template-columns: 4.6rem auto 1fr auto;
+  align-items: baseline;
+  gap: 0.9rem;
+  padding: 0.35rem 0.2rem 0.45rem;
+  border-bottom: 1px solid #1c1c1f;
+  animation: act-in 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: var(--act-delay, 0.4s);
 }
 
-.card-head {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.45rem;
-}
-.card-num {
+.act-num {
   font-family: 'Big Shoulders Display', sans-serif;
   font-weight: 900;
-  font-size: 2.4rem;
+  font-size: 3rem;
   line-height: 0.85;
   color: var(--red);
   letter-spacing: -0.02em;
   text-shadow: 0 0 22px rgba(255, 45, 32, 0.35);
-}
-.card-dots {
-  display: inline-flex;
-  gap: 0.18rem;
-  margin-left: 0.15rem;
-}
-.card-dot {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: #2a2a2c;
-}
-.card-dot:first-child { background: #3a1e1c; }
-.card-eta {
-  margin-left: auto;
-  font-size: 0.6rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--dim);
-  border: 1px solid #2a2a2c;
-  padding: 0.1rem 0.35rem;
-  border-radius: 2px;
+  font-variant-numeric: tabular-nums;
 }
 
-.card-title {
+.act-title {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+  color: var(--bone);
+}
+
+.act-leader {
+  align-self: end;
+  height: 1.1rem;
+  background-image: radial-gradient(circle, var(--dim) 1px, transparent 1.5px);
+  background-size: 8px 100%;
+  background-position: 0 1em;
+  background-repeat: repeat-x;
+  opacity: 0.45;
+  transform: translateY(-3px);
+}
+
+.act-eta {
+  font-family: 'JetBrains Mono', monospace;
   font-size: 0.85rem;
   letter-spacing: 0.06em;
-  color: var(--bone);
-  margin-bottom: 0.4rem;
-}
-.act-card--final .card-title { color: var(--red); }
-
-.card-rule {
-  height: 2px;
-  width: 38px;
-  background: var(--red);
-  margin-bottom: 0.55rem;
-  box-shadow: 0 0 12px rgba(255, 45, 32, 0.35);
+  color: var(--dim);
+  font-variant-numeric: tabular-nums;
 }
 
-.card-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-  margin-bottom: 0.65rem;
-  flex: 1;
-  align-content: flex-start;
-}
-.tag {
-  display: inline-block;
-  font-size: 0.62rem;
-  letter-spacing: 0.04em;
-  padding: 0.12rem 0.4rem;
-  border: 1px solid #2a2a2c;
-  border-radius: 2px;
-  background: rgba(20, 20, 24, 0.4);
-  color: #c8c2b6;
-  white-space: nowrap;
-}
-
-.card-hook {
-  font-family: 'Instrument Serif', serif;
-  font-style: italic;
-  font-size: 0.78rem;
-  color: #b9b3a9;
-  line-height: 1.25;
-  border-top: 1px dashed #2a2a2c;
-  padding-top: 0.5rem;
-  margin-top: auto;
-}
-.hook-mark {
-  color: var(--red);
-  font-family: 'JetBrains Mono', monospace;
-  font-style: normal;
-  margin-right: 0.3rem;
-  font-size: 0.7rem;
-}
-
-/* -------- act connector arrow -------- */
-.act-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--red);
-  font-size: 1.1rem;
-  opacity: 0.5;
-  animation: arrow-pulse 2.4s ease-in-out infinite both;
-  animation-delay: var(--arrow-delay, 0.5s);
-  text-shadow: 0 0 12px rgba(255, 45, 32, 0.4);
-}
+.act--final .act-title { color: var(--red); }
+.act--final .act-eta   { color: var(--bone); }
+.act--final            { border-bottom-color: rgba(255, 45, 32, 0.35); }
 
 /* -------- footer -------- */
 .footer-bar {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   margin-top: 0.8rem;
   padding-top: 0.55rem;
@@ -526,37 +363,6 @@
   letter-spacing: 0.12em;
   animation: fade-in 0.55s ease both;
   animation-delay: 1.05s;
-}
-.footer-name {
-  color: var(--bone);
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  font-size: 0.78rem;
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.5rem;
-}
-.footer-aka {
-  font-family: 'Instrument Serif', serif;
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  color: var(--dim);
-  font-size: 0.78rem;
-  text-transform: none;
-}
-.footer-aka b {
-  color: var(--red);
-  font-weight: 700;
-  font-family: 'JetBrains Mono', monospace;
-  font-style: normal;
-  letter-spacing: 0.02em;
-}
-.footer-sub {
-  color: var(--dim);
-  margin-top: 0.1rem;
-  text-transform: lowercase;
-  letter-spacing: 0.08em;
 }
 .footer-right {
   display: inline-flex;
@@ -604,13 +410,9 @@
   from { opacity: 0; clip-path: inset(0 100% 0 0); }
   to   { opacity: 1; clip-path: inset(0 0 0 0); }
 }
-@keyframes card-in {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-@keyframes arrow-pulse {
-  0%, 100% { opacity: 0.3; transform: translateX(0); }
-  50%      { opacity: 0.9; transform: translateX(2px); }
+@keyframes act-in {
+  from { opacity: 0; transform: translateX(-12px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes g-a {
