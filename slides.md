@@ -29,15 +29,15 @@ src: ./pages/01-abertura/01-legadao.md
 ---
 
 ---
-src: ./pages/01-abertura/01b-legadao-pastas.md
+src: ./pages/01-abertura/02-legadao-pastas.md
 ---
 
 ---
-src: ./pages/01-abertura/02-meme.md
+src: ./pages/01-abertura/03-meme.md
 ---
 
 ---
-src: ./pages/01-abertura/03-virada.md
+src: ./pages/01-abertura/04-virada.md
 ---
 
 ---
@@ -45,39 +45,39 @@ src: ./pages/02-extracao/01-boundaries.md
 ---
 
 ---
-src: ./pages/02-extracao/01b-teste-falha.md
+src: ./pages/02-extracao/02-teste-falha.md
 ---
 
 ---
-src: ./pages/02-extracao/01c-estruturas.md
+src: ./pages/02-extracao/03-estruturas.md
 ---
 
 ---
-src: ./pages/02-extracao/01d-reteste.md
+src: ./pages/02-extracao/04-reteste.md
 ---
 
 ---
-src: ./pages/02-extracao/01e-teste-p2.md
+src: ./pages/02-extracao/05-teste-p2.md
 ---
 
 ---
-src: ./pages/02-extracao/01e2-evento-visual.md
+src: ./pages/02-extracao/06-evento-visual.md
 ---
 
 ---
-src: ./pages/02-extracao/01f-eventos.md
+src: ./pages/02-extracao/07-eventos.md
 ---
 
 ---
-src: ./pages/02-extracao/01g-teste-p2-passa.md
+src: ./pages/02-extracao/08-teste-p2-passa.md
 ---
 
 ---
-src: ./pages/02-extracao/02-caso-shop.md
+src: ./pages/02-extracao/09-caso-shop.md
 ---
 
 ---
-src: ./pages/02-extracao/03-resultado.md
+src: ./pages/02-extracao/10-resultado.md
 ---
 
 ---

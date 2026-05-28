@@ -45,21 +45,21 @@ pages/
 │   ├── 02-whoami.md
 │   └── 03-toctree.md
 ├── 01-abertura/           # Storytelling opening: legadão, meme, virada
-│   ├── 01-legadao.md      # Section intro
-│   ├── 01b-legadao-pastas.md  # Stepper: ALL 19 folders expanded (tree-explorer layout)
-│   ├── 02-meme.md         # index.php humor
-│   └── 03-virada.md       # Emotional turn
+│   ├── 01-legadao.md          # Section intro
+│   ├── 02-legadao-pastas.md   # Stepper: ALL 19 folders expanded (tree-explorer layout)
+│   ├── 03-meme.md             # index.php humor
+│   └── 04-virada.md           # Emotional turn
 ├── 02-extracao/           # Conceptual: boundaries, deletion test, folder structures
 │   ├── 01-boundaries.md       # Section intro + deletion test concept
-│   ├── 01b-teste-falha.md     # Deletion test Q1: scattered files → fails (deletion-test layout)
-│   ├── 01c-estruturas.md      # 4 folder patterns for same module (core message)
-│   ├── 01d-reteste.md         # Deletion test Q1 retest: modular → passes
-│   ├── 01e-teste-p2.md        # Deletion test Q2: cross-module coupling
-│   ├── 01e2-evento-visual.md  # Interactive EventFlow diagram (coupled vs decoupled)
-│   ├── 01f-eventos.md         # Before/after: imports vs events (split-compare)
-│   ├── 01g-teste-p2-passa.md  # Deletion test Q2 retest: events → passes
-│   ├── 02-caso-shop.md        # Real-world shop module (100+ files)
-│   └── 03-resultado.md        # Mermaid: 1 shop → sales, payment, fulfillment
+│   ├── 02-teste-falha.md      # Deletion test Q1: scattered files → fails (deletion-test layout)
+│   ├── 03-estruturas.md       # 4 folder patterns for same module (core message)
+│   ├── 04-reteste.md          # Deletion test Q1 retest: modular → passes
+│   ├── 05-teste-p2.md         # Deletion test Q2: cross-module coupling
+│   ├── 06-evento-visual.md    # Interactive EventFlow diagram (coupled vs decoupled)
+│   ├── 07-eventos.md          # Before/after: imports vs events (split-compare)
+│   ├── 08-teste-p2-passa.md   # Deletion test Q2 retest: events → passes
+│   ├── 09-caso-shop.md        # Real-world shop module (100+ files)
+│   └── 10-resultado.md        # Mermaid: 1 shop → sales, payment, fulfillment
 ├── 03-implementacao/      # Technical: modular, code, errors, patterns
 │   ├── 01-modular.md      # internachi/modular + AI as devil's advocate
 │   ├── 02-before-after.md # Magic-move code diffs
@@ -89,7 +89,7 @@ pages/
 | `EventFlow.vue` | Interactive Vue Flow diagram: coupled vs decoupled module communication. Uses `@vue-flow/core`. Togglable mode (coupled/decoupled) + delete simulation |
 | `EventFlowModule.vue` | SVG module node renderer used inside `EventFlow.vue` |
 
-### Stepper pattern (`01b-legadao-pastas.md`)
+### Stepper pattern (`02-legadao-pastas.md`)
 
 The folder walkthrough uses `tree-explorer` layout with `transition: none` on every slide so only the right panel content changes. Each slide has an HTML comment header for navigation:
 ```
@@ -100,7 +100,7 @@ The folder walkthrough uses `tree-explorer` layout with `transition: none` on ev
 
 Order follows the tree top-to-bottom: Actions → Data → Enums → Events → Http → Jobs → Listeners → Livewire → Mail → Models → Notifications → Observers → Services → Rest → Impact(487).
 
-The same `transition: none` stepper pattern is reused in `02-extracao/` (slides 01b through 01g) with the `deletion-test` layout — each slide progresses the interactive deletion test while keeping the questions panel stable.
+The same `transition: none` stepper pattern is reused in `02-extracao/` (slides `02-teste-falha` through `08-teste-p2-passa`) with the `deletion-test` layout — each slide progresses the interactive deletion test while keeping the questions panel stable. Note that `03-estruturas.md` is a separate topic interleaved in this range, not part of the stepper.
 
 ## Slidev Conventions
 
