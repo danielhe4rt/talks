@@ -1,5 +1,8 @@
 ---
-layout: split-compare
+layout: split-modular
+metaNumber: "15"
+metaSection: "EXTRAÇÃO"
+metaSubtitle: "events vs imports"
 beforeLabel: ACOPLADO
 afterLabel: DESACOPLADO
 ---
@@ -60,8 +63,22 @@ Não sabe e não precisa saber quem escuta.
 -->
 
 ---
+layout: brutalist-base
+metaNumber: "15.1"
+metaSection: "EXTRAÇÃO"
+metaSubtitle: "events vs imports"
+metaRight: "quem escuta?"
+contentAlign: "top"
+---
 
-# Quem escuta?
+<TitleBlock
+  eyebrow="o contrato entre módulos"
+  outlined="QUEM"
+  solid="ESCUTA"
+  accent="?"
+  tail="dispatch → listener"
+  size="small"
+/>
 
 <div class="grid grid-cols-[1fr_auto_1fr] gap-6 mt-6 items-center">
 

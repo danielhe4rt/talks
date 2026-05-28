@@ -1,9 +1,13 @@
 ---
-layout: deletion-test
+layout: deletion-test-modular
 transition: none
+metaNumber: "12"
+metaSection: "EXTRAÇÃO"
+metaSubtitle: "teste da deleção"
+metaRight: "Q1 · modular"
 ---
 
-# O Teste da Deleção™ <span class="text-sm font-normal opacity-40">— rodando nos módulos</span>
+# O Teste da Deleção™ <span>— rodando nos módulos</span>
 
 ::questions::
 

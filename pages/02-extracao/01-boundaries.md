@@ -1,48 +1,175 @@
 ---
-layout: section
+layout: section-modular
+actNumber: "02"
+actLabel: "ato 02 de 04"
+eyebrow: "ato 2 · extração"
+outlined: "ACHAR OS"
+solid: "BOUNDARIES"
+accent: "."
+tail: "~12 min · conceitual"
 ---
 
-# Encontrando Boundaries
-## O Teste da Deleção
+## o teste da deleção · como achar os limites do seu código
 
 <!--
 "Então se organizar por tipo técnico é o problema... qual é a alternativa? Vamos aprender a encontrar os boundaries — os limites naturais do seu código."
 -->
 
 ---
+layout: brutalist-base
+metaNumber: "09"
+metaSection: "EXTRAÇÃO"
+metaSubtitle: "teste da deleção"
+metaRight: "regras · 3"
+---
 
-# O Teste da Deleção™
+<TitleBlock
+  eyebrow="o método"
+  outlined="O TESTE"
+  solid="DA DELEÇÃO"
+  accent="™"
+  tail="3 PERGUNTAS"
+  size="normal"
+/>
 
-<div class="text-lg mt-4">
+<div class="dt-intro">
 
-Pega uma funcionalidade do seu sistema. <br>
-Imagina que você deleta **TODOS** os arquivos dela.
+<p class="dt-prompt">
+Pega uma funcionalidade do seu sistema.<br>
+Imagina que você deleta <b>TODOS</b> os arquivos dela.
+</p>
 
-</div>
+<div class="dt-cards">
 
 <v-clicks>
 
-<div class="mt-8 p-4 bg-yellow-900/20 rounded-lg border border-yellow-500/30">
-<span class="text-yellow-400 font-bold text-lg">1.</span> Você consegue <span class="text-yellow-400 font-bold">listar todos os arquivos</span>?
+<div class="dt-card dt-card--q1">
+  <div class="dt-card-head">
+    <span class="dt-card-num">01</span>
+    <span class="dt-card-tag">listar</span>
+  </div>
+  <div class="dt-card-body">
+    Você consegue <b>listar todos os arquivos</b>?
+  </div>
 </div>
 
-<div class="mt-3 p-4 bg-orange-900/20 rounded-lg border border-orange-500/30">
-<span class="text-orange-400 font-bold text-lg">2.</span> Quanto do sistema <span class="text-orange-400 font-bold">quebra</span>?
+<div class="dt-card dt-card--q2">
+  <div class="dt-card-head">
+    <span class="dt-card-num">02</span>
+    <span class="dt-card-tag">quebra</span>
+  </div>
+  <div class="dt-card-body">
+    Quanto do sistema <b>quebra</b>?
+  </div>
 </div>
 
-<div class="mt-3 p-4 bg-red-900/20 rounded-lg border border-red-500/30">
-<span class="text-red-400 font-bold text-lg">3.</span> Algum desses arquivos é <span class="text-red-400 font-bold">usado por outra feature</span>?
+<div class="dt-card dt-card--q3">
+  <div class="dt-card-head">
+    <span class="dt-card-num">03</span>
+    <span class="dt-card-tag">compartilhado</span>
+  </div>
+  <div class="dt-card-body">
+    Algum desses arquivos é <b>usado por outra feature</b>?
+  </div>
 </div>
 
 </v-clicks>
 
+</div>
+
 <v-click>
 
-<div class="mt-6 text-center text-lg opacity-70">
-Vamos rodar esse teste no nosso legadão?
+<div class="dt-tail">
+  <span class="dt-tail-mark">▶</span>
+  <span>Vamos rodar esse teste no nosso legadão.</span>
 </div>
 
 </v-click>
+
+</div>
+
+<style>
+.dt-intro {
+  margin-top: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.dt-prompt {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.35rem !important;
+  color: #c8c2b6 !important;
+  margin: 0 !important;
+  line-height: 1.45 !important;
+  max-width: 70%;
+}
+.dt-prompt b {
+  font-family: var(--font-mono);
+  font-style: normal;
+  color: var(--red);
+  letter-spacing: 0.05em;
+}
+.dt-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9rem;
+  margin-top: 0.4rem;
+}
+.dt-card {
+  border: 1px solid rgba(255,255,255,0.08);
+  border-left: 3px solid var(--card-accent, var(--red));
+  background: linear-gradient(180deg, rgba(20,20,24,0.55), rgba(10,10,12,0.75));
+  padding: 0.75rem 0.85rem 0.85rem;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.dt-card--q1 { --card-accent: #facc15; }
+.dt-card--q2 { --card-accent: #fb923c; }
+.dt-card--q3 { --card-accent: var(--red); }
+.dt-card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.dt-card-num {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--card-accent, var(--red));
+  line-height: 1;
+}
+.dt-card-tag {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+.dt-card-body {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #c8c2b6;
+}
+.dt-card-body b {
+  color: var(--bone);
+  font-weight: 700;
+}
+.dt-tail {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1rem;
+  color: #b9b3a9;
+  margin-top: 0.2rem;
+}
+.dt-tail-mark { color: var(--red); font-size: 0.7rem; }
+</style>
 
 <!--
 "Eu chamo isso de Teste da Deleção. É simples: pega uma funcionalidade — tipo processamento de pagamento — e imagina que deleta TUDO que é dela. 3 perguntas. Se alguma falha, você tem um problema de boundary."

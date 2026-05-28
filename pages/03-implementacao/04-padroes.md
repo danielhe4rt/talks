@@ -1,35 +1,41 @@
 ---
+layout: brutalist-base
+metaNumber: "30"
+metaSection: "IMPLEMENTAÇÃO"
+metaSubtitle: "padrões que emergem"
+contentAlign: "top"
+---
 
-# Padrões que emergiram
+# Padrões que <span class="g g-c">emergiram</span>
 
 <v-clicks>
 
 <div class="grid grid-cols-3 gap-4 mt-4">
 
-<div class="p-4 bg-blue-900/30 rounded-lg border border-blue-500/30">
-  <div class="text-blue-400 font-bold text-lg mb-2">Identity (IAM)</div>
-  <div class="text-sm opacity-80">
-    Como o sistema se identifica para <span class="text-yellow-400">outros sistemas</span>.<br>
-    <span class="text-yellow-400">Não é User</span> — é credenciais externas.<br>
-    <span class="opacity-60 mt-2 block">Chaves do Stripe, tokens do Correios, OAuth clients</span>
+<div class="p-4 rounded" style="background: rgba(96, 165, 250, 0.08); border: 1px solid rgba(96, 165, 250, 0.3);">
+  <div class="font-bold text-lg mb-2" style="color: var(--accent-blue);">Identity (IAM)</div>
+  <div class="text-sm" style="opacity: 0.85;">
+    Como o sistema se identifica para <span style="color: var(--accent-orange);">outros sistemas</span>.<br>
+    <span style="color: var(--accent-orange);">Não é User</span> — é credenciais externas.<br>
+    <span class="mt-2 block" style="opacity: 0.6;">Chaves do Stripe, tokens do Correios, OAuth clients</span>
   </div>
 </div>
 
-<div class="p-4 bg-orange-900/30 rounded-lg border border-orange-500/30">
-  <div class="text-orange-400 font-bold text-lg mb-2">Integration-*</div>
-  <div class="text-sm opacity-80">
+<div class="p-4 rounded" style="background: rgba(255, 165, 58, 0.08); border: 1px solid rgba(255, 165, 58, 0.3);">
+  <div class="font-bold text-lg mb-2" style="color: var(--accent-orange);">Integration-*</div>
+  <div class="text-sm" style="opacity: 0.85;">
     Um módulo por sistema externo.<br>
-    <span class="text-yellow-400">Adaptador isolado</span> — se trocar Stripe por PagSeguro, só um módulo muda.<br>
-    <span class="opacity-60 mt-2 block">integration-stripe, integration-correios, integration-slack</span>
+    <span style="color: var(--accent-orange);">Adaptador isolado</span> — se trocar Stripe por PagSeguro, só um módulo muda.<br>
+    <span class="mt-2 block" style="opacity: 0.6;">integration-stripe, integration-correios, integration-slack</span>
   </div>
 </div>
 
-<div class="p-4 bg-purple-900/30 rounded-lg border border-purple-500/30">
-  <div class="text-purple-400 font-bold text-lg mb-2">Panel</div>
-  <div class="text-sm opacity-80">
-    Onde moram os items do <span class="text-yellow-400">Filament</span>.<br>
+<div class="p-4 rounded" style="background: rgba(192, 132, 252, 0.08); border: 1px solid rgba(192, 132, 252, 0.3);">
+  <div class="font-bold text-lg mb-2" style="color: var(--accent-purple);"><span class="g g-c">Panel</span></div>
+  <div class="text-sm" style="opacity: 0.85;">
+    Onde moram os items do <span style="color: var(--accent-orange);">Filament</span>.<br>
     Cada panel é um módulo separado.<br>
-    <span class="opacity-60 mt-2 block">panel-admin, panel-app, panel-guest</span>
+    <span class="mt-2 block" style="opacity: 0.6;">panel-admin, panel-app, panel-guest</span>
   </div>
 </div>
 
@@ -39,7 +45,7 @@
 
 <v-click>
 
-<div class="mt-6 text-center text-sm opacity-60">
+<div class="mt-6 text-center text-sm" style="opacity: 0.6;">
 Você não precisa planejar esses módulos. Eles emergem quando você aplica o Teste da Deleção.
 </div>
 

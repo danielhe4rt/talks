@@ -1,9 +1,13 @@
 ---
-layout: deletion-test
+layout: deletion-test-modular
 transition: none
+metaNumber: "16"
+metaSection: "EXTRAÇÃO"
+metaSubtitle: "teste da deleção"
+metaRight: "Q2 · events"
 ---
 
-# O Teste da Deleção™ <span class="text-sm font-normal opacity-40">— Pergunta 2 (de novo)</span>
+# O Teste da Deleção™ <span>— Pergunta 2 (de novo)</span>
 
 ::questions::
 

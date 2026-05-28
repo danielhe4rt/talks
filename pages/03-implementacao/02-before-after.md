@@ -1,6 +1,12 @@
 ---
+layout: brutalist-base
+metaNumber: "21"
+metaSection: "IMPLEMENTAÇÃO"
+metaSubtitle: "o problema em código"
+contentAlign: "top"
+---
 
-# O problema original em código
+# O problema original em <span class="g g-a">código</span>
 
 ````md magic-move {lines: true}
 ```php {all|10-11}
@@ -42,8 +48,14 @@ class PlaceOrder
 -->
 
 ---
+layout: brutalist-base
+metaNumber: "22"
+metaSection: "IMPLEMENTAÇÃO"
+metaSubtitle: "evento como fronteira"
+contentAlign: "top"
+---
 
-# Evento como fronteira
+# Evento como <span class="g g-c">fronteira</span>
 
 <div class="grid grid-cols-2 gap-6">
 <div>
@@ -90,9 +102,9 @@ class StartPaymentProcess
 
 <v-click>
 
-<div class="mt-6 p-3 bg-green-900/30 rounded-lg border border-green-500/30 text-sm text-center">
+<div class="mt-6 p-3 rounded text-sm" style="background: rgba(110, 231, 161, 0.07); border: 1px solid rgba(110, 231, 161, 0.3); text-align: center;">
 <code>sales</code> nem sabe que <code>payment</code> existe.<br>
-Dependência <span class="text-green-400 font-bold">unidirecional</span>: payment → sales. Nunca o contrário.
+Dependência <span style="color: var(--accent-green); font-weight: 700;">unidirecional</span>: payment → sales. Nunca o contrário.
 </div>
 
 </v-click>
@@ -101,6 +113,12 @@ Dependência <span class="text-green-400 font-bold">unidirecional</span>: paymen
 "O StartPaymentProcess tá no módulo payment. ELE decide despachar o job, ELE escolhe a queue, ELE decide qual gateway usar. Sales nem sabe que payment existe. A dependência agora é unidirecional: payment depende de sales (pra ler o pedido), mas sales não depende de ninguém."
 -->
 
+---
+layout: brutalist-base
+metaNumber: "23"
+metaSection: "IMPLEMENTAÇÃO"
+metaSubtitle: "padrão no fim do pipeline"
+contentAlign: "top"
 ---
 
 # O mesmo padrão no final do pipeline
@@ -150,11 +168,17 @@ class StartFulfillmentOnPayment
 -->
 
 ---
-layout: two-cols
-layoutClass: gap-8
+layout: brutalist-base
+metaNumber: "24"
+metaSection: "IMPLEMENTAÇÃO"
+metaSubtitle: "grafo de dependências"
+contentAlign: "top"
 ---
 
 # O grafo de dependências
+
+<div class="grid grid-cols-2 gap-8 mt-2">
+<div>
 
 ### ANTES
 
@@ -165,13 +189,12 @@ flowchart LR
     style B fill:#991b1b,stroke:#ef4444,color:#fff
 ```
 
-<div class="mt-4 text-red-400 text-sm">
+<div class="mt-4 text-sm" style="color: var(--red);">
 Circular, tudo acoplado.
 </div>
 
-::right::
-
-<div class="mt-12"></div>
+</div>
+<div>
 
 ### DEPOIS
 
@@ -187,12 +210,15 @@ flowchart TD
 <v-click>
 
 <div class="mt-4 text-sm">
-  <div class="text-green-400">✓ Unidirecional</div>
-  <div class="text-green-400">✓ Cada camada só depende da anterior</div>
-  <div class="text-green-400">✓ Eventos como fronteira</div>
+  <div style="color: var(--accent-green);">✓ Unidirecional</div>
+  <div style="color: var(--accent-green);">✓ Cada camada só depende da anterior</div>
+  <div style="color: var(--accent-green);">✓ Eventos como fronteira</div>
 </div>
 
 </v-click>
+
+</div>
+</div>
 
 <!--
 "De um espaguete circular pra um grafo unidirecional em 3 camadas. A regra é simples: setas apontam pra baixo, nunca pra cima."

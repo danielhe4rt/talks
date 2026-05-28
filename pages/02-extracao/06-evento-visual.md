@@ -1,10 +1,40 @@
 ---
+layout: brutalist-base
+metaNumber: "14"
+metaSection: "EXTRAÇÃO"
+metaSubtitle: "comunicação entre módulos"
+metaRight: "interativo"
+contentAlign: "top"
 transition: fade
 ---
 
-# Comunicação entre módulos
+<TitleBlock
+  eyebrow="conceito antes do código"
+  outlined="MÓDULO"
+  solid="↔ MÓDULO"
+  accent="."
+  tail="ACOPLADO · DESACOPLADO"
+  size="small"
+/>
 
-<EventFlow />
+<div class="ef-wrap">
+  <EventFlow />
+</div>
+
+<style>
+.ef-wrap {
+  flex: 1;
+  min-height: 0;
+  margin-top: 0.6rem;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+.ef-wrap > * {
+  width: 100%;
+  height: 100%;
+}
+</style>
 
 <!--
 "Antes de eu mostrar o código, deixa eu te mostrar o CONCEITO visualmente."

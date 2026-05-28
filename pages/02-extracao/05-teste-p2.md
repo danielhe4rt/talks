@@ -1,9 +1,13 @@
 ---
-layout: deletion-test
+layout: deletion-test-modular
 transition: none
+metaNumber: "13"
+metaSection: "EXTRAÇÃO"
+metaSubtitle: "teste da deleção"
+metaRight: "Q2 · coupling"
 ---
 
-# O Teste da Deleção™ <span class="text-sm font-normal opacity-40">— Pergunta 2</span>
+# O Teste da Deleção™ <span>— Pergunta 2 · <span class="g g-c">coupling</span></span>
 
 ::questions::
 

@@ -2,9 +2,13 @@
 <!-- STEPPER: app/Actions/ (line 2)               -->
 <!-- ============================================ -->
 ---
-layout: tree-explorer
+layout: tree-explorer-modular
 transition: none
 noteType: warning
+metaNumber: "06"
+metaSection: "ABERTURA"
+metaSubtitle: "stepper · 487 arquivos"
+metaRight: "app/Actions/"
 ---
 
 # O ecommerce que eu herdei
@@ -64,9 +68,10 @@ app/
 <!-- STEPPER: app/Data/ (line 4)                  -->
 <!-- ============================================ -->
 ---
-layout: tree-explorer
+layout: tree-explorer-modular
 transition: none
 noteType: info
+metaRight: "app/Data/"
 ---
 
 # O ecommerce que eu herdei
@@ -122,9 +127,10 @@ app/
 <!-- STEPPER: app/Enums/ (line 5)                 -->
 <!-- ============================================ -->
 ---
-layout: tree-explorer
+layout: tree-explorer-modular
 transition: none
 noteType: danger
+metaRight: "app/Enums/"
 ---
 
 # O ecommerce que eu herdei
@@ -178,9 +184,10 @@ app/
 <!-- STEPPER: app/Events/ (line 6)                -->
 <!-- ============================================ -->
 ---
-layout: tree-explorer
+layout: tree-explorer-modular
 transition: none
 noteType: warning
+metaRight: "app/Events/"
 ---
 
 # O ecommerce que eu herdei
@@ -238,9 +245,10 @@ app/
 <!-- STEPPER: app/Http/ (line 8)                  -->
 <!-- ============================================ -->
 ---
-layout: tree-explorer
+layout: tree-explorer-modular
 transition: none
 noteType: warning
+metaRight: "app/Http/"
 ---
 
 # O ecommerce que eu herdei
@@ -314,9 +322,10 @@ app/
 <!-- STEPPER: app/Jobs/ (line 9)                  -->
 <!-- ============================================ -->
 ---
-layout: tree-explorer
+layout: tree-explorer-modular
 transition: none
 noteType: danger
+metaRight: "app/Jobs/"
 ---
 
 # O ecommerce que eu herdei
@@ -380,9 +389,10 @@ app/
 <!-- STEPPER: app/Listeners/ (line 10)            -->
 <!-- ============================================ -->
 ---
-layout: tree-explorer
+layout: tree-explorer-modular
 transition: none
 noteType: danger
+metaRight: "app/Listeners/"
 ---
 
 # O ecommerce que eu herdei
@@ -438,9 +448,10 @@ app/
 <!-- STEPPER: app/Livewire/ (line 11)             -->
 <!-- ============================================ -->
 ---
-layout: tree-explorer
+layout: tree-explorer-modular
 transition: none
 noteType: info
+metaRight: "app/Livewire/"
 ---
 
 # O ecommerce que eu herdei
@@ -494,9 +505,10 @@ Catálogo, checkout e wishlist — **3 experiências de usuário** completamente
 <!-- STEPPER: app/Mail/ (line 12)                 -->
 <!-- ============================================ -->
 ---
-layout: tree-explorer
+layout: tree-explorer-modular
 transition: none
 noteType: info
+metaRight: "app/Mail/"
 ---
 
 # O ecommerce que eu herdei
@@ -548,9 +560,10 @@ app/
 <!-- STEPPER: app/Models/ (line 13)               -->
 <!-- ============================================ -->
 ---
-layout: tree-explorer
+layout: tree-explorer-modular
 transition: none
 noteType: danger
+metaRight: "app/Models/"
 ---
 
 # O ecommerce que eu herdei
@@ -625,9 +638,10 @@ app/
 <!-- STEPPER: app/Notifications/ (line 14)        -->
 <!-- ============================================ -->
 ---
-layout: tree-explorer
+layout: tree-explorer-modular
 transition: none
 noteType: warning
+metaRight: "app/Notifications/"
 ---
 
 # O ecommerce que eu herdei
@@ -679,9 +693,10 @@ app/
 <!-- STEPPER: app/Observers/ (line 15)            -->
 <!-- ============================================ -->
 ---
-layout: tree-explorer
+layout: tree-explorer-modular
 transition: none
 noteType: info
+metaRight: "app/Observers/"
 ---
 
 # O ecommerce que eu herdei
@@ -732,9 +747,10 @@ Side effects de **5 domínios** escondidos em hooks mágicos. Difícil rastrear 
 <!-- STEPPER: app/Services/ (line 18)             -->
 <!-- ============================================ -->
 ---
-layout: tree-explorer
+layout: tree-explorer-modular
 transition: none
 noteType: danger
+metaRight: "app/Services/"
 ---
 
 # O ecommerce que eu herdei
@@ -802,9 +818,10 @@ app/
 <!--   Policies, Providers, Support)              -->
 <!-- ============================================ -->
 ---
-layout: tree-explorer
+layout: tree-explorer-modular
 transition: none
 noteType: info
+metaRight: "Console · Exceptions · Policies · Providers · Support"
 ---
 
 # O ecommerce que eu herdei
@@ -876,12 +893,16 @@ Até as exceptions misturadas: `InsufficientStockException` e `PaymentDeclinedEx
 <!-- "O resto: Console, Exceptions, Policies, Providers, Support. Tudo separado por tipo técnico." -->
 
 <!-- ============================================ -->
-<!-- SLIDE FINAL: 487 (layout: impact)            -->
+<!-- SLIDE FINAL: 487 (layout: impact-modular)    -->
 <!-- ============================================ -->
 ---
-layout: impact
+layout: impact-modular
 color: red
 transition: fade
+metaNumber: "06"
+metaSection: "ABERTURA"
+metaSubtitle: "the verdict"
+metaRight: "0 boundaries"
 ---
 
 # 487

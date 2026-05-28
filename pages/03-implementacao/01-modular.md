@@ -1,8 +1,14 @@
 ---
-layout: section
+layout: section-modular
+actNumber: "03"
+actLabel: "ato 03 de 04"
+eyebrow: "ato 3 · implementação"
+outlined: "internachi/"
+solid: "modular"
+accent: "."
+tail: "~15 min · técnico"
 ---
 
-# `internachi/modular`
 ## na prática
 
 <!--
@@ -10,10 +16,16 @@ layout: section
 -->
 
 ---
+layout: brutalist-base
+metaNumber: "17"
+metaSection: "IMPLEMENTAÇÃO"
+metaSubtitle: "setup em 2 comandos"
+contentAlign: "top"
+---
 
-# Setup em 2 comandos
+# Setup em <span class="g g-a">2 comandos</span>
 
-<div class="grid grid-cols-2 gap-6">
+<div class="grid grid-cols-2 gap-6 mt-4">
 <div>
 
 ```bash
@@ -53,8 +65,8 @@ app-modules/
 
 <v-click>
 
-<div class="mt-4 p-3 bg-green-900/30 rounded-lg border border-green-500/30 text-center">
-Cada módulo é um <span class="text-green-400 font-bold">mini-package Laravel</span> com namespace próprio.
+<div class="mt-4 p-3 rounded border" style="background: rgba(110, 231, 161, 0.06); border-color: rgba(110, 231, 161, 0.25); text-align: center;">
+Cada módulo é um <span style="color: var(--accent-green); font-weight: 700;">mini-package Laravel</span> com namespace próprio.
 </div>
 
 </v-click>
@@ -63,6 +75,12 @@ Cada módulo é um <span class="text-green-400 font-bold">mini-package Laravel</
 "Dois comandos. composer require e php artisan make:module. Pronto, você tem um módulo com estrutura completa — service provider, config, migrations, tests. Cada módulo é basicamente um mini-package Laravel com namespace próprio."
 -->
 
+---
+layout: brutalist-base
+metaNumber: "18"
+metaSection: "IMPLEMENTAÇÃO"
+metaSubtitle: "composer.json do módulo"
+contentAlign: "top"
 ---
 
 # O `composer.json` do módulo
@@ -89,12 +107,12 @@ Cada módulo é um <span class="text-green-400 font-bold">mini-package Laravel</
 <v-click>
 
 <div class="mt-4 flex gap-4 text-sm">
-  <div class="flex-1 p-3 bg-blue-900/30 rounded border border-blue-500/30">
-    <span class="text-blue-400 font-bold">Namespace isolado</span><br>
+  <div class="flex-1 p-3 rounded" style="background: rgba(96, 165, 250, 0.08); border: 1px solid rgba(96, 165, 250, 0.3);">
+    <span style="color: var(--accent-blue); font-weight: 700;">Namespace isolado</span><br>
     <code class="text-xs">EcomDev\Payment\</code> nunca colide com <code class="text-xs">EcomDev\Sales\</code>
   </div>
-  <div class="flex-1 p-3 bg-purple-900/30 rounded border border-purple-500/30">
-    <span class="text-purple-400 font-bold">Auto-discovery</span><br>
+  <div class="flex-1 p-3 rounded" style="background: rgba(192, 132, 252, 0.08); border: 1px solid rgba(192, 132, 252, 0.3);">
+    <span style="color: var(--accent-purple); font-weight: 700;">Auto-discovery</span><br>
     Service provider registra automaticamente. Zero config manual.
   </div>
 </div>
@@ -106,8 +124,14 @@ Cada módulo é um <span class="text-green-400 font-bold">mini-package Laravel</
 -->
 
 ---
+layout: brutalist-base
+metaNumber: "19"
+metaSection: "IMPLEMENTAÇÃO"
+metaSubtitle: "service provider"
+contentAlign: "top"
+---
 
-# O Service Provider como contrato
+# O Service Provider como <span class="g g-c">contrato</span>
 
 ```php {all|3-8|10-16|all}
 class PaymentServiceProvider extends ServiceProvider
@@ -132,9 +156,9 @@ class PaymentServiceProvider extends ServiceProvider
 
 <v-click>
 
-<div class="mt-4 p-3 bg-yellow-900/30 rounded-lg border border-yellow-500/30 text-center">
-Quer entender o que um módulo faz? Lê o <span class="text-yellow-400 font-bold">Service Provider</span>.<br>
-<span class="text-sm opacity-60">35 linhas. Não 100+ arquivos.</span>
+<div class="mt-4 p-3 rounded" style="background: rgba(255, 165, 58, 0.08); border: 1px solid rgba(255, 165, 58, 0.3); text-align: center;">
+Quer entender o que um módulo faz? Lê o <span style="color: var(--accent-orange); font-weight: 700;">Service Provider</span>.<br>
+<span class="text-sm" style="opacity: 0.6;">35 linhas. Não 100+ arquivos.</span>
 </div>
 
 </v-click>
@@ -146,8 +170,14 @@ Quer entender o que um módulo faz? Lê o <span class="text-yellow-400 font-bold
 -->
 
 ---
+layout: brutalist-base
+metaNumber: "20"
+metaSection: "IMPLEMENTAÇÃO"
+metaSubtitle: "AI como devil's advocate"
+contentAlign: "top"
+---
 
-# Antes de mover código: questionei TUDO
+# Antes de mover código: <span class="g g-b">questionei TUDO</span>
 
 <div class="text-sm mb-4">
 
@@ -157,28 +187,28 @@ Usei AI como **devil's advocate**. 13 perguntas. 13 decisões documentadas.
 
 <v-clicks>
 
-<div class="p-3 bg-gray-800/50 rounded-lg border border-gray-600/30 text-sm mb-3">
-  <span class="text-yellow-400">❓</span> "O módulo payment deve disparar criação de envio diretamente ou só o evento PaymentConfirmed?"<br>
-  <span class="ml-4 text-green-400">→ Só o evento. Payment não sabe que envio existe.</span>
+<div class="p-3 rounded text-sm mb-3" style="background: rgba(20, 20, 24, 0.5); border: 1px solid rgba(255, 255, 255, 0.07);">
+  <span style="color: var(--accent-orange);">❓</span> "O módulo payment deve disparar criação de envio diretamente ou só o evento PaymentConfirmed?"<br>
+  <span class="ml-4" style="color: var(--accent-green);">→ Só o evento. Payment não sabe que envio existe.</span>
 </div>
 
-<div class="p-3 bg-gray-800/50 rounded-lg border border-gray-600/30 text-sm mb-3">
-  <span class="text-yellow-400">❓</span> "Onde fica o PaymentTransaction model — no módulo que produz ou no que armazena?"<br>
-  <span class="ml-4 text-green-400">→ No que armazena (sales). Dados ficam com quem persiste.</span>
+<div class="p-3 rounded text-sm mb-3" style="background: rgba(20, 20, 24, 0.5); border: 1px solid rgba(255, 255, 255, 0.07);">
+  <span style="color: var(--accent-orange);">❓</span> "Onde fica o PaymentTransaction model — no módulo que produz ou no que armazena?"<br>
+  <span class="ml-4" style="color: var(--accent-green);">→ No que armazena (sales). Dados ficam com quem persiste.</span>
 </div>
 
-<div class="p-3 bg-gray-800/50 rounded-lg border border-gray-600/30 text-sm mb-3">
-  <span class="text-yellow-400">❓</span> "Feature flags renomeiam ou mantêm prefixo antigo?"<br>
-  <span class="ml-4 text-green-400">→ Mantêm. Pennant grava no banco. Risco > estética.</span>
+<div class="p-3 rounded text-sm mb-3" style="background: rgba(20, 20, 24, 0.5); border: 1px solid rgba(255, 255, 255, 0.07);">
+  <span style="color: var(--accent-orange);">❓</span> "Feature flags renomeiam ou mantêm prefixo antigo?"<br>
+  <span class="ml-4" style="color: var(--accent-green);">→ Mantêm. Pennant grava no banco. Risco > estética.</span>
 </div>
 
 </v-clicks>
 
 <v-click>
 
-<div class="mt-2 p-3 bg-blue-900/30 rounded-lg border border-blue-500/30 text-sm text-center">
+<div class="mt-2 p-3 rounded text-sm" style="background: rgba(96, 165, 250, 0.08); border: 1px solid rgba(96, 165, 250, 0.3); text-align: center;">
 Cada decisão virou uma entrada no <code>CONTEXT.md</code> do módulo.<br>
-<span class="opacity-60">Não é doc que ninguém lê. É doc que o <span class="text-blue-400 font-bold">AGENTE</span> lê.</span>
+<span style="opacity: 0.6;">Não é doc que ninguém lê. É doc que o <span style="color: var(--accent-blue); font-weight: 700;">AGENTE</span> lê.</span>
 </div>
 
 </v-click>

@@ -1,8 +1,12 @@
 ---
-layout: statement
+layout: statement-modular
+metaNumber: "25"
+metaSection: "IMPLEMENTAÇÃO"
+metaSubtitle: "os erros"
+eyebrow: "implementação real"
 ---
 
-# Fiz a extração e... deu merda.
+# Fiz a extração e... <span class="g g-b">deu merda</span>.
 
 3 erros reais. 3 lições aprendidas.
 
@@ -11,8 +15,14 @@ layout: statement
 -->
 
 ---
+layout: brutalist-base
+metaNumber: "26"
+metaSection: "IMPLEMENTAÇÃO"
+metaSubtitle: "erro 1 — circular surpresa"
+contentAlign: "top"
+---
 
-# Erro 1: Dependência circular surpresa
+# Erro 1: <span class="g g-a">Dependência circular</span> surpresa
 
 <div class="text-sm mb-4">
 
@@ -30,8 +40,8 @@ flowchart LR
 
 <v-click>
 
-<div class="mt-4 p-3 bg-red-900/30 rounded-lg border border-red-500/30 text-sm">
-<span class="text-red-400 font-bold">Meu erro:</span> achei que <code>PaymentTransaction</code> pertencia ao módulo <code>payment</code>, porque é o payment que cria transações. Mas <code>Order</code> — que mora em <code>sales</code> — tem um <code>->transactions()</code> relationship.
+<div class="mt-4 p-3 rounded text-sm" style="background: rgba(255, 45, 32, 0.08); border: 1px solid rgba(255, 45, 32, 0.3);">
+<span style="color: var(--red); font-weight: 700;">Meu erro:</span> achei que <code>PaymentTransaction</code> pertencia ao módulo <code>payment</code>, porque é o payment que cria transações. Mas <code>Order</code> — que mora em <code>sales</code> — tem um <code>->transactions()</code> relationship.
 </div>
 
 </v-click>
@@ -41,29 +51,35 @@ flowchart LR
 -->
 
 ---
+layout: brutalist-base
+metaNumber: "27"
+metaSection: "IMPLEMENTAÇÃO"
+metaSubtitle: "quem é o dono dos dados?"
+contentAlign: "top"
+---
 
 # Solução: quem é o dono dos dados?
 
-<div class="p-4 bg-yellow-900/40 rounded-lg border-2 border-yellow-500/50 text-center text-xl font-bold mb-6">
-O modelo fica com quem <span class="text-yellow-400">ARMAZENA</span>,<br> não com quem <span class="text-yellow-400">PRODUZ</span>.
+<div class="p-4 rounded text-center text-xl font-bold mb-6" style="background: rgba(255, 165, 58, 0.1); border: 2px solid rgba(255, 165, 58, 0.5);">
+O modelo fica com quem <span style="color: var(--accent-orange);">ARMAZENA</span>,<br> não com quem <span style="color: var(--accent-orange);">PRODUZ</span>.
 </div>
 
 <v-clicks>
 
-<div class="p-3 bg-gray-800/50 rounded-lg border border-gray-600/30 text-sm mb-3">
-<span class="opacity-60">PaymentTransaction é um registro de dados do pedido.</span><br>
-Payment <span class="text-blue-400">PRODUZ</span> transações. Sales <span class="text-green-400">ARMAZENA</span> transações.
+<div class="p-3 rounded text-sm mb-3" style="background: rgba(20, 20, 24, 0.5); border: 1px solid rgba(255, 255, 255, 0.07);">
+<span style="opacity: 0.6;">PaymentTransaction é um registro de dados do pedido.</span><br>
+Payment <span style="color: var(--accent-blue);">PRODUZ</span> transações. Sales <span style="color: var(--accent-green);">ARMAZENA</span> transações.
 </div>
 
-<div class="p-3 bg-green-900/30 rounded-lg border border-green-500/30 text-sm mb-3">
+<div class="p-3 rounded text-sm mb-3" style="background: rgba(110, 231, 161, 0.07); border: 1px solid rgba(110, 231, 161, 0.3);">
 → <code>PaymentTransaction</code> mora em <code>sales</code>.<br>
 → <code>payment</code> usa o modelo como dependência.
 </div>
 
 <div class="flex justify-center gap-4 text-sm">
-  <span class="text-green-400">✓ Unidirecional mantido</span>
-  <span class="opacity-60">payment → sales</span>
-  <span class="opacity-60">sales → ninguém</span>
+  <span style="color: var(--accent-green);">✓ Unidirecional mantido</span>
+  <span style="opacity: 0.6;">payment → sales</span>
+  <span style="opacity: 0.6;">sales → ninguém</span>
 </div>
 
 </v-clicks>
@@ -73,8 +89,14 @@ Payment <span class="text-blue-400">PRODUZ</span> transações. Sales <span clas
 -->
 
 ---
+layout: brutalist-base
+metaNumber: "28"
+metaSection: "IMPLEMENTAÇÃO"
+metaSubtitle: "erro 2 — listeners duplicados"
+contentAlign: "top"
+---
 
-# Erro 2: Listeners duplicados
+# Erro 2: Listeners <span class="g g-a">duplicados</span>
 
 <div class="text-sm mb-4">
 
@@ -96,17 +118,17 @@ Pedido chega → ChargePaymentJob × 2 → 💳 COBROU DUAS VEZES 🐛
 <v-clicks>
 
 <div class="flex flex-col gap-2 text-sm">
-  <div class="p-2 bg-green-900/30 rounded border border-green-500/30 flex items-center gap-2">
-    <span class="text-green-400 font-mono font-bold">#1</span> Adiciona novo listener (coexiste com o antigo) <span class="ml-auto opacity-60">← seguro</span>
+  <div class="p-2 rounded flex items-center gap-2" style="background: rgba(110, 231, 161, 0.07); border: 1px solid rgba(110, 231, 161, 0.3);">
+    <span style="color: var(--accent-green); font-family: var(--font-mono); font-weight: 700;">#1</span> Adiciona novo listener (coexiste com o antigo) <span class="ml-auto" style="opacity: 0.6;">← seguro</span>
   </div>
-  <div class="p-2 bg-green-900/30 rounded border border-green-500/30 flex items-center gap-2">
-    <span class="text-green-400 font-mono font-bold">#2</span> Extrai o módulo, remove dispatch antigo <span class="ml-auto opacity-60">← seguro</span>
+  <div class="p-2 rounded flex items-center gap-2" style="background: rgba(110, 231, 161, 0.07); border: 1px solid rgba(110, 231, 161, 0.3);">
+    <span style="color: var(--accent-green); font-family: var(--font-mono); font-weight: 700;">#2</span> Extrai o módulo, remove dispatch antigo <span class="ml-auto" style="opacity: 0.6;">← seguro</span>
   </div>
-  <div class="p-2 bg-green-900/30 rounded border border-green-500/30 flex items-center gap-2">
-    <span class="text-green-400 font-mono font-bold">#3</span> Move código adjacente <span class="ml-auto opacity-60">← seguro</span>
+  <div class="p-2 rounded flex items-center gap-2" style="background: rgba(110, 231, 161, 0.07); border: 1px solid rgba(110, 231, 161, 0.3);">
+    <span style="color: var(--accent-green); font-family: var(--font-mono); font-weight: 700;">#3</span> Move código adjacente <span class="ml-auto" style="opacity: 0.6;">← seguro</span>
   </div>
-  <div class="p-2 bg-green-900/30 rounded border border-green-500/30 flex items-center gap-2">
-    <span class="text-green-400 font-mono font-bold">#4</span> Limpa código morto do módulo original <span class="ml-auto opacity-60">← seguro</span>
+  <div class="p-2 rounded flex items-center gap-2" style="background: rgba(110, 231, 161, 0.07); border: 1px solid rgba(110, 231, 161, 0.3);">
+    <span style="color: var(--accent-green); font-family: var(--font-mono); font-weight: 700;">#4</span> Limpa código morto do módulo original <span class="ml-auto" style="opacity: 0.6;">← seguro</span>
   </div>
 </div>
 
@@ -120,6 +142,12 @@ Pedido chega → ChargePaymentJob × 2 → 💳 COBROU DUAS VEZES 🐛
 "A solução foi sequenciar a extração em 4 steps independentes. Primeiro adiciona o novo caminho sem remover o antigo. O sistema tolera o duplicado graças a um idempotency guard no gateway. Depois remove o caminho antigo. Cada step é deployável e reversível."
 -->
 
+---
+layout: brutalist-base
+metaNumber: "29"
+metaSection: "IMPLEMENTAÇÃO"
+metaSubtitle: "erro 3 — feature flags"
+contentAlign: "top"
 ---
 
 # Erro 3: Feature flags com prefixo errado
@@ -150,21 +178,21 @@ Feature flags do pagamento:
 
 <v-clicks>
 
-<div class="mt-2 p-2 bg-red-900/30 rounded border border-red-500/30">
-Pennant grava o nome da flag <span class="text-red-400 font-bold">no banco</span>
+<div class="mt-2 p-2 rounded" style="background: rgba(255, 45, 32, 0.08); border: 1px solid rgba(255, 45, 32, 0.3);">
+Pennant grava o nome da flag <span style="color: var(--red); font-weight: 700;">no banco</span>
 </div>
 
-<div class="mt-2 p-2 bg-red-900/30 rounded border border-red-500/30">
-Precisa de data migration pra <span class="text-red-400 font-bold">todos os tenants</span>
+<div class="mt-2 p-2 rounded" style="background: rgba(255, 45, 32, 0.08); border: 1px solid rgba(255, 45, 32, 0.3);">
+Precisa de data migration pra <span style="color: var(--red); font-weight: 700;">todos os tenants</span>
 </div>
 
-<div class="mt-2 p-2 bg-red-900/30 rounded border border-red-500/30">
-Risco: flag ligada vira <span class="text-red-400 font-bold">desligada</span> durante deploy
+<div class="mt-2 p-2 rounded" style="background: rgba(255, 45, 32, 0.08); border: 1px solid rgba(255, 45, 32, 0.3);">
+Risco: flag ligada vira <span style="color: var(--red); font-weight: 700;">desligada</span> durante deploy
 </div>
 
-<div class="mt-3 p-3 bg-yellow-900/40 rounded-lg border-2 border-yellow-500/50 font-bold text-center">
+<div class="mt-3 p-3 rounded font-bold text-center" style="background: rgba(255, 165, 58, 0.1); border: 2px solid rgba(255, 165, 58, 0.5);">
 Decisão: manter o prefixo "Shop"<br>
-<span class="text-sm font-normal opacity-70">Inconsistência estética &lt; risco de produção</span>
+<span class="text-sm font-normal" style="opacity: 0.7;">Inconsistência estética &lt; risco de produção</span>
 </div>
 
 </v-clicks>

@@ -1,8 +1,13 @@
 ---
-layout: split-compare
+layout: split-modular
+metaNumber: "23"
+metaSection: "FECHAMENTO"
+metaSubtitle: "antes e depois"
+beforeLabel: "ANTES"
+afterLabel: "DEPOIS"
 ---
 
-# O antes e depois
+# O <span class="g g-a">antes</span> e depois
 
 ::before::
 
@@ -14,7 +19,7 @@ app/
     0 glossários
 ```
 
-<div class="mt-4 p-3 bg-red-900/30 rounded border border-red-500/30 text-sm text-center">
+<div class="commentary commentary--before">
 "O que esse sistema faz?"
 </div>
 
@@ -34,11 +39,34 @@ app-modules/
 
 <v-click>
 
-<div class="mt-4 p-3 bg-green-900/30 rounded border border-green-500/30 text-sm text-center">
+<div class="commentary commentary--after">
 "Cada módulo me diz o que faz."
 </div>
 
 </v-click>
+
+<style scoped>
+.commentary {
+  margin-top: 0.8rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 3px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  text-align: center;
+  letter-spacing: 0.005em;
+}
+.commentary--before {
+  background: rgba(255, 45, 32, 0.08);
+  border: 1px solid rgba(255, 45, 32, 0.28);
+  color: #f0c8c2;
+}
+.commentary--after {
+  background: rgba(110, 231, 161, 0.08);
+  border: 1px solid rgba(110, 231, 161, 0.28);
+  color: #c8e7d3;
+}
+</style>
 
 <!--
 "487 arquivos numa pasta monolítica. Hoje: 312 no core e 847 distribuídos em 10 módulos. Cada módulo tem seu glossário, seus testes, seu namespace. E o mais importante: quando eu abro qualquer módulo, eu sei o que ele faz em 30 segundos."

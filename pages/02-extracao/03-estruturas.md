@@ -1,24 +1,34 @@
 ---
-layout: statement
+layout: statement-modular
+metaNumber: "11"
+metaSection: "EXTRAÇÃO"
+metaSubtitle: "estruturas de pasta"
+eyebrow: "uma pergunta antes do código"
 ---
 
-# Tá, mas como organizamos nossa estrutura de arquivos?
+# Tá, mas como organizamos<br>nossa estrutura de arquivos<span class="text-red-400">?</span>
 
 <v-click>
 
-<div class="mt-6 text-xl opacity-70">
-Bom... do jeito que você ficar confortável.
-</div>
+<p>Bom… do jeito que você ficar confortável.</p>
 
 </v-click>
 
 <v-click>
 
-<div class="mt-4 text-base opacity-50">
-Deixa eu te mostrar 4 formas de organizar o <b>mesmo módulo</b>.
-</div>
+<p class="dim">Deixa eu te mostrar 4 formas de organizar o <b>mesmo módulo</b>.</p>
 
 </v-click>
+
+<style>
+.statement-content :deep(p.dim) {
+  font-size: 1.15rem;
+  opacity: 0.6;
+}
+.statement-content :deep(h1 .text-red-400) {
+  color: var(--red);
+}
+</style>
 
 <!--
 "O teste falhou. Beleza. Mas antes de sair movendo arquivos, tem uma pergunta que sempre aparece: como eu organizo as pastas dentro do módulo?"
@@ -29,13 +39,20 @@ Deixa eu te mostrar 4 formas de organizar o <b>mesmo módulo</b>.
 -->
 
 ---
+layout: brutalist-base
+metaNumber: "11.1"
+metaSection: "EXTRAÇÃO"
+metaSubtitle: "estrutura 1/4"
+metaRight: "flat file"
+contentAlign: "top"
+---
 
 # <span class="text-blue-400">Flat File</span>
 
-<div class="grid grid-cols-[45%_1fr] gap-8 mt-4">
-<div>
+<div class="struct-grid">
+<div class="struct-left">
 
-<div class="font-mono text-[10px] opacity-50 mb-1">namespace App\Modules\Cart</div>
+<div class="ns-tag">namespace App\Modules\Cart</div>
 
 ```text {*}{class:'!text-xs'}
 app/Modules/Cart/
@@ -46,37 +63,33 @@ app/Modules/Cart/
 └── ClearExpiredCartsJob.php
 ```
 
-<div class="mt-3 text-center text-sm opacity-40">5 arquivos · 0 subpastas</div>
+<div class="struct-count">5 arquivos · 0 subpastas</div>
 
 </div>
-<div>
+<div class="struct-right">
 
-<div class="space-y-4">
-
-<div class="p-3 bg-blue-900/20 rounded border border-blue-500/20">
-<div class="text-blue-400 font-bold text-xs uppercase tracking-wider mb-1">O que é</div>
-<div class="text-sm opacity-80">Todos os arquivos na raiz do módulo. Sem pastas, sem cerimônia.</div>
+<div class="struct-card struct-card--blue">
+<div class="struct-card-tag">o que é</div>
+<div class="struct-card-body">Todos os arquivos na raiz do módulo. Sem pastas, sem cerimônia.</div>
 </div>
 
 <v-click>
 
-<div class="p-3 bg-gray-800/40 rounded border border-gray-600/20">
-<div class="text-gray-400 font-bold text-xs uppercase tracking-wider mb-1">Quando usar</div>
-<div class="text-sm opacity-80">Módulo com <b class="text-blue-300">&lt; 15 arquivos</b>. Time pequeno. Início de extração.</div>
+<div class="struct-card">
+<div class="struct-card-tag">quando usar</div>
+<div class="struct-card-body">Módulo com <b class="text-blue-300">&lt; 15 arquivos</b>. Time pequeno. Início de extração.</div>
 </div>
 
 </v-click>
 
 <v-click>
 
-<div class="p-3 bg-gray-800/40 rounded border border-gray-600/20">
-<div class="text-gray-400 font-bold text-xs uppercase tracking-wider mb-1">Referências</div>
-<div class="text-sm opacity-80">Go stdlib, pacotes Spatie simples (spatie/laravel-permission), micro-packages npm.</div>
+<div class="struct-card">
+<div class="struct-card-tag">referências</div>
+<div class="struct-card-body">Go stdlib, pacotes Spatie simples (spatie/laravel-permission), micro-packages npm.</div>
 </div>
 
 </v-click>
-
-</div>
 
 </div>
 </div>
@@ -90,13 +103,20 @@ app/Modules/Cart/
 -->
 
 ---
+layout: brutalist-base
+metaNumber: "11.2"
+metaSection: "EXTRAÇÃO"
+metaSubtitle: "estrutura 2/4"
+metaRight: "laravel padrão"
+contentAlign: "top"
+---
 
 # <span class="text-green-400">Laravel Padrão</span>
 
-<div class="grid grid-cols-[45%_1fr] gap-8 mt-4">
-<div>
+<div class="struct-grid">
+<div class="struct-left">
 
-<div class="font-mono text-[10px] opacity-50 mb-1">namespace App\Modules\Cart</div>
+<div class="ns-tag">namespace App\Modules\Cart</div>
 
 ```text {*}{class:'!text-xs'}
 app/Modules/Cart/
@@ -111,37 +131,33 @@ app/Modules/Cart/
     └── PriceCalculator.php
 ```
 
-<div class="mt-3 text-center text-sm opacity-40">5 arquivos · 4 subpastas</div>
+<div class="struct-count">5 arquivos · 4 subpastas</div>
 
 </div>
-<div>
+<div class="struct-right">
 
-<div class="space-y-4">
-
-<div class="p-3 bg-green-900/20 rounded border border-green-500/20">
-<div class="text-green-400 font-bold text-xs uppercase tracking-wider mb-1">O que é</div>
-<div class="text-sm opacity-80">A mesma estrutura que <code>artisan make:*</code> gera. Models/, Jobs/, Services/.</div>
+<div class="struct-card struct-card--green">
+<div class="struct-card-tag">o que é</div>
+<div class="struct-card-body">A mesma estrutura que <code>artisan make:*</code> gera. Models/, Jobs/, Services/.</div>
 </div>
 
 <v-click>
 
-<div class="p-3 bg-gray-800/40 rounded border border-gray-600/20">
-<div class="text-gray-400 font-bold text-xs uppercase tracking-wider mb-1">Quando usar</div>
-<div class="text-sm opacity-80">Time que <b class="text-green-300">já conhece Laravel</b>. Onboarding precisa ser rápido. <code>artisan make:*</code> funciona sem config.</div>
+<div class="struct-card">
+<div class="struct-card-tag">quando usar</div>
+<div class="struct-card-body">Time que <b class="text-green-300">já conhece Laravel</b>. Onboarding precisa ser rápido. <code>artisan make:*</code> funciona sem config.</div>
 </div>
 
 </v-click>
 
 <v-click>
 
-<div class="p-3 bg-gray-800/40 rounded border border-gray-600/20">
-<div class="text-gray-400 font-bold text-xs uppercase tracking-wider mb-1">Referências</div>
-<div class="text-sm opacity-80">Laravel default, Laracasts, Laravel Beyond CRUD (Spatie). A maioria dos projetos Laravel do mundo.</div>
+<div class="struct-card">
+<div class="struct-card-tag">referências</div>
+<div class="struct-card-body">Laravel default, Laracasts, Laravel Beyond CRUD (Spatie). A maioria dos projetos Laravel do mundo.</div>
 </div>
 
 </v-click>
-
-</div>
 
 </div>
 </div>
@@ -155,13 +171,20 @@ app/Modules/Cart/
 -->
 
 ---
+layout: brutalist-base
+metaNumber: "11.3"
+metaSection: "EXTRAÇÃO"
+metaSubtitle: "estrutura 3/4"
+metaRight: "clean architecture"
+contentAlign: "top"
+---
 
 # <span class="text-purple-400">Clean Architecture</span>
 
-<div class="grid grid-cols-[45%_1fr] gap-8 mt-4">
-<div>
+<div class="struct-grid">
+<div class="struct-left">
 
-<div class="font-mono text-[10px] opacity-50 mb-1">namespace App\Modules\Cart</div>
+<div class="ns-tag">namespace App\Modules\Cart</div>
 
 ```text {*}{class:'!text-xs'}
 app/Modules/Cart/
@@ -175,37 +198,33 @@ app/Modules/Cart/
     └── ClearExpiredCartsJob.php
 ```
 
-<div class="mt-3 text-center text-sm opacity-40">5 arquivos · 3 camadas</div>
+<div class="struct-count">5 arquivos · 3 camadas</div>
 
 </div>
-<div>
+<div class="struct-right">
 
-<div class="space-y-4">
-
-<div class="p-3 bg-purple-900/20 rounded border border-purple-500/20">
-<div class="text-purple-400 font-bold text-xs uppercase tracking-wider mb-1">O que é</div>
-<div class="text-sm opacity-80">Separa <b>regras de negócio</b> (Domain) do <b>framework</b> (Infrastructure). Application orquestra.</div>
+<div class="struct-card struct-card--purple">
+<div class="struct-card-tag">o que é</div>
+<div class="struct-card-body">Separa <b>regras de negócio</b> (Domain) do <b>framework</b> (Infrastructure). Application orquestra.</div>
 </div>
 
 <v-click>
 
-<div class="p-3 bg-gray-800/40 rounded border border-gray-600/20">
-<div class="text-gray-400 font-bold text-xs uppercase tracking-wider mb-1">Quando usar</div>
-<div class="text-sm opacity-80">Regras de negócio <b class="text-purple-300">complexas</b> que precisam sobreviver a troca de framework ou de dependência externa.</div>
+<div class="struct-card">
+<div class="struct-card-tag">quando usar</div>
+<div class="struct-card-body">Regras de negócio <b class="text-purple-300">complexas</b> que precisam sobreviver a troca de framework ou de dependência externa.</div>
 </div>
 
 </v-click>
 
 <v-click>
 
-<div class="p-3 bg-gray-800/40 rounded border border-gray-600/20">
-<div class="text-gray-400 font-bold text-xs uppercase tracking-wider mb-1">Referências</div>
-<div class="text-sm opacity-80">Clean Architecture (Uncle Bob), Hexagonal/Ports&Adapters, Lucid Architecture (Laravel).</div>
+<div class="struct-card">
+<div class="struct-card-tag">referências</div>
+<div class="struct-card-body">Clean Architecture (Uncle Bob), Hexagonal/Ports&Adapters, Lucid Architecture (Laravel).</div>
 </div>
 
 </v-click>
-
-</div>
 
 </div>
 </div>
@@ -219,13 +238,20 @@ app/Modules/Cart/
 -->
 
 ---
+layout: brutalist-base
+metaNumber: "11.4"
+metaSection: "EXTRAÇÃO"
+metaSubtitle: "estrutura 4/4"
+metaRight: "ddd-like"
+contentAlign: "top"
+---
 
 # <span class="text-orange-400">DDD-like</span>
 
-<div class="grid grid-cols-[45%_1fr] gap-8 mt-4">
-<div>
+<div class="struct-grid">
+<div class="struct-left">
 
-<div class="font-mono text-[10px] opacity-50 mb-1">namespace App\Modules\Cart</div>
+<div class="ns-tag">namespace App\Modules\Cart</div>
 
 ```text {*}{class:'!text-xs'}
 app/Modules/Cart/
@@ -244,40 +270,107 @@ app/Modules/Cart/
     └── EloquentCartRepository.php
 ```
 
-<div class="mt-3 text-center text-sm opacity-40">6 arquivos · 7 subpastas</div>
+<div class="struct-count">6 arquivos · 7 subpastas</div>
 
 </div>
-<div>
+<div class="struct-right">
 
-<div class="space-y-4">
-
-<div class="p-3 bg-orange-900/20 rounded border border-orange-500/20">
-<div class="text-orange-400 font-bold text-xs uppercase tracking-wider mb-1">O que é</div>
-<div class="text-sm opacity-80">Clean Architecture + padrões táticos: Actions, Aggregates, separação rígida por responsabilidade.</div>
+<div class="struct-card struct-card--orange">
+<div class="struct-card-tag">o que é</div>
+<div class="struct-card-body">Clean Architecture + padrões táticos: Actions, Aggregates, separação rígida por responsabilidade.</div>
 </div>
 
 <v-click>
 
-<div class="p-3 bg-gray-800/40 rounded border border-gray-600/20">
-<div class="text-gray-400 font-bold text-xs uppercase tracking-wider mb-1">Quando usar</div>
-<div class="text-sm opacity-80">Módulo <b class="text-orange-300">grande e complexo</b>. Time com experiência. Quando a separação por camada não é suficiente.</div>
+<div class="struct-card">
+<div class="struct-card-tag">quando usar</div>
+<div class="struct-card-body">Módulo <b class="text-orange-300">grande e complexo</b>. Time com experiência. Quando a separação por camada não é suficiente.</div>
 </div>
 
 </v-click>
 
 <v-click>
 
-<div class="p-3 bg-gray-800/40 rounded border border-gray-600/20">
-<div class="text-gray-400 font-bold text-xs uppercase tracking-wider mb-1">Referências</div>
-<div class="text-sm opacity-80">Domain-Driven Design (Eric Evans), Implementing DDD (Vaughn Vernon), Laravel Beyond CRUD (Spatie).</div>
+<div class="struct-card">
+<div class="struct-card-tag">referências</div>
+<div class="struct-card-body">Domain-Driven Design (Eric Evans), Implementing DDD (Vaughn Vernon), Laravel Beyond CRUD (Spatie).</div>
 </div>
 
 </v-click>
 
 </div>
+</div>
 
-</div>
-</div>
+<style>
+/* shared layout for the 4 structure slides */
+.struct-grid {
+  display: grid;
+  grid-template-columns: 44% 1fr;
+  gap: 2rem;
+  margin-top: 0.7rem;
+  min-height: 0;
+}
+.struct-left { display: flex; flex-direction: column; min-width: 0; }
+.struct-right { display: flex; flex-direction: column; gap: 0.65rem; min-width: 0; }
+.ns-tag {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 0.35rem;
+}
+.struct-count {
+  margin-top: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--dim);
+  text-align: center;
+}
+.struct-card {
+  padding: 0.6rem 0.8rem 0.65rem;
+  border-radius: 3px;
+  border-left: 3px solid var(--struct-accent, rgba(255,255,255,0.15));
+  background: linear-gradient(180deg, rgba(20,20,24,0.55), rgba(10,10,12,0.75));
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-right: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.struct-card--blue   { --struct-accent: var(--accent-blue); }
+.struct-card--green  { --struct-accent: var(--accent-green); }
+.struct-card--purple { --struct-accent: var(--accent-purple); }
+.struct-card--orange { --struct-accent: var(--accent-orange); }
+.struct-card-tag {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--struct-accent, var(--dim));
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+.struct-card-body {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: #c8c2b6;
+}
+.struct-card-body b { color: var(--bone); }
+.struct-card-body code {
+  font-family: var(--font-mono);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 0.04em 0.3em;
+  border-radius: 2px;
+  font-size: 0.9em;
+}
+.brutalist-content h1 .text-blue-400   { color: var(--accent-blue); }
+.brutalist-content h1 .text-green-400  { color: var(--accent-green); }
+.brutalist-content h1 .text-purple-400 { color: var(--accent-purple); }
+.brutalist-content h1 .text-orange-400 { color: var(--accent-orange); }
+</style>
 
 <!--
 "DDD-like. Parecido com Clean, mas vai mais fundo: Domain tem subpastas próprias separando Models de Services. Application separa Actions de Jobs. Cada coisa no seu lugar."
@@ -288,20 +381,23 @@ app/Modules/Cart/
 -->
 
 ---
-layout: impact
+layout: impact-modular
+metaNumber: "11.5"
+metaSection: "EXTRAÇÃO"
+metaSubtitle: "a virada conceitual"
 color: green
 ---
 
-# 4 estruturas
+# 4 estruturas<span class="impact-glyph">.</span>
 
 O mesmo módulo. Os mesmos arquivos. A mesma responsabilidade.
 
 <v-click>
 
-<div class="mt-8 p-6 bg-yellow-900/40 rounded-lg border-2 border-yellow-500/50">
-<div class="text-2xl font-bold text-yellow-400">
+<div class="impact-box">
+<div class="impact-headline">
 Não existe padrão certo.<br>
-Existe o que encaixa pro seu time.
+Existe o que <span class="g g-b">encaixa</span> pro seu time.
 </div>
 </div>
 
@@ -309,11 +405,51 @@ Existe o que encaixa pro seu time.
 
 <v-click>
 
-<div class="mt-6 text-lg opacity-70">
-O que importa é o <span class="text-green-400 font-bold">boundary</span>, não a <span class="text-gray-400">pasta</span>.
+<div class="impact-foot">
+O que importa é o <b class="impact-foot-strong">boundary</b>, não a <span class="impact-foot-dim">pasta</span>.
 </div>
 
 </v-click>
+
+<style>
+.impact-content :deep(h1) {
+  font-size: 6rem;
+}
+.impact-content :deep(.impact-glyph) {
+  color: var(--accent-green);
+}
+.impact-content :deep(.impact-box) {
+  margin-top: 1.6rem;
+  padding: 1.1rem 1.3rem;
+  border: 1px solid rgba(110, 231, 161, 0.4);
+  border-left: 4px solid var(--accent-green);
+  background: linear-gradient(180deg, rgba(110,231,161,0.08), rgba(10,10,12,0.5));
+  text-align: left;
+}
+.impact-content :deep(.impact-headline) {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: var(--bone);
+  letter-spacing: -0.005em;
+}
+.impact-content :deep(.impact-foot) {
+  margin-top: 1.1rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: #b9b3a9;
+}
+.impact-content :deep(.impact-foot-strong) {
+  color: var(--accent-green);
+  font-style: normal;
+  font-family: var(--font-mono);
+}
+.impact-content :deep(.impact-foot-dim) {
+  color: var(--dim);
+}
+</style>
 
 <!--
 "4 estruturas completamente diferentes. Mas olha: o boundary é o MESMO. A responsabilidade é a MESMA. A estrutura de pastas é cosmética — ela não muda o que o módulo FAZ."

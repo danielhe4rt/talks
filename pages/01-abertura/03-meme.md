@@ -1,6 +1,10 @@
 ---
-layout: impact
+layout: impact-modular
 color: yellow
+metaNumber: "07"
+metaSection: "ABERTURA"
+metaSubtitle: "index.php"
+metaRight: "14.000 linhas"
 ---
 
 # index.php

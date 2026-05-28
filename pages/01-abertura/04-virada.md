@@ -1,5 +1,10 @@
 ---
-layout: statement
+layout: statement-modular
+metaNumber: "08"
+metaSection: "ABERTURA"
+metaSubtitle: "a virada"
+eyebrow: "e agora?"
+accent: "?"
 ---
 
 # E aí? O que faz?
@@ -32,7 +37,7 @@ Eu não desisti. Eu fui entender o que tava errado.
 
 <div class="mt-4 text-lg opacity-70">
 E o que tava errado não era o código —<br>
-era como eu <span class="text-yellow-400 font-bold">PENSAVA</span> sobre o código.
+era como eu <span class="g g-a text-yellow-400 font-bold">PENSAVA</span> sobre o código.
 </div>
 
 </v-click>

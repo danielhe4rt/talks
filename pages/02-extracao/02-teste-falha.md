@@ -1,9 +1,13 @@
 ---
-layout: deletion-test
+layout: deletion-test-modular
 transition: none
+metaNumber: "10"
+metaSection: "EXTRAÇÃO"
+metaSubtitle: "teste da deleção"
+metaRight: "Q1 · legadão"
 ---
 
-# O Teste da Deleção™ <span class="text-sm font-normal opacity-40">— rodando no legadão</span>
+# O Teste da Deleção™ <span>— rodando no <span class="g g-a">legadão</span></span>
 
 ::questions::
 

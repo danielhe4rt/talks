@@ -1,6 +1,22 @@
 ---
+layout: brutalist-base
+metaNumber: "18"
+metaSection: "EXTRAÇÃO"
+metaSubtitle: "o resultado"
+metaRight: "1 → 3 módulos"
+contentAlign: "top"
+---
 
-# O resultado: 3 módulos onde tinha 1
+<TitleBlock
+  eyebrow="depois da extração"
+  outlined="3 MÓDULOS"
+  solid="ONDE TINHA 1"
+  accent="."
+  tail="dependência unidirecional"
+  size="small"
+/>
+
+<div class="result-mermaid">
 
 ```mermaid {scale: 0.85}
 flowchart TD
@@ -27,15 +43,51 @@ flowchart TD
     style FULL fill:#553c9a,stroke:#805ad5,color:#fff
 ```
 
+</div>
+
 <v-click>
 
-<div class="mt-2 flex justify-center gap-6 text-sm">
-  <span class="text-green-400">✓ Unidirecional</span>
-  <span class="text-green-400">✓ Cada módulo tem responsabilidade clara</span>
-  <span class="text-green-400">✓ Boundaries definidos pelo Teste da Deleção</span>
+<div class="result-checks">
+  <span class="result-check"><span class="result-check-mark">✓</span>Unidirecional</span>
+  <span class="result-check"><span class="result-check-mark">✓</span>Cada módulo tem responsabilidade clara</span>
+  <span class="result-check"><span class="result-check-mark">✓</span>Boundaries definidos pelo Teste da Deleção</span>
 </div>
 
 </v-click>
+
+<style>
+.result-mermaid {
+  margin-top: 0.5rem;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.result-mermaid :deep(.slidev-mermaid),
+.result-mermaid :deep(svg) {
+  max-height: 100%;
+}
+.result-checks {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+  margin-top: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: #c8c2b6;
+  letter-spacing: 0.02em;
+}
+.result-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.result-check-mark {
+  color: var(--accent-green);
+  font-weight: 700;
+}
+</style>
 
 <!--
 "Saí de 1 módulo com 100+ arquivos pra 3 módulos com responsabilidade clara. E a chave é: a dependência é UNIDIRECIONAL. Payment depende de sales pra ler o pedido, mas sales NUNCA importa payment. Cada módulo sabe fazer a parte dele e só."
