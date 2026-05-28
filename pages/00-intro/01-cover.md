@@ -1,18 +1,15 @@
 ---
-layout: cover
-class: text-center
+layout: cover-modular
 ---
 
-# Como eu descobri que meu <br> `app/Services/` era uma mentira
-
-<div class="text-xl mt-4 opacity-60">
-Daniel He4rt
-</div>
-
-<div class="abs-bl m-6 text-sm opacity-40">
-~40 min | Laravel Modularization
-</div>
-
 <!--
-Entra com energia. Deixa o título na tela 3 segundos sem falar. Depois: "Boa tarde pessoal!"
+[Deixa o cover na tela 3-4 segundos sem falar. Olha pra plateia. Deixa o título respirar.]
+
+"Boa tarde pessoal. Esse é o talk de hoje: **Laravel Modular** — do `app/Services/` ao Teste da Deleção."
+
+[pausa]
+
+"Em 40 minutos eu vou contar uma história real. Um projeto com 487 arquivos espalhados em 19 pastas. Um `app/Services/` que parecia organizado mas era uma mentira. E como sair disso sem reescrever nada — só reorganizando o que já existia."
+
+[transição] "Mas antes, rapidinho — quem que tá falando aqui na frente?"
 -->
