@@ -25,6 +25,7 @@ defineProps<{
   metaSection?: string
   metaSubtitle?: string
   metaRight?: string
+  metaPhase?: 'red' | 'refactor' | 'green' | 'diagnostico'
 }>()
 </script>
 
@@ -38,6 +39,7 @@ defineProps<{
       :section="metaSection"
       :subtitle="metaSubtitle"
       :right="metaRight"
+      :phase="metaPhase"
     />
 
     <div class="dt-title">

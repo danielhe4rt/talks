@@ -24,6 +24,7 @@ defineProps<{
   metaSection?: string
   metaSubtitle?: string
   metaRight?: string
+  metaPhase?: 'red' | 'refactor' | 'green' | 'diagnostico'
   eyebrow?: string
   accent?: string
   vignettePos?: 'tr' | 'br' | 'tl' | 'bl'
@@ -40,6 +41,7 @@ defineProps<{
       :section="metaSection"
       :subtitle="metaSubtitle"
       :right="metaRight"
+      :phase="metaPhase"
     />
 
     <div class="statement-body">

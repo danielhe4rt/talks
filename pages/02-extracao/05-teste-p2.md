@@ -4,7 +4,8 @@ transition: none
 metaNumber: "13"
 metaSection: "EXTRAÇÃO"
 metaSubtitle: "teste da deleção"
-metaRight: "Q2 · coupling"
+metaPhase: red
+metaRight: "Q2 · MODULAR"
 ---
 
 # O Teste da Deleção™ <span>— Pergunta 2 · <span class="g g-c">coupling</span></span>
@@ -21,13 +22,13 @@ metaRight: "Q2 · coupling"
 </div>
 
 <!-- Pergunta 2: foco -->
-<div v-click="1" class="p-2.5 bg-orange-900/15 rounded border border-orange-500/20">
+<div v-click="1" class="p-2.5 bg-red-900/15 rounded border border-red-500/25">
   <div class="flex items-center justify-between">
-    <span class="text-orange-400 font-bold text-[10px] uppercase tracking-wider">Pergunta 2</span>
-    <span v-click="3" class="text-yellow-400 font-bold text-sm">⚠</span>
+    <span class="text-red-400 font-bold text-[10px] uppercase tracking-wider">Pergunta 2</span>
+    <span v-click="3" class="text-red-400 font-bold text-sm">✘</span>
   </div>
-  <div class="text-sm mt-1">Quanto do sistema <b class="text-orange-300">quebra</b>?</div>
-  <div v-click="3" class="text-[10px] text-yellow-300/70 mt-1">Ainda quebra, mas agora você SABE onde.</div>
+  <div class="text-sm mt-1">Quanto do sistema <b class="text-red-300">quebra</b>?</div>
+  <div v-click="3" class="text-[10px] text-red-300/70 mt-1">Checkout quebra direto via import.</div>
 </div>
 
 <!-- Pergunta 3: pendente -->
@@ -40,10 +41,10 @@ metaRight: "Q2 · coupling"
 </div>
 
 <!-- Progresso -->
-<div v-click="3" class="mt-2 p-2.5 bg-yellow-900/20 rounded-lg border-2 border-yellow-500/30 text-center">
+<div v-click="3" class="mt-2 p-2.5 bg-red-900/25 rounded-lg border-2 border-red-500/40 text-center">
   <div class="flex justify-center gap-3 text-lg">
     <span class="text-green-400">✓</span>
-    <span class="text-yellow-400">⚠</span>
+    <span class="text-red-400">✘</span>
     <span class="text-gray-500">?</span>
   </div>
 </div>
@@ -109,10 +110,10 @@ metaRight: "Q2 · coupling"
 </div>
 
 <!-- ============================== -->
-<!-- VISUAL 3: Conclusão diagnóstico -->
+<!-- VISUAL 3: Conclusão — NÃO PASSA -->
 <!-- ============================== -->
 <div v-click="3" class="absolute inset-0 flex flex-col items-center justify-center overflow-hidden">
-  <div class="text-5xl font-black text-yellow-400/70 tracking-wider">DIAGNÓSTICO</div>
+  <div class="text-6xl font-black text-red-500/70 tracking-wider">NÃO PASSA</div>
   <div class="mt-5 space-y-2 text-sm">
     <div class="flex items-center gap-3">
       <span class="text-green-400 text-lg">✓</span>
@@ -120,17 +121,17 @@ metaRight: "Q2 · coupling"
     </div>
     <div class="flex items-center gap-3">
       <span class="text-red-400 text-lg">✘</span>
-      <span class="opacity-70">1 módulo quebra (Checkout → Payment)</span>
+      <span class="opacity-70">Checkout quebra (import direto de Payment)</span>
     </div>
   </div>
-  <div class="mt-5 p-3 bg-yellow-900/20 rounded border border-yellow-500/25 text-center text-sm max-w-md">
-    Mas agora o problema tem <b class="text-yellow-300">nome</b> e <b class="text-yellow-300">endereço</b>.
+  <div class="mt-5 p-3 bg-red-900/25 rounded border border-red-500/30 text-center text-sm max-w-md">
+    Q1 passou (acho onde está). <b class="text-red-300">Q2 ainda falha</b> — o import é um fio que liga Checkout a Payment.
   </div>
 </div>
 
 <!--
 [sem click — slide aparece com Pergunta 1 já ✓]
-"Pergunta 1 passou. Agora a segunda: se eu deletar Payment/, quanto do sistema quebra?"
+"Pergunta 1 passou — acho onde está. Agora a segunda: se eu deletar Payment/, quanto do sistema quebra?"
 
 [click 1 — Pergunta 2 + módulos com Payment deletado]
 "Deletei app/Modules/Payment/ inteiro. 5 módulos, tirei 1. O que acontece com os outros 4?"
@@ -138,6 +139,6 @@ metaRight: "Q2 · coupling"
 [click 2 — resultados por módulo + import que quebra]
 "Cart? Funciona. Catalog? Funciona. Shipping? Funciona. Checkout? QUEBRA. Por quê? Porque PlaceOrder.php faz um use direto: App\Modules\Payment\ProcessPayment. Esse import é um fio que liga Checkout a Payment. Cortou Payment, Checkout cai junto."
 
-[click 3 — ⚠️ + diagnóstico + conclusão]
-"Antes, quando o código tava espalhado, 3 classes quebravam e eu nem sabia por quê. Agora: 1 módulo quebra e eu sei EXATAMENTE qual import causa isso. O problema tem nome e endereço. Ainda não resolvi, mas agora eu consigo enxergar."
+[click 3 — ✘ + NÃO PASSA + conclusão]
+"Q2 ainda falha. Sem desculpa: deletei Payment, Checkout quebra direto via import. Sim, agora eu sei EXATAMENTE qual import é o problema — mas saber o nome do problema não passa o teste. Ainda preciso resolver."
 -->

@@ -4,7 +4,8 @@ transition: none
 metaNumber: "16"
 metaSection: "EXTRAÇÃO"
 metaSubtitle: "teste da deleção"
-metaRight: "Q2 · events"
+metaPhase: green
+metaRight: "Q2 · EVENTOS"
 ---
 
 # O Teste da Deleção™ <span>— Pergunta 2 (de novo)</span>
@@ -45,6 +46,7 @@ metaRight: "Q2 · events"
     <span class="text-green-400">✓</span>
     <span class="text-green-400">✓</span>
     <span class="text-gray-500">?</span>
+    <span class="text-gray-500">?</span>
   </div>
 </div>
 
@@ -84,13 +86,14 @@ metaRight: "Q2 · events"
 <!-- VISUAL 2: Resultado ✓          -->
 <!-- ============================== -->
 <div v-click="2" class="absolute inset-0 flex flex-col items-center justify-center overflow-hidden">
-  <div class="text-5xl font-black text-green-500/70 tracking-wider">PASSOU</div>
+  <div class="text-5xl font-black text-green-500/70 tracking-wider">2 de 4</div>
   <div class="mt-4 flex gap-4">
     <span class="text-green-400 text-2xl">✓</span>
     <span class="text-green-400 text-2xl">✓</span>
     <span class="text-gray-500 text-2xl">?</span>
+    <span class="text-gray-500 text-2xl">?</span>
   </div>
-  <div class="mt-4 text-sm opacity-50">Falta uma pergunta.</div>
+  <div class="mt-4 text-sm opacity-50">Faltam duas perguntas.</div>
 </div>
 
 <!--

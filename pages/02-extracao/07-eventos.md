@@ -3,6 +3,8 @@ layout: split-modular
 metaNumber: "15"
 metaSection: "EXTRAÇÃO"
 metaSubtitle: "events vs imports"
+metaPhase: refactor
+metaRight: "Q2 · BEFORE/AFTER"
 beforeLabel: ACOPLADO
 afterLabel: DESACOPLADO
 ---
@@ -67,7 +69,8 @@ layout: brutalist-base
 metaNumber: "15.1"
 metaSection: "EXTRAÇÃO"
 metaSubtitle: "events vs imports"
-metaRight: "quem escuta?"
+metaPhase: refactor
+metaRight: "Q2 · QUEM ESCUTA?"
 contentAlign: "top"
 ---
 

@@ -73,37 +73,34 @@ src: ./pages/02-extracao/08-teste-p2-passa.md
 ---
 
 ---
-src: ./pages/02-extracao/09-caso-shop.md
+src: ./pages/02-extracao/09-teste-p3.md
 ---
 
 ---
-src: ./pages/02-extracao/10-resultado.md
+src: ./pages/02-extracao/10-gateway.md
 ---
 
 ---
-src: ./pages/03-implementacao/01-modular.md
+src: ./pages/02-extracao/11-teste-p3-passa.md
 ---
 
 ---
-src: ./pages/03-implementacao/02-before-after.md
+src: ./pages/02-extracao/12-teste-p4.md
 ---
 
 ---
-src: ./pages/03-implementacao/03-erros.md
+src: ./pages/02-extracao/13-internachi-providers.md
 ---
 
 ---
-src: ./pages/03-implementacao/04-padroes.md
+src: ./pages/02-extracao/14-internachi-reflection.md
 ---
 
 ---
-src: ./pages/04-fechamento/01-antes-depois.md
+src: ./pages/02-extracao/15-internachi-estrutura.md
 ---
 
 ---
-src: ./pages/04-fechamento/02-regras.md
+src: ./pages/02-extracao/16-teste-p4-passa.md
 ---
 
----
-src: ./pages/04-fechamento/03-cta.md
----

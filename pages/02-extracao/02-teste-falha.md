@@ -4,7 +4,8 @@ transition: none
 metaNumber: "10"
 metaSection: "EXTRAÇÃO"
 metaSubtitle: "teste da deleção"
-metaRight: "Q1 · legadão"
+metaPhase: diagnostico
+metaRight: "Q1+Q2+Q3 · LEGADÃO"
 ---
 
 # O Teste da Deleção™ <span>— rodando no <span class="g g-a">legadão</span></span>
@@ -39,6 +40,16 @@ metaRight: "Q1 · legadão"
   </div>
   <div class="text-sm mt-1">Algum arquivo <b class="text-red-300">usado</b> por outra feature?</div>
   <div v-click="4" class="text-[10px] text-red-300/70 mt-1">Actions chamadas por 5 classes</div>
+</div>
+
+<!-- Pergunta 4: framework — fora do v-click, sempre dimmed -->
+<div class="p-2.5 bg-purple-900/10 rounded border border-purple-500/15" style="opacity: 0.4;">
+  <div class="flex items-center justify-between">
+    <span class="text-purple-300 font-bold text-[10px] uppercase tracking-wider">Pergunta 4</span>
+    <span class="text-gray-400 font-bold text-sm">—</span>
+  </div>
+  <div class="text-sm mt-1">Apagar o módulo apaga <b class="text-purple-200">TUDO</b>?</div>
+  <div class="text-[9px] text-purple-300/70 mt-1 tracking-wider uppercase">requer módulos · revisita em P4</div>
 </div>
 
 <!-- Resultado final -->

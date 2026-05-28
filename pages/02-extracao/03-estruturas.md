@@ -3,6 +3,8 @@ layout: statement-modular
 metaNumber: "11"
 metaSection: "EXTRAÇÃO"
 metaSubtitle: "estruturas de pasta"
+metaPhase: refactor
+metaRight: "Q1 · ESTRUTURAS"
 eyebrow: "uma pergunta antes do código"
 ---
 
@@ -43,7 +45,8 @@ layout: brutalist-base
 metaNumber: "11.1"
 metaSection: "EXTRAÇÃO"
 metaSubtitle: "estrutura 1/4"
-metaRight: "flat file"
+metaPhase: refactor
+metaRight: "Q1 · FLAT FILE"
 contentAlign: "top"
 ---
 
@@ -107,7 +110,8 @@ layout: brutalist-base
 metaNumber: "11.2"
 metaSection: "EXTRAÇÃO"
 metaSubtitle: "estrutura 2/4"
-metaRight: "laravel padrão"
+metaPhase: refactor
+metaRight: "Q1 · LARAVEL PADRÃO"
 contentAlign: "top"
 ---
 
@@ -175,7 +179,8 @@ layout: brutalist-base
 metaNumber: "11.3"
 metaSection: "EXTRAÇÃO"
 metaSubtitle: "estrutura 3/4"
-metaRight: "clean architecture"
+metaPhase: refactor
+metaRight: "Q1 · CLEAN ARCH"
 contentAlign: "top"
 ---
 
@@ -242,7 +247,8 @@ layout: brutalist-base
 metaNumber: "11.4"
 metaSection: "EXTRAÇÃO"
 metaSubtitle: "estrutura 4/4"
-metaRight: "ddd-like"
+metaPhase: refactor
+metaRight: "Q1 · DDD-LIKE"
 contentAlign: "top"
 ---
 
@@ -315,6 +321,8 @@ layout: impact-modular
 metaNumber: "11.5"
 metaSection: "EXTRAÇÃO"
 metaSubtitle: "a virada conceitual"
+metaPhase: refactor
+metaRight: "Q1 · VIRADA"
 color: green
 ---
 

@@ -24,6 +24,7 @@ defineProps<{
   metaSection?: string
   metaSubtitle?: string
   metaRight?: string
+  metaPhase?: 'red' | 'refactor' | 'green' | 'diagnostico'
   vignettePos?: 'tr' | 'br' | 'tl' | 'bl'
   next?: string
   contentAlign?: 'top' | 'center' | 'between'
@@ -40,6 +41,7 @@ defineProps<{
       :section="metaSection"
       :subtitle="metaSubtitle"
       :right="metaRight"
+      :phase="metaPhase"
     />
 
     <div class="brutalist-content" :data-align="contentAlign || 'center'">

@@ -19,6 +19,7 @@ defineProps<{
   metaSection?: string
   metaSubtitle?: string
   metaRight?: string
+  metaPhase?: 'red' | 'refactor' | 'green' | 'diagnostico'
   color?: 'red' | 'yellow' | 'green' | 'blue' | 'purple'
   vignettePos?: 'tr' | 'br' | 'tl' | 'bl'
 }>()
@@ -34,6 +35,7 @@ defineProps<{
       :section="metaSection"
       :subtitle="metaSubtitle"
       :right="metaRight"
+      :phase="metaPhase"
     />
 
     <div class="impact-body">

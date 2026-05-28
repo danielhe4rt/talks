@@ -3,53 +3,71 @@ layout: brutalist-base
 metaNumber: "14"
 metaSection: "EXTRAÇÃO"
 metaSubtitle: "comunicação entre módulos"
-metaRight: "interativo"
+metaPhase: refactor
+metaRight: "Q2 · EVENTOS"
 contentAlign: "top"
 transition: fade
 ---
 
-<TitleBlock
-  eyebrow="conceito antes do código"
-  outlined="MÓDULO"
-  solid="↔ MÓDULO"
-  accent="."
-  tail="ACOPLADO · DESACOPLADO"
-  size="small"
-/>
-
-<div class="ef-wrap">
-  <EventFlow />
+<div class="ev-intro">
+  <span class="ev-intro__eyebrow">conceito antes do código</span>
+  <p class="ev-intro__pitch">
+    Dois jeitos de um módulo falar com outro.<br>
+    Um sobrevive ao <span class="g g-b">Teste da Deleção</span>. O outro não.
+  </p>
 </div>
 
+<EventCompare />
+
 <style>
-.ef-wrap {
-  flex: 1;
-  min-height: 0;
+.ev-intro {
   margin-top: 0.6rem;
   display: flex;
-  align-items: stretch;
-  justify-content: stretch;
+  flex-direction: column;
+  gap: 0.3rem;
 }
-.ef-wrap > * {
-  width: 100%;
-  height: 100%;
+.ev-intro__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 700;
+}
+.ev-intro__pitch {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  color: #c8c2b6;
+  margin: 0;
+  max-width: 60%;
+}
+.ev-intro__pitch b,
+.ev-intro__pitch strong {
+  color: var(--bone);
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-weight: 700;
 }
 </style>
 
 <!--
 "Antes de eu mostrar o código, deixa eu te mostrar o CONCEITO visualmente."
 
-[interativo — speaker alterna entre os modos e deleta Payment]
+[apresenta sem clicar — deixa a animação rodar]
 
-"No modo acoplado, Checkout importa Payment diretamente. Olha o código embaixo: use Payment\ProcessPayment. Se eu deletar Payment... boom. Checkout explode. Fatal Error."
+"Esquerda: ACOPLADO. IMPORT. Checkout faz `use App\\Modules\\Payment` e chama direto. Olha o fio entre os dois — sólido, brilhante. É uma dependência."
 
-[toggle para desacoplado]
+"Direita: DESACOPLADO. EVENTO. Checkout não importa Payment. Checkout dispara `OrderPlaced::dispatch()` — olha as ondas, é um broadcast pro nada. Payment está ouvindo, mas Checkout não sabe disso. Não precisa saber."
 
-"Agora no modo desacoplado. Checkout não importa Payment. Checkout dispara um EVENTO — OrderPlaced. Olha as ondas: é um broadcast. Checkout tá gritando pra quem quiser ouvir. Payment escuta."
+[clica em DELETAR PAYMENT — os dois lados reagem simultaneamente]
 
-[deleta Payment no modo desacoplado]
+"Apaguei Payment dos dois lados. Olha o que aconteceu."
 
-"Deletei Payment. E o Checkout? Sistema intacto. O evento ainda dispara, mas ninguém tá escutando. E tá tudo bem. Checkout não sabe e não precisa saber que Payment existia."
+"Esquerda: o fio quebrou. Checkout explodiu — fatal error. O import virou linha tracejada vermelha. Você apagou um módulo e o outro caiu junto."
 
-"Isso é a diferença entre import direto e comunicação por evento. Vamos ver como fica no código."
+"Direita: Payment sumiu tranquilo. O evento ainda dispara — Checkout não sabe que ninguém tá escutando, e não precisa saber. Sistema intacto."
+
+"Isso é a diferença entre import e evento. Não é só estilo de código — é se o seu boundary sobrevive ao Teste da Deleção. Vamos ver como fica isso no código real."
 -->
