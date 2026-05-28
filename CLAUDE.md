@@ -29,6 +29,11 @@ pnpm run export   # Export to PDF (requires playwright-chromium)
 - **components/** — Vue components usable directly in slides (e.g. `<Counter />`)
 - **snippets/** — External code files importable via `<<< @/snippets/file.ts#region`
 
+### Key dependencies
+
+- `@vue-flow/core` (^1.48.2) — powers the interactive `EventFlow.vue` diagram
+- `@iconify-json/mdi` (devDep) — Material Design Icons available in slides via `<mdi-icon-name />`
+
 ### Slide pages structure
 
 Pages are organized in numbered subfolders matching the talk's narrative sections:
@@ -45,10 +50,16 @@ pages/
 │   ├── 02-meme.md         # index.php humor
 │   └── 03-virada.md       # Emotional turn
 ├── 02-extracao/           # Conceptual: boundaries, deletion test, folder structures
-│   ├── 01-boundaries.md
-│   ├── 02-caso-shop.md
-│   ├── 03-resultado.md
-│   └── 04-estruturas.md   # Same module in 4 folder patterns (core message)
+│   ├── 01-boundaries.md       # Section intro + deletion test concept
+│   ├── 01b-teste-falha.md     # Deletion test Q1: scattered files → fails (deletion-test layout)
+│   ├── 01c-estruturas.md      # 4 folder patterns for same module (core message)
+│   ├── 01d-reteste.md         # Deletion test Q1 retest: modular → passes
+│   ├── 01e-teste-p2.md        # Deletion test Q2: cross-module coupling
+│   ├── 01e2-evento-visual.md  # Interactive EventFlow diagram (coupled vs decoupled)
+│   ├── 01f-eventos.md         # Before/after: imports vs events (split-compare)
+│   ├── 01g-teste-p2-passa.md  # Deletion test Q2 retest: events → passes
+│   ├── 02-caso-shop.md        # Real-world shop module (100+ files)
+│   └── 03-resultado.md        # Mermaid: 1 shop → sales, payment, fulfillment
 ├── 03-implementacao/      # Technical: modular, code, errors, patterns
 │   ├── 01-modular.md      # internachi/modular + AI as devil's advocate
 │   ├── 02-before-after.md # Magic-move code diffs
@@ -65,9 +76,18 @@ pages/
 | Layout | File | Slots | Props | Purpose |
 |--------|------|-------|-------|---------|
 | `tree-explorer` | `tree-explorer.vue` | `default` (title), `::tree::`, `::content::`, `::note::` | `noteType`: info/warning/danger/tip | Two-column stepper with admonition. Left=tree, Right=files+note |
-| `whoami` | `whoami.vue` | `default` (bio) | `image`, `handle` | Profile with circular avatar |
+| `whoami` | `whoami.vue` | `default` (bio) | `image`, `handle`, `full_name`, `has_socials` | Profile with circular avatar |
 | `impact` | `impact.vue` | `default` | `color`: red/yellow/green/blue/purple | Big number/statement with radial glow |
 | `split-compare` | `split-compare.vue` | `default` (title), `::before::`, `::after::` | `beforeLabel`, `afterLabel` | Before/after with colored tints |
+| `deletion-test` | `deletion-test.vue` | `default` (title), `::questions::`, `::visual::` | — | Title row + questions/visual split (32%/68%) for interactive deletion test |
+
+### Components (`components/`)
+
+| Component | Purpose |
+|-----------|---------|
+| `Counter.vue` | Simple interactive counter (Slidev demo) |
+| `EventFlow.vue` | Interactive Vue Flow diagram: coupled vs decoupled module communication. Uses `@vue-flow/core`. Togglable mode (coupled/decoupled) + delete simulation |
+| `EventFlowModule.vue` | SVG module node renderer used inside `EventFlow.vue` |
 
 ### Stepper pattern (`01b-legadao-pastas.md`)
 
@@ -79,6 +99,8 @@ The folder walkthrough uses `tree-explorer` layout with `transition: none` on ev
 ```
 
 Order follows the tree top-to-bottom: Actions → Data → Enums → Events → Http → Jobs → Listeners → Livewire → Mail → Models → Notifications → Observers → Services → Rest → Impact(487).
+
+The same `transition: none` stepper pattern is reused in `02-extracao/` (slides 01b through 01g) with the `deletion-test` layout — each slide progresses the interactive deletion test while keeping the questions panel stable.
 
 ## Slidev Conventions
 
