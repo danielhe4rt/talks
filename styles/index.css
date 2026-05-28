@@ -1,0 +1,84 @@
+/* ========================================================================
+   Brutalist deck — global tokens, fonts, glitch vocabulary
+
+   All -modular layouts/components in this deck inherit from this file.
+   Keep this short — only put things here that are *truly* deck-wide.
+   ======================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root {
+  /* color tokens */
+  --red: #ff2d20;
+  --red-deep: #c4150c;
+  --bone: #f5f1ea;
+  --ink: #0a0a0b;
+  --dim: #6b6b6b;
+  --rule: #1c1c1f;
+  --frame: #2a2a2c;
+
+  /* accent palette (use sparingly, one per concept) */
+  --accent-green:  #6ee7a1;
+  --accent-blue:   #60a5fa;
+  --accent-purple: #c084fc;
+  --accent-orange: #ffa53a;
+  --accent-pink:   #ff5b8a;
+
+  /* font families */
+  --font-display: 'Big Shoulders Display', 'Archivo Black', sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, monospace;
+  --font-serif:   'Instrument Serif', serif;
+}
+
+/* ========================================================================
+   Glitch flickers — vocabulary shared by every modular slide
+   Wrap a span with .g .g-a (or g-b, g-c) to make it flicker periodically.
+   ======================================================================== */
+
+.g {
+  display: inline-block;
+  will-change: filter, transform, opacity;
+}
+.g-a { animation: g-a 6.5s infinite both; }
+.g-b { animation: g-b 8s infinite both;   animation-delay: -2.4s; }
+.g-c { animation: g-c 7.2s infinite both; animation-delay: -4.1s; }
+
+@keyframes g-a {
+  0%, 90%   { filter: none; transform: none; color: inherit; opacity: 1; }
+  91%       { filter: blur(1.4px); transform: translateX(2px); opacity: 0.55; color: var(--red); }
+  92%       { filter: blur(0.4px); transform: translateX(-3px); opacity: 0.8; }
+  93%       { filter: blur(0.9px) hue-rotate(40deg); transform: translateX(1px); }
+  94%, 100% { filter: none; transform: none; opacity: 1; color: inherit; }
+}
+@keyframes g-b {
+  0%, 84%   { filter: none; opacity: 1; transform: none; letter-spacing: 0; }
+  85%       { filter: blur(0.6px); opacity: 0.4; transform: skewX(-4deg); letter-spacing: 0.04em; }
+  86%       { filter: blur(1.2px); opacity: 0.7; transform: skewX(2deg) translateY(-1px); }
+  87%       { filter: blur(0.3px); opacity: 0.9; transform: none; letter-spacing: 0.01em; }
+  88%, 100% { filter: none; opacity: 1; transform: none; letter-spacing: 0; }
+}
+@keyframes g-c {
+  0%, 78%   { filter: none; transform: none; color: inherit; }
+  79%       { filter: blur(0.9px) hue-rotate(20deg); transform: translate(2px, 1px); color: var(--accent-blue); }
+  80%       { filter: blur(1.6px); transform: translate(-3px, -1px); opacity: 0.5; }
+  81%       { filter: blur(0.5px); transform: translate(1px, 0); color: var(--accent-orange); }
+  82%, 100% { filter: none; transform: none; color: inherit; opacity: 1; }
+}
+
+/* ========================================================================
+   Shared entrance animations
+   ======================================================================== */
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes title-wipe {
+  from { opacity: 0; clip-path: inset(0 100% 0 0); }
+  to   { opacity: 1; clip-path: inset(0 0 0 0); }
+}
+@keyframes cursor-blink { 50% { opacity: 0; } }
