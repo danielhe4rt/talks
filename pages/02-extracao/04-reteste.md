@@ -73,10 +73,9 @@ metaRight: "Q1 · MODULAR"
 
 <!-- Resultado: Pergunta 1 passa -->
 <div v-click="2" class="absolute inset-0 flex flex-col items-center justify-center">
-  <div class="text-6xl font-black text-green-500/70 tracking-wider">1 de 4</div>
+  <div class="text-6xl font-black text-green-500/70 tracking-wider">1 de 3</div>
   <div class="mt-4 flex gap-4 items-center">
     <span class="text-green-400 text-2xl">✓</span>
-    <span class="text-gray-500 text-2xl">?</span>
     <span class="text-gray-500 text-2xl">?</span>
     <span class="text-gray-500 text-2xl">?</span>
   </div>

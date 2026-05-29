@@ -21,14 +21,14 @@ transition: fade
 
 <style>
 .ev-intro {
-  margin-top: 0.6rem;
+  margin-top: 0.2rem;
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.2rem;
 }
 .ev-intro__eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.55rem;
   letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--red);
@@ -37,8 +37,8 @@ transition: fade
 .ev-intro__pitch {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 1.15rem;
-  line-height: 1.35;
+  font-size: 0.95rem;
+  line-height: 1.3;
   color: #c8c2b6;
   margin: 0;
   max-width: 60%;

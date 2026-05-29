@@ -20,7 +20,7 @@ layout: brutalist-base
 metaNumber: "09"
 metaSection: "EXTRAÇÃO"
 metaSubtitle: "teste da deleção"
-metaRight: "regras · 3"
+metaRight: "teste · 3"
 ---
 
 <TitleBlock
@@ -28,7 +28,7 @@ metaRight: "regras · 3"
   outlined="O TESTE"
   solid="DA DELEÇÃO"
   accent="™"
-  tail="4 PERGUNTAS"
+  tail="3 PERGUNTAS"
   size="normal"
 />
 
@@ -75,17 +75,6 @@ Imagina que você deleta <b>TODOS</b> os arquivos dela.
 
 </v-clicks>
 
-<div class="dt-card dt-card--q4">
-  <div class="dt-card-head">
-    <span class="dt-card-num">04</span>
-    <span class="dt-card-tag">framework</span>
-  </div>
-  <div class="dt-card-body">
-    Apagar o módulo <b>realmente apaga TUDO</b>?
-  </div>
-  <div class="dt-card-await">[ requer módulos ]</div>
-</div>
-
 </div>
 
 <v-click>
@@ -123,7 +112,7 @@ Imagina que você deleta <b>TODOS</b> os arquivos dela.
 }
 .dt-cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.75rem;
   margin-top: 0.4rem;
 }
@@ -140,22 +129,6 @@ Imagina que você deleta <b>TODOS</b> os arquivos dela.
 .dt-card--q1 { --card-accent: #facc15; }
 .dt-card--q2 { --card-accent: #fb923c; }
 .dt-card--q3 { --card-accent: var(--red); }
-.dt-card--q4 {
-  --card-accent: var(--accent-purple);
-  opacity: 0.5;
-  background: linear-gradient(180deg, rgba(20,20,24,0.4), rgba(10,10,12,0.6));
-}
-.dt-card--q4 .dt-card-body { color: #8a8478; }
-.dt-card--q4 .dt-card-body b { color: #b9b3a9; }
-.dt-card-await {
-  font-family: var(--font-mono);
-  font-size: 0.55rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--accent-purple);
-  margin-top: 0.1rem;
-  opacity: 0.75;
-}
 .dt-card-head {
   display: flex;
   align-items: baseline;

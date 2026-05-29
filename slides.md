@@ -32,9 +32,6 @@ src: ./pages/01-abertura/01-legadao.md
 src: ./pages/01-abertura/02-legadao-pastas.md
 ---
 
----
-src: ./pages/01-abertura/03-meme.md
----
 
 ---
 src: ./pages/01-abertura/04-virada.md
@@ -102,5 +99,25 @@ src: ./pages/02-extracao/15-internachi-estrutura.md
 
 ---
 src: ./pages/02-extracao/16-teste-p4-passa.md
+---
+
+---
+src: ./pages/03-convencoes/01-integrations.md
+---
+
+---
+src: ./pages/03-convencoes/02-panels.md
+---
+
+---
+src: ./pages/03-convencoes/03-disclaimer.md
+---
+
+---
+src: ./pages/04-fechamento/01-payoff.md
+---
+
+---
+src: ./pages/04-fechamento/02-cta.md
 ---
 

@@ -42,16 +42,6 @@ metaRight: "Q1+Q2+Q3 · LEGADÃO"
   <div v-click="4" class="text-[10px] text-red-300/70 mt-1">Actions chamadas por 5 classes</div>
 </div>
 
-<!-- Pergunta 4: framework — fora do v-click, sempre dimmed -->
-<div class="p-2.5 bg-purple-900/10 rounded border border-purple-500/15" style="opacity: 0.4;">
-  <div class="flex items-center justify-between">
-    <span class="text-purple-300 font-bold text-[10px] uppercase tracking-wider">Pergunta 4</span>
-    <span class="text-gray-400 font-bold text-sm">—</span>
-  </div>
-  <div class="text-sm mt-1">Apagar o módulo apaga <b class="text-purple-200">TUDO</b>?</div>
-  <div class="text-[9px] text-purple-300/70 mt-1 tracking-wider uppercase">requer módulos · revisita em P4</div>
-</div>
-
 <!-- Resultado final -->
 <div v-click="4" class="mt-2 p-2.5 bg-red-900/30 rounded-lg border-2 border-red-500/40 text-center">
   <div class="text-red-400 font-black text-base tracking-widest">FALHOU</div>
@@ -62,24 +52,20 @@ metaRight: "Q1+Q2+Q3 · LEGADÃO"
 <!-- ============================== -->
 <!-- VISUAL 1: File tree espalhado  -->
 <!-- ============================== -->
-<div v-click="[1, 2]" class="absolute inset-0 overflow-auto">
-  <div class="text-xs font-bold text-yellow-400 mb-2">Onde estão os arquivos de "pagamento"?</div>
-  <div class="font-mono text-[11px] leading-[1.6]">
+<div v-click="[1, 2]" class="absolute inset-0 flex flex-col overflow-hidden">
+  <div class="text-[11px] font-bold text-yellow-400 mb-1.5">Onde estão os arquivos de "pagamento"?</div>
+  <div class="font-mono text-[10px] leading-[1.35]">
     <div class="opacity-30">app/</div>
     <div class="opacity-30">├── Actions/</div>
-    <div class="opacity-30">│   ├── CreateOrderAction.php</div>
     <div class="bg-yellow-500/15 text-yellow-300 rounded px-1 -mx-0.5">│   ├── <b>ProcessPaymentAction.php</b></div>
-    <div class="opacity-30">│   └── CalculateShippingAction.php</div>
+    <div class="opacity-30">│   └── CreateOrderAction.php</div>
     <div class="opacity-30">├── Jobs/</div>
-    <div class="bg-yellow-500/15 text-yellow-300 rounded px-1 -mx-0.5">│   ├── <b>ChargePaymentJob.php</b></div>
-    <div class="opacity-30">│   └── ProcessOrderJob.php</div>
+    <div class="bg-yellow-500/15 text-yellow-300 rounded px-1 -mx-0.5">│   └── <b>ChargePaymentJob.php</b></div>
     <div class="opacity-30">├── Services/</div>
-    <div class="bg-yellow-500/15 text-yellow-300 rounded px-1 -mx-0.5">│   ├── <b>PaymentGatewayService.php</b></div>
-    <div class="opacity-30">│   └── OrderService.php</div>
+    <div class="bg-yellow-500/15 text-yellow-300 rounded px-1 -mx-0.5">│   └── <b>PaymentGatewayService.php</b></div>
     <div class="opacity-30">├── Models/</div>
     <div class="bg-yellow-500/15 text-yellow-300 rounded px-1 -mx-0.5">│   ├── <b>Payment.php</b></div>
-    <div class="bg-yellow-500/15 text-yellow-300 rounded px-1 -mx-0.5">│   ├── <b>PaymentTransaction.php</b></div>
-    <div class="opacity-30">│   └── Order.php</div>
+    <div class="bg-yellow-500/15 text-yellow-300 rounded px-1 -mx-0.5">│   └── <b>PaymentTransaction.php</b></div>
     <div class="opacity-30">├── Http/Controllers/</div>
     <div class="bg-yellow-500/15 text-yellow-300 rounded px-1 -mx-0.5">│   └── <b>PaymentWebhookController.php</b></div>
     <div class="opacity-30">├── Notifications/</div>
@@ -89,7 +75,7 @@ metaRight: "Q1+Q2+Q3 · LEGADÃO"
     <div class="opacity-30">└── Observers/</div>
     <div class="bg-yellow-500/15 text-yellow-300 rounded px-1 -mx-0.5">    └── <b>PaymentObserver.php</b></div>
   </div>
-  <div class="mt-3 p-2 bg-red-900/25 rounded border border-red-500/25 text-xs text-red-300">
+  <div class="mt-2 p-1.5 bg-red-900/25 rounded border border-red-500/25 text-[11px] text-red-300">
     <b>9 arquivos</b> em <b>8 pastas</b> diferentes. Você confia que pegou tudo?
   </div>
 </div>

@@ -127,14 +127,14 @@ function toggleDelete() { deleted.value = !deleted.value }
 <style scoped>
 .ec {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  display: block;
   min-height: 0;
-  padding-top: 0.4rem;
+  padding-top: 0.2rem;
   font-family: var(--font-mono);
   position: relative;
 }
+.ec > .ec__grid + .ec__grid { margin-top: 0.7rem; }
+.ec > .ec__grid + .ec__toolbar { margin-top: 0.5rem; }
 
 /* shared grid */
 .ec__grid {
@@ -144,8 +144,8 @@ function toggleDelete() { deleted.value = !deleted.value }
   align-items: stretch;
 }
 .ec__grid--heads { align-items: end; }
-.ec__grid--diag  { flex: 1; min-height: 0; }
-.ec__col { display: flex; flex-direction: column; min-width: 0; }
+.ec__grid--diag  { min-height: 0; }
+.ec__col { display: block; min-width: 0; }
 
 /* divider — vertical gradient rule */
 .ec__divider {
@@ -190,7 +190,7 @@ function toggleDelete() { deleted.value = !deleted.value }
 .ec__title {
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: 3.6rem;
+  font-size: 2.6rem;
   letter-spacing: -0.02em;
   margin: 0;
   line-height: 0.92;
@@ -204,10 +204,10 @@ function toggleDelete() { deleted.value = !deleted.value }
 .ec__sub {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 1rem;
-  line-height: 1.35;
+  font-size: 0.85rem;
+  line-height: 1.3;
   color: #b9b3a9;
-  margin: 0.35rem 0 0;
+  margin: 0.25rem 0 0;
 }
 .ec__sub em {
   font-style: italic;
@@ -217,18 +217,17 @@ function toggleDelete() { deleted.value = !deleted.value }
 
 /* DIAGRAM rows */
 .ec__diag {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  display: flex;
+  flex-direction: column;
   gap: 0.7rem;
   margin-top: 0.45rem;
-  height: 100%;
   min-height: 0;
 }
 
 .ec__mod {
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 3px;
-  padding: 0.65rem 0.95rem;
+  padding: 0.5rem 0.9rem;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -260,7 +259,7 @@ function toggleDelete() { deleted.value = !deleted.value }
 
 .ec__mod-name {
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   letter-spacing: -0.005em;
 }
 .ec__mod-state {
@@ -350,13 +349,13 @@ function toggleDelete() { deleted.value = !deleted.value }
 /* CODE rails */
 .ec__code {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  line-height: 1.6;
+  font-size: 0.7rem;
+  line-height: 1.45;
   background: rgba(0,0,0,0.35);
   border: 1px solid rgba(255,255,255,0.06);
   border-left: 2px solid rgba(255,255,255,0.1);
   border-radius: 2px;
-  padding: 0.65rem 0.9rem;
+  padding: 0.5rem 0.85rem;
   margin: 0;
   color: #c8c2b6;
   overflow: hidden;

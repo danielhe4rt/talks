@@ -46,7 +46,6 @@ metaRight: "Q2 · EVENTOS"
     <span class="text-green-400">✓</span>
     <span class="text-green-400">✓</span>
     <span class="text-gray-500">?</span>
-    <span class="text-gray-500">?</span>
   </div>
 </div>
 
@@ -86,14 +85,13 @@ metaRight: "Q2 · EVENTOS"
 <!-- VISUAL 2: Resultado ✓          -->
 <!-- ============================== -->
 <div v-click="2" class="absolute inset-0 flex flex-col items-center justify-center overflow-hidden">
-  <div class="text-5xl font-black text-green-500/70 tracking-wider">2 de 4</div>
+  <div class="text-5xl font-black text-green-500/70 tracking-wider">2 de 3</div>
   <div class="mt-4 flex gap-4">
     <span class="text-green-400 text-2xl">✓</span>
     <span class="text-green-400 text-2xl">✓</span>
     <span class="text-gray-500 text-2xl">?</span>
-    <span class="text-gray-500 text-2xl">?</span>
   </div>
-  <div class="mt-4 text-sm opacity-50">Faltam duas perguntas.</div>
+  <div class="mt-4 text-sm opacity-50">Falta uma.</div>
 </div>
 
 <!--

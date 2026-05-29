@@ -83,13 +83,13 @@ contentAlign: "top"
   size="small"
 />
 
-<div class="grid grid-cols-[1fr_auto_1fr] gap-6 mt-6 items-center">
+<div class="grid grid-cols-[1fr_auto_1fr] gap-6 mt-3 items-center">
 
 <div>
 
-<div class="text-xs text-blue-400 font-bold uppercase tracking-wider mb-2">Checkout dispara</div>
+<div class="text-[10px] text-blue-400 font-bold uppercase tracking-wider mb-1.5">Checkout dispara</div>
 
-```php {*}{class:'!text-xs'}
+```php {*}{class:'!text-[0.7rem] !leading-snug'}
 // Checkout/Events/OrderPlaced.php
 
 class OrderPlaced
@@ -108,9 +108,9 @@ class OrderPlaced
 
 <v-click>
 
-<div class="text-xs text-green-400 font-bold uppercase tracking-wider mb-2">Payment escuta</div>
+<div class="text-[10px] text-green-400 font-bold uppercase tracking-wider mb-1.5">Payment escuta</div>
 
-```php {*}{class:'!text-xs'}
+```php {*}{class:'!text-[0.7rem] !leading-snug'}
 // Payment/Listeners/HandleOrderPlaced.php
 
 class HandleOrderPlaced
@@ -131,9 +131,9 @@ class HandleOrderPlaced
 
 <v-click>
 
-<div class="mt-6 p-4 bg-green-900/20 rounded-lg border border-green-500/20 text-center">
-  <div class="text-sm">Checkout não importa Payment. Payment não importa Checkout.</div>
-  <div class="text-base font-bold text-green-400 mt-1">Zero imports cruzados.</div>
+<div class="mt-3 p-2.5 bg-green-900/20 rounded-lg border border-green-500/20 text-center">
+  <div class="text-xs">Checkout não importa Payment. Payment não importa Checkout.</div>
+  <div class="text-sm font-bold text-green-400 mt-0.5">Zero imports cruzados.</div>
 </div>
 
 </v-click>

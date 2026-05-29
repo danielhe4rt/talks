@@ -5,10 +5,10 @@ metaNumber: "19"
 metaSection: "EXTRAÇÃO"
 metaSubtitle: "teste da deleção"
 metaPhase: green
-metaRight: "Q3 · 3 DE 4"
+metaRight: "Q3 · 3 DE 3"
 ---
 
-# O Teste da Deleção™ <span>— 3 de 4</span>
+# O Teste da Deleção™ <span>— 3 de 3</span>
 
 ::questions::
 
@@ -48,7 +48,6 @@ metaRight: "Q3 · 3 DE 4"
     <span class="text-green-400">✓</span>
     <span class="text-green-400">✓</span>
     <span class="text-green-400">✓</span>
-    <span class="text-gray-500">?</span>
   </div>
 </div>
 
@@ -60,7 +59,6 @@ metaRight: "Q3 · 3 DE 4"
 <div v-click="[1, 3]" class="absolute inset-0 flex flex-col justify-center overflow-hidden">
   <div class="text-xs font-bold text-green-400 mb-5">Cada módulo passa o teste sozinho:</div>
   <div class="grid grid-cols-3 gap-3">
-
     <div class="p-3 bg-green-900/15 rounded border border-green-500/25">
       <div class="text-[10px] text-gray-400 uppercase tracking-wider mb-1">Modules/</div>
       <div class="text-green-300 font-mono text-sm font-bold mb-2">Payment</div>
@@ -70,7 +68,6 @@ metaRight: "Q3 · 3 DE 4"
         <div>✓ ninguém depende</div>
       </div>
     </div>
-
     <div class="p-3 bg-green-900/15 rounded border border-green-500/25">
       <div class="text-[10px] text-gray-400 uppercase tracking-wider mb-1">Modules/</div>
       <div class="text-green-300 font-mono text-sm font-bold mb-2">Gateway</div>
@@ -80,7 +77,6 @@ metaRight: "Q3 · 3 DE 4"
         <div>✓ contrato explícito</div>
       </div>
     </div>
-
     <div class="p-3 bg-green-900/15 rounded border border-green-500/25">
       <div class="text-[10px] text-gray-400 uppercase tracking-wider mb-1">Modules/</div>
       <div class="text-green-300 font-mono text-sm font-bold mb-2">Subscriptions</div>
@@ -90,24 +86,22 @@ metaRight: "Q3 · 3 DE 4"
         <div>✓ usa Gateway</div>
       </div>
     </div>
-
   </div>
 </div>
 
 <!-- ============================== -->
-<!-- VISUAL 2: 3 de 4               -->
+<!-- VISUAL 2: 3 de 3 + rug-pull P4 -->
 <!-- ============================== -->
 <div v-click="3" class="absolute inset-0 flex flex-col items-center justify-center overflow-hidden">
-  <div class="text-[10rem] font-black text-green-500/80 tracking-tight leading-none">3<span class="opacity-60">/</span>4</div>
+  <div class="text-[10rem] font-black text-green-500/80 tracking-tight leading-none">3<span class="opacity-60">/</span>3</div>
   <div class="mt-4 flex gap-4">
     <span class="text-green-400 text-2xl">✓</span>
     <span class="text-green-400 text-2xl">✓</span>
     <span class="text-green-400 text-2xl">✓</span>
-    <span class="text-gray-500 text-2xl">?</span>
   </div>
-  <div class="mt-5 max-w-md text-center text-sm opacity-70">
-    Lembra do <b class="text-purple-300">P4</b>?<br>
-    Agora a gente tem módulos. <b class="text-green-300">Vamos rodar.</b>
+  <div class="mt-5 max-w-lg text-center text-sm opacity-80">
+    <b class="text-green-300">3 / 3 — passou.</b> <span class="text-purple-300">✶</span> Mas espera.<br>
+    Tem uma <b class="text-purple-300">4ª pergunta</b>. Você só faz quando tem módulos.
   </div>
 </div>
 
@@ -121,6 +115,10 @@ metaRight: "Q3 · 3 DE 4"
 [click 2 — P3 em foco]
 "E Q3?"
 
-[click 3 — P3 ✓ + 3/4 + cue pro P4]
-"Q3 passou quando o arquivo que servia 3 features virou um módulo próprio: Gateway. Agora cada um dos 3 módulos passa nas 3 perguntas, individualmente. Mas… lembra do P4? Aquela pergunta que ficou esperando lá no começo, porque dependia da gente ter módulos? Agora a gente tem. Vamos rodar."
+[click 3 — P3 ✓ + 3/3 + rug-pull P4]
+"Q3 passou quando o arquivo que servia 3 features virou um módulo próprio: Gateway. Três de três. O teste passou."
+
+[pausa de meio segundo, deixa a plateia respirar]
+
+"Mas… espera. Tem uma quarta pergunta. Eu nunca falei dela antes porque não dava pra fazer: ela só existe quando você tem módulos de verdade. Agora a gente tem. Bora rodar a P4."
 -->
