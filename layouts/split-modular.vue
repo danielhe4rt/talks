@@ -32,6 +32,7 @@ defineProps<{
   metaPhase?: 'red' | 'refactor' | 'green' | 'diagnostico'
   beforeLabel?: string
   afterLabel?: string
+  beforeColor?: 'red' | 'blue'
 }>()
 </script>
 
@@ -53,7 +54,7 @@ defineProps<{
     </div>
 
     <div class="split-body">
-      <div class="split-side split-side--before">
+      <div class="split-side split-side--before" :class="{ 'split-side--before-blue': beforeColor === 'blue' }">
         <div class="side-corner">
           <span class="corner-block" />
           <span class="corner-label">{{ beforeLabel || 'ANTES' }}</span>
@@ -145,6 +146,19 @@ defineProps<{
     linear-gradient(180deg, rgba(20, 20, 24, 0.55), rgba(10, 10, 12, 0.75));
   border-color: rgba(255, 45, 32, 0.18);
   animation-delay: 0.25s;
+}
+.split-side--before-blue {
+  background:
+    radial-gradient(ellipse at 0% 100%, rgba(96, 165, 250, 0.08), transparent 60%),
+    linear-gradient(180deg, rgba(20, 20, 24, 0.55), rgba(10, 10, 12, 0.75));
+  border-color: rgba(96, 165, 250, 0.2);
+}
+.split-side--before-blue .corner-block {
+  background: var(--accent-blue);
+  box-shadow: 0 0 14px rgba(96, 165, 250, 0.4);
+}
+.split-side--before-blue .corner-label {
+  color: var(--accent-blue);
 }
 .split-side--after {
   background:

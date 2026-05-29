@@ -16,19 +16,21 @@ afterLabel: DEPOIS
 
 <div class="text-[10px] text-red-400 font-bold uppercase tracking-wider mb-2">leak dentro de Payment</div>
 
-```text {*}{class:'!text-xs'}
-app/Modules/
-├── Payment/
-│   ├── ProcessPayment.php
-│   ├── PaymentGatewayService.php  ← leak
-│   └── ...
-├── Subscriptions/
-│   └── RecurringChargeJob.php   ─┐
-├── Checkout/                     │ todos
-│   └── PlaceOrder.php            │ chamam
-└── Admin/                        │ direto
-    └── RefundController.php     ─┘
-```
+<StructTree
+  root="app/Modules/"
+  accent="red"
+  compact
+  :tree="[
+    { name: 'Payment/', kind: 'dir', children: [
+      { name: 'ProcessPayment.php', kind: 'support' },
+      { name: 'PaymentGatewayService.php', kind: 'domain', note: '← leak', noteKind: 'danger' },
+      { name: '…', kind: 'support' },
+    ] },
+    { name: 'Subscriptions/', kind: 'dir', children: [ { name: 'RecurringChargeJob.php', kind: 'support' } ] },
+    { name: 'Checkout/', kind: 'dir', children: [ { name: 'PlaceOrder.php', kind: 'support' } ] },
+    { name: 'Admin/', kind: 'dir', children: [ { name: 'RefundController.php', kind: 'support' } ] },
+  ]"
+/>
 
 <div class="mt-3 p-2 bg-red-900/20 rounded text-xs text-red-300">
 Mora em Payment, mas 3 features importam direto.<br>
@@ -39,18 +41,20 @@ Mudou Payment → quebra Subscriptions <i>e</i> Admin.
 
 <div class="text-[10px] text-green-400 font-bold uppercase tracking-wider mb-2">gateway vira módulo</div>
 
-```text {*}{class:'!text-xs'}
-app/Modules/
-├── Gateway/                     ← novo
-│   ├── GatewayContract.php
-│   └── StripeGateway.php
-├── Payment/
-│   └── ProcessPayment.php       ─┐
-├── Subscriptions/                │ todos
-│   └── RecurringChargeJob.php    │ usam
-└── Admin/                        │ Gateway
-    └── RefundController.php     ─┘
-```
+<StructTree
+  root="app/Modules/"
+  accent="green"
+  compact
+  :tree="[
+    { name: 'Gateway/', kind: 'dir', note: '← novo', noteKind: 'ok', children: [
+      { name: 'GatewayContract.php', kind: 'domain' },
+      { name: 'StripeGateway.php', kind: 'domain' },
+    ] },
+    { name: 'Payment/', kind: 'dir', children: [ { name: 'ProcessPayment.php', kind: 'support' } ] },
+    { name: 'Subscriptions/', kind: 'dir', children: [ { name: 'RecurringChargeJob.php', kind: 'support' } ] },
+    { name: 'Admin/', kind: 'dir', children: [ { name: 'RefundController.php', kind: 'support' } ] },
+  ]"
+/>
 
 <div class="mt-3 p-2 bg-green-900/20 rounded text-xs text-green-300">
 Gateway é o contrato. Payment, Subscriptions e Admin<br>

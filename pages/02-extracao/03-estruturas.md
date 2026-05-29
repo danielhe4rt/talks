@@ -55,18 +55,7 @@ contentAlign: "top"
 <div class="struct-grid">
 <div class="struct-left">
 
-<div class="ns-tag">namespace App\Modules\Cart</div>
-
-```text {*}{class:'!text-xs'}
-app/Modules/Cart/
-├── Cart.php
-├── CartItem.php
-├── CartService.php
-├── PriceCalculator.php
-└── ClearExpiredCartsJob.php
-```
-
-<div class="struct-count">5 arquivos · 0 subpastas</div>
+<StructTree variant="flat" accent="blue" />
 
 </div>
 <div class="struct-right">
@@ -120,22 +109,7 @@ contentAlign: "top"
 <div class="struct-grid">
 <div class="struct-left">
 
-<div class="ns-tag">namespace App\Modules\Cart</div>
-
-```text {*}{class:'!text-xs'}
-app/Modules/Cart/
-├── Models/
-│   ├── Cart.php
-│   └── CartItem.php
-├── Services/
-│   └── CartService.php
-├── Jobs/
-│   └── ClearExpiredCartsJob.php
-└── Support/
-    └── PriceCalculator.php
-```
-
-<div class="struct-count">5 arquivos · 4 subpastas</div>
+<StructTree variant="laravel" accent="green" />
 
 </div>
 <div class="struct-right">
@@ -189,21 +163,7 @@ contentAlign: "top"
 <div class="struct-grid">
 <div class="struct-left">
 
-<div class="ns-tag">namespace App\Modules\Cart</div>
-
-```text {*}{class:'!text-xs'}
-app/Modules/Cart/
-├── Domain/
-│   ├── Cart.php
-│   ├── CartItem.php
-│   └── PriceCalculator.php
-├── Application/
-│   └── CartService.php
-└── Infrastructure/
-    └── ClearExpiredCartsJob.php
-```
-
-<div class="struct-count">5 arquivos · 3 camadas</div>
+<StructTree variant="clean" accent="purple" />
 
 </div>
 <div class="struct-right">
@@ -257,26 +217,7 @@ contentAlign: "top"
 <div class="struct-grid">
 <div class="struct-left">
 
-<div class="ns-tag">namespace App\Modules\Cart</div>
-
-```text {*}{class:'!text-xs'}
-app/Modules/Cart/
-├── Domain/
-│   ├── Models/
-│   │   ├── Cart.php
-│   │   └── CartItem.php
-│   └── Services/
-│       └── PriceCalculator.php
-├── Application/
-│   ├── Actions/
-│   │   └── AddToCartAction.php
-│   └── Jobs/
-│       └── ClearExpiredCartsJob.php
-└── Infrastructure/
-    └── EloquentCartRepository.php
-```
-
-<div class="struct-count">6 arquivos · 7 subpastas</div>
+<StructTree variant="ddd" accent="orange" />
 
 </div>
 <div class="struct-right">

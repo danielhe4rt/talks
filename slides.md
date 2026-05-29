@@ -21,6 +21,14 @@ src: ./pages/00-intro/02-whoami.md
 ---
 
 ---
+src: ./pages/00-intro/02b-comunidades.md
+---
+
+---
+src: ./pages/00-intro/02c-recruit.md
+---
+
+---
 src: ./pages/00-intro/03-toctree.md
 ---
 
@@ -115,6 +123,10 @@ src: ./pages/03-convencoes/03-disclaimer.md
 
 ---
 src: ./pages/04-fechamento/01-payoff.md
+---
+
+---
+src: ./pages/04-fechamento/01b-monolito-modular.md
 ---
 
 ---

@@ -65,31 +65,24 @@ Não sabe e não precisa saber quem escuta.
 -->
 
 ---
-layout: brutalist-base
+layout: split-modular
 metaNumber: "15.1"
 metaSection: "EXTRAÇÃO"
 metaSubtitle: "events vs imports"
 metaPhase: refactor
 metaRight: "Q2 · QUEM ESCUTA?"
-contentAlign: "top"
+beforeLabel: CHECKOUT DISPARA
+afterLabel: PAYMENT ESCUTA
+beforeColor: blue
 ---
 
-<TitleBlock
-  eyebrow="o contrato entre módulos"
-  outlined="QUEM"
-  solid="ESCUTA"
-  accent="?"
-  tail="dispatch → listener"
-  size="small"
-/>
+# QUEM <span class="text-green-400">escuta</span>?
 
-<div class="grid grid-cols-[1fr_auto_1fr] gap-6 mt-3 items-center">
+Checkout não importa Payment. Payment não importa Checkout — **zero imports cruzados.**
 
-<div>
+::before::
 
-<div class="text-[10px] text-blue-400 font-bold uppercase tracking-wider mb-1.5">Checkout dispara</div>
-
-```php {*}{class:'!text-[0.7rem] !leading-snug'}
+```php {*}{class:'!text-xs'}
 // Checkout/Events/OrderPlaced.php
 
 class OrderPlaced
@@ -100,17 +93,14 @@ class OrderPlaced
 }
 ```
 
+<div class="mt-3 p-2 bg-blue-900/20 rounded text-xs text-blue-300">
+Checkout só cria o evento.<br>
+Não sabe quem escuta.
 </div>
 
-<div class="text-2xl opacity-30">→</div>
+::after::
 
-<div>
-
-<v-click>
-
-<div class="text-[10px] text-green-400 font-bold uppercase tracking-wider mb-1.5">Payment escuta</div>
-
-```php {*}{class:'!text-[0.7rem] !leading-snug'}
+```php {*}{class:'!text-xs'}
 // Payment/Listeners/HandleOrderPlaced.php
 
 class HandleOrderPlaced
@@ -123,25 +113,15 @@ class HandleOrderPlaced
 }
 ```
 
-</v-click>
-
+<div class="mt-3 p-2 bg-green-900/20 rounded text-xs text-green-300">
+Payment escuta e chama<br>
+ProcessPayment internamente.
 </div>
-
-</div>
-
-<v-click>
-
-<div class="mt-3 p-2.5 bg-green-900/20 rounded-lg border border-green-500/20 text-center">
-  <div class="text-xs">Checkout não importa Payment. Payment não importa Checkout.</div>
-  <div class="text-sm font-bold text-green-400 mt-0.5">Zero imports cruzados.</div>
-</div>
-
-</v-click>
 
 <!--
-"Checkout cria o evento OrderPlaced. Só isso. Quem escuta?"
+"Checkout cria o evento OrderPlaced. Só isso. Não sabe quem escuta."
 
-[click] "Payment. O Listener HandleOrderPlaced recebe o evento e chama ProcessPayment internamente. Olha: o import de ProcessPayment agora é INTERNO do módulo Payment. Checkout não sabe que essa classe existe."
+"Do outro lado, Payment escuta: o Listener HandleOrderPlaced recebe o evento e chama ProcessPayment internamente. O import de ProcessPayment agora é INTERNO do módulo Payment."
 
-[click] "Checkout não importa Payment. Payment não importa Checkout. Os dois módulos não se conhecem. O evento é o contrato entre eles. Zero imports cruzados."
+"Checkout não importa Payment. Payment não importa Checkout. Os dois módulos não se conhecem. O evento é o contrato entre eles. Zero imports cruzados."
 -->

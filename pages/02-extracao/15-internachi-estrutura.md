@@ -16,24 +16,21 @@ afterLabel: ENCAPSULADO
 
 <div class="text-[10px] text-red-400 font-bold uppercase tracking-wider mb-1.5">laravel padrão</div>
 
-```text {*}{class:'!text-[0.7rem] !leading-snug'}
-app/Modules/Payment/
-├── Services/
-└── Models/
-
-resources/views/
-└── payment/             ← view do módulo
-    └── checkout.blade.php
-
-config/
-└── payment.php          ← config do módulo
-
-database/migrations/
-└── 2024_01_payment.php  ← migration
-
-routes/
-└── payment.php          ← rotas
-```
+<StructTree
+  root="projeto/"
+  accent="red"
+  fs="0.76rem"
+  :tree="[
+    { name: 'app/Modules/Payment/', kind: 'dir', children: [
+      { name: 'Services/', kind: 'support' },
+      { name: 'Models/', kind: 'support' },
+    ] },
+    { name: 'resources/views/payment/checkout.blade.php', kind: 'domain', note: '← view', noteKind: 'danger' },
+    { name: 'config/payment.php', kind: 'domain', note: '← config', noteKind: 'danger' },
+    { name: 'database/migrations/2024_01_payment.php', kind: 'domain', note: '← migration', noteKind: 'danger' },
+    { name: 'routes/payment.php', kind: 'domain', note: '← rotas', noteKind: 'danger' },
+  ]"
+/>
 
 <div class="mt-2 p-2 bg-red-900/20 rounded text-[11px] text-red-300">
 Pasta do módulo é só pedaço.<br>
@@ -44,24 +41,35 @@ View, config, migration, rota estão <b>fora</b>.
 
 <div class="text-[10px] text-green-400 font-bold uppercase tracking-wider mb-1.5">internachi</div>
 
-```text {*}{class:'!text-[0.68rem] !leading-snug'}
-app-modules/payment/
-├── composer.json            ← pacote Composer
-├── src/
-│   ├── Services/
-│   ├── Models/
-│   └── PaymentServiceProvider.php
-├── resources/
-│   └── views/
-│       └── checkout.blade.php
-├── config/
-│   └── payment.php
-├── database/
-│   └── migrations/
-│       └── 2024_01_payment.php
-└── routes/
-    └── web.php
-```
+<StructTree
+  root="app-modules/payment/"
+  accent="green"
+  fs="0.7rem"
+  :tree="[
+    { name: 'composer.json', kind: 'domain', note: '← pacote Composer', noteKind: 'ok' },
+    { name: 'src/', kind: 'dir', children: [
+      { name: 'Services/', kind: 'dir' },
+      { name: 'Models/', kind: 'dir' },
+      { name: 'PaymentServiceProvider.php', kind: 'support' },
+    ] },
+    { name: 'resources/', kind: 'dir', children: [
+      { name: 'views/', kind: 'dir', children: [
+        { name: 'checkout.blade.php', kind: 'support' },
+      ] },
+    ] },
+    { name: 'config/', kind: 'dir', children: [
+      { name: 'payment.php', kind: 'support' },
+    ] },
+    { name: 'database/', kind: 'dir', children: [
+      { name: 'migrations/', kind: 'dir', children: [
+        { name: '2024_01_payment.php', kind: 'support' },
+      ] },
+    ] },
+    { name: 'routes/', kind: 'dir', children: [
+      { name: 'web.php', kind: 'support' },
+    ] },
+  ]"
+/>
 
 <div class="mt-2 p-2 bg-green-900/20 rounded text-[11px] text-green-300">
 <b>Apaga a pasta. Apaga TUDO de payment.</b><br>

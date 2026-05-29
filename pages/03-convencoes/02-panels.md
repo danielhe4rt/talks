@@ -4,6 +4,7 @@ metaNumber: "16"
 metaSection: "CONVENÇÕES"
 metaSubtitle: "panel · *"
 contentAlign: "top"
+clicks: 2
 ---
 
 <div class="conv-head">
@@ -61,7 +62,7 @@ contentAlign: "top"
 
 <div class="panels-stage">
 
-<div class="panel-frame" v-click="[0, 1]">
+<div class="panel-frame" v-show="$clicks === 0">
   <div class="panel-frame__head">
     <span class="panel-frame__ns">namespace <b>Shop\PanelAdmin</b></span>
     <span class="panel-frame__audience">operação · suporte · financeiro</span>
@@ -87,7 +88,7 @@ app-modules/panel-admin/
 ```
 </div>
 
-<div class="panel-frame" v-click="[1, 2]">
+<div class="panel-frame" v-show="$clicks === 1">
   <div class="panel-frame__head">
     <span class="panel-frame__ns">namespace <b>Shop\PanelApp</b></span>
     <span class="panel-frame__audience">quem já comprou e <span class="g g-c">voltou</span></span>
@@ -109,7 +110,7 @@ app-modules/panel-app/
 ```
 </div>
 
-<div class="panel-frame" v-click="[2, 99]">
+<div class="panel-frame" v-show="$clicks === 2">
   <div class="panel-frame__head">
     <span class="panel-frame__ns">namespace <b>Shop\PanelGuest</b></span>
     <span class="panel-frame__audience">home · catálogo · landing</span>
