@@ -16,3 +16,7 @@ src: ./pages/poc-phpeste/02-whoami.md
 ---
 src: ./pages/poc-phpeste/03-comunidades.md
 ---
+
+---
+src: ./pages/poc-phpeste/04-recruit.md
+---

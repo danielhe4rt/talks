@@ -52,4 +52,6 @@ defineProps<{
   white-space: pre;
 }
 .ph-ticket__body p { margin: 0.6rem 0 0; font-style: italic; }
+.ph-ticket__body .ph-qr { display: block; margin-top: -0.2rem; width: 100%; height: auto; border-radius: 4px; }
+.ph-ticket__body .ph-qr-url { font-style: normal; font-size: 0.72rem; font-weight: 600; text-align: center; }
 </style>

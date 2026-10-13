@@ -190,6 +190,58 @@
 
 .ph-mono { font-family: var(--ph-font-mono); }
 
+/* -------- painel de lista: stamped off-white panel (site's ticket card +
+   woodcut hard shadow), crimson "losango" markers or icon badges.
+   ph-whoami applies it to its list automatically; elsewhere wrap the
+   markdown list in <div class="ph-panel">. -------- */
+.ph-panel ul,
+.ph-whoami__content ul {
+  margin: 0;
+  padding: 0.4rem 1.3rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  background: var(--ph-off-white);
+  color: var(--ph-espresso);
+  border: 2px solid var(--ph-espresso);
+  border-top: 6px solid var(--ph-yellow);
+  border-radius: 4px;
+  box-shadow: 6px 6px 0 var(--ph-espresso);
+}
+.ph-panel li,
+.ph-whoami__content li {
+  position: relative;
+  padding: 0.5rem 0 0.5rem 1.6rem;
+  font-size: 1.12rem;
+  line-height: 1.4;
+}
+.ph-panel li + li,
+.ph-whoami__content li + li { border-top: 1.5px dashed var(--ph-sand); }
+.ph-panel li::before,
+.ph-whoami__content li::before {
+  content: '';
+  position: absolute;
+  left: 0.15rem;
+  top: calc(0.5rem + 0.5em);
+  width: 0.6rem;
+  height: 0.6rem;
+  background: var(--ph-crimson);
+  transform: rotate(45deg);
+}
+.ph-panel li strong { font-weight: 600; }
+.ph-slide--espresso .ph-panel ul { box-shadow: 6px 6px 0 var(--ph-orange); }
+
+/* two-column helper: content + narrow aside (QR, ticket…) */
+.ph-split {
+  display: grid;
+  grid-template-columns: 1fr var(--aside, 15rem);
+  gap: 2.2rem;
+  align-items: center;
+}
+
+.ph-split .ph-ticket { padding: 0.9rem 1rem 1rem; }
+.ph-split .ph-ticket__title { font-size: 1.35rem; margin-bottom: 0.5rem; }
+
 /* -------- motion: gentle entrances, off when the OS asks -------- */
 @keyframes ph-rise {
   from { opacity: 0; transform: translateY(12px); }

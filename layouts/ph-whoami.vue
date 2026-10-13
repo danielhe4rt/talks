@@ -147,38 +147,6 @@ withDefaults(defineProps<{
 }
 .ph-whoami__content p strong { font-weight: 600; }
 
-/* bullet list as a stamped off-white panel (site's ticket card + woodcut
-   hard shadow) so it pops off the orange; crimson "losango" markers */
-.ph-whoami__content ul {
-  margin: 0;
-  padding: 0.4rem 1.3rem;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  background: var(--ph-off-white);
-  color: var(--ph-espresso);
-  border: 2px solid var(--ph-espresso);
-  border-top: 6px solid var(--ph-yellow);
-  border-radius: 4px;
-  box-shadow: 6px 6px 0 var(--ph-espresso);
-}
-.ph-whoami__content li {
-  position: relative;
-  padding: 0.5rem 0 0.5rem 1.6rem;
-  font-size: 1.12rem;
-  line-height: 1.4;
-}
-.ph-whoami__content li + li { border-top: 1.5px dashed var(--ph-sand); }
-.ph-whoami__content li::before {
-  content: '';
-  position: absolute;
-  left: 0.15rem;
-  top: calc(0.5rem + 0.5em);
-  width: 0.6rem;
-  height: 0.6rem;
-  background: var(--ph-crimson);
-  transform: rotate(45deg);
-}
 .ph-whoami__content li strong { font-weight: 600; }
 
 .ph-whoami__socials {
