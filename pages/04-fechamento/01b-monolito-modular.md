@@ -14,7 +14,7 @@ contentAlign: "top"
   </div>
   <div class="mm-hero">
     <span class="mm-hero-num">−90<span class="mm-hero-pct">%</span></span>
-    <span class="mm-hero-lbl">custo · Prime Video<br>distribuiu cedo → voltou pro monólito</span>
+    <span class="mm-hero-lbl">custo · Prime Video, 2023<br>serviço distribuído → monólito</span>
   </div>
 </div>
 
@@ -299,9 +299,9 @@ do seu legado ao catálogo da Shopify, a régua é a mesma: <b>modulariza primei
 "Eu acabei de mostrar a MINHA conta: quando o produto pivota, eu troco um módulo sem cirurgia. E aí vem a dúvida: tá, mas isso é exagero de quem tem um app pequeno? Não. Quando a escala muda tudo de verdade, os grandes fizeram exatamente a mesma conta."
 
 [hero — Prime Video]
-"A Amazon Prime Video é o exemplo que calou a galera: eles tinham microsserviços, distribuíram cedo demais, e VOLTARAM pro monólito — cortaram 90% do custo. Distribuir não é grátis: tem rede, tem orquestração."
+"O exemplo que calou a galera foi a Amazon Prime Video, em 2023: o time que monitora a qualidade dos vídeos tinha montado o serviço distribuído, em pedacinhos serverless. Juntaram tudo num processo só — um monólito — e o custo caiu 90%. Distribuir não é grátis: tem rede, tem orquestração."
 
-[click 1] "Deploy único. Um pipeline de build, test e deploy. A Shopify roda um dos maiores monólitos Rails do mundo, mais de mil devs, num codebase só — modular, com boundaries impostos por ferramenta."
+[click 1] "Deploy único. Um pipeline de build, test e deploy. A Shopify roda um dos maiores monólitos Rails do mundo, milhares de devs num codebase só — modular, com boundaries impostos por ferramenta."
 
 [click 2] "Distribuir cedo cobra caro: rede e orquestração têm conta. In-process não tem. Por isso a Prime Video voltou."
 
