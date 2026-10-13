@@ -28,3 +28,7 @@ src: ./pages/poc-phpeste/05-agenda.md
 ---
 src: ./pages/poc-phpeste/06-ato-legadao.md
 ---
+
+---
+src: ./pages/poc-phpeste/07-legadao-pastas.md
+---
