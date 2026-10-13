@@ -515,3 +515,8 @@
   color: var(--ph-sand-lt);
 }
 .ph-slide--sand .ph-file-label { color: var(--ph-espresso); }
+
+/* ticket holding a file tree: compact title + dense mono */
+.ph-ticket--tree { padding: 0.8rem 1rem 0.9rem; }
+.ph-ticket--tree .ph-ticket__title { font-size: 1.15rem; margin: 0.2rem 0 0.5rem; }
+.ph-ticket--tree pre { font-size: 0.8rem !important; line-height: 1.42 !important; }

@@ -48,3 +48,7 @@ src: ./pages/poc-phpeste/10-ato-extracao.md
 ---
 src: ./pages/poc-phpeste/11-teste-falha.md
 ---
+
+---
+src: ./pages/poc-phpeste/12-estruturas.md
+---

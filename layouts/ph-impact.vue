@@ -5,6 +5,7 @@
 withDefaults(defineProps<{
   tone?: 'orange' | 'espresso' | 'crimson' | 'sand'
   size?: 'number' | 'statement'
+  eyebrow?: string
   meta?: string
 }>(), {
   tone: 'orange',
@@ -25,6 +26,7 @@ withDefaults(defineProps<{
     </header>
 
     <div class="ph-impact__body">
+      <span v-if="eyebrow" class="ph-eyebrow ph-impact__eyebrow">{{ eyebrow }}</span>
       <slot />
     </div>
 
@@ -71,6 +73,9 @@ withDefaults(defineProps<{
   letter-spacing: 0;
   text-transform: none;
 }
+.ph-impact__eyebrow { font-size: 1.2rem; }
+.ph-slide--orange .ph-impact__eyebrow,
+.ph-slide--sand .ph-impact__eyebrow { color: var(--ph-espresso); }
 .ph-slide--sand .ph-impact__q strong { text-decoration-color: var(--ph-crimson); }
 .ph-impact__body > p:first-of-type {
   margin: 0;
