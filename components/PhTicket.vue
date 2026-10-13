@@ -52,6 +52,23 @@ defineProps<{
   white-space: pre;
 }
 .ph-ticket__body p { margin: 0.6rem 0 0; font-style: italic; }
+.ph-ticket__list { margin: 0; padding: 0; list-style: none; counter-reset: q; }
+.ph-ticket__list li {
+  counter-increment: q;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.35rem 0;
+  font-weight: 600;
+}
+.ph-ticket__list li + li { border-top: 1.5px dashed var(--ph-sand, #c4a07a); }
+.ph-ticket__list li::before {
+  content: counter(q, decimal-leading-zero);
+  font-family: var(--ph-font-display);
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: var(--ph-crimson, #a52830);
+}
 .ph-ticket__body .ph-qr { display: block; margin-top: -0.2rem; width: 100%; height: auto; border-radius: 4px; }
 .ph-ticket__body .ph-qr-url { font-style: normal; font-size: 0.72rem; font-weight: 600; text-align: center; }
 </style>

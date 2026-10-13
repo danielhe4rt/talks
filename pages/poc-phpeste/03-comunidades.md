@@ -44,7 +44,7 @@ As **4 comunidades** que eu faço parte hoje.
 
 "A segunda é a PHPSP, o grupo de devs PHP de São Paulo — tem mais de 10 anos de Pub e Talks presenciais, é onde a galera de PHP de SP se encontra de verdade."
 
-"A terceira é a Filament BR, a comunidade brasileira de FilamentPHP — que é justamente a stack que eu vou mostrar mais pra frente na palestra."
+"A terceira é a Filament BR, a comunidade brasileira de FilamentPHP — que aparece mais pra frente, no painel admin."
 
 "E a quarta é a 3Pontos, onde eu trabalho hoje como Tech Lead. A 3Pontos é comunidade e também um banco de talentos tech — e é exatamente sobre isso o próximo slide."
 

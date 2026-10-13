@@ -13,9 +13,9 @@ hint: ato 01
 
 <PhActs :acts="[
   { title: 'O legadão', desc: 'Um projeto que parece familiar pra todo mundo.', min: 5 },
-  { title: 'Extração', desc: 'Boundaries, o Teste da Deleção e por que não existe pasta certa.', min: 12 },
-  { title: 'Implementação', desc: 'A ferramenta, o código antes e depois e os erros de verdade.', min: 15 },
-  { title: 'Fechamento', desc: 'Os números reais e 4 regras pra levar pra casa.', min: 8 },
+  { title: 'Teste da Deleção', desc: 'Boundaries, eventos, Gateway e internachi/modular.', min: 22 },
+  { title: 'Convenções', desc: 'Integration-* e panel-*: como isso fica no dia a dia do time.', min: 7 },
+  { title: 'Fechamento', desc: 'O que isso compra quando o produto pivota.', min: 6 },
 ]" />
 
 <!--
@@ -25,11 +25,11 @@ hint: ato 01
 
 "01 — O legadão. A história começa aqui, num projeto que parece familiar pra todo mundo."
 
-"02 — Extração. A parte conceitual: como encontrar boundaries, o Teste da Deleção, e por que não existe estrutura de pasta certa."
+"02 — Teste da Deleção. O coração da palestra: como achar boundaries, por que não existe estrutura de pasta certa, e as perguntas que levam um módulo de 'espalhado em 8 pastas' até 'pode apagar sem medo' — eventos, Gateway e internachi/modular."
 
-"03 — Implementação. A parte prática: a ferramenta que usei, o código antes e depois, e os erros que cometi de verdade."
+"03 — Convenções. Como isso fica no dia a dia do meu time: integration-* e panel-*."
 
-"04 — Fechamento. Os números reais e 4 regras pra você levar pra casa."
+"04 — Fechamento. O que isso compra quando o produto pivota — e por que os grandes fizeram a mesma conta."
 
 [transição] "Vamos pro primeiro ato."
 -->
