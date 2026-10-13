@@ -186,7 +186,7 @@ app-modules/
 </style>
 
 <!--
-"Convenção número um — e antes que alguém grite no chat: essas não são regras de modularização. São as MINHAS. Funcionam pro meu time. Talvez encaixem no seu, talvez não."
+"Convenção número um — e antes que alguém levante a mão: essas não são regras de modularização. São as MINHAS. Funcionam pro meu time. Talvez encaixem no seu, talvez não."
 
 "Primeira: todo serviço externo vira módulo próprio. Stripe? `integration-stripe`. Correios? `integration-correios`. Slack pra alertas? `integration-slack`. Mesmo que seja só um SDK e três chamadas — ele tem casa."
 
