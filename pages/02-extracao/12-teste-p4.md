@@ -120,5 +120,5 @@ metaRight: "Q4 · FRAMEWORK"
 "E aí vem o tapa: 'Class App\Modules\Payment\PaymentServiceProvider not found'. Por quê? Porque eu deletei a pasta, mas no bootstrap/providers.php ainda tem uma linha registrando o ServiceProvider desse módulo. O framework não sabe que ele foi embora."
 
 [click 3 — ✘ + QUASE + diagnóstico]
-"Você apagou o módulo. O framework ainda aponta pra ele. Q4 falhou — não por culpa do meu boundary, mas porque o Laravel exige registro manual em N lugares pra cada módulo existir. Falta um último passo."
+"Você apagou o módulo. O framework ainda aponta pra ele. Q4 falhou — não por culpa do meu boundary, mas porque o Laravel exige registro manual em N lugares pra cada módulo existir. Falta um último passo — e ele tem nome: internachi/modular."
 -->

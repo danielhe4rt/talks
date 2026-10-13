@@ -69,7 +69,7 @@ metaRight: "Q3 · LEAKS"
 <!-- VISUAL 2: Arrows from consumers -->
 <!-- ============================== -->
 <div v-click="[2, 3]" class="absolute inset-0 flex flex-col justify-center overflow-hidden">
-  <div class="text-xs font-bold text-red-400 mb-4">3 consumidores diferentes batem no mesmo arquivo:</div>
+  <div class="text-xs font-bold text-red-400 mb-4">3 features diferentes batem no mesmo arquivo:</div>
 
   <div class="flex justify-center">
     <div class="px-4 py-3 bg-gray-800/60 rounded border border-yellow-500/40 text-center">
@@ -81,18 +81,18 @@ metaRight: "Q3 · LEAKS"
   <div class="mt-5 grid grid-cols-3 gap-3">
     <div class="p-2.5 bg-gray-900/60 rounded border border-red-500/20">
       <div class="text-red-400 font-mono text-[10px] font-bold mb-0.5">↑ chamado por</div>
-      <div class="font-mono text-xs text-bone">Checkout/<br>PlaceOrder.php</div>
-      <div class="mt-1 inline-block text-[9px] uppercase tracking-wider text-gray-500 bg-gray-800/60 px-1.5 rounded">checkout</div>
+      <div class="font-mono text-xs text-bone">Payment/<br>ProcessPayment.php</div>
+      <div class="mt-1 inline-block text-[9px] uppercase tracking-wider text-gray-500 bg-gray-800/60 px-1.5 rounded">cobrança</div>
     </div>
     <div class="p-2.5 bg-gray-900/60 rounded border border-red-500/20">
       <div class="text-red-400 font-mono text-[10px] font-bold mb-0.5">↑ chamado por</div>
-      <div class="font-mono text-xs text-bone">Subscriptions/<br>RecurringChargeJob.php</div>
-      <div class="mt-1 inline-block text-[9px] uppercase tracking-wider text-gray-500 bg-gray-800/60 px-1.5 rounded">subscriptions</div>
+      <div class="font-mono text-xs text-bone">Payment/<br>ProcessRefund.php</div>
+      <div class="mt-1 inline-block text-[9px] uppercase tracking-wider text-gray-500 bg-gray-800/60 px-1.5 rounded">reembolso</div>
     </div>
     <div class="p-2.5 bg-gray-900/60 rounded border border-red-500/20">
       <div class="text-red-400 font-mono text-[10px] font-bold mb-0.5">↑ chamado por</div>
-      <div class="font-mono text-xs text-bone">Admin/<br>RefundController.php</div>
-      <div class="mt-1 inline-block text-[9px] uppercase tracking-wider text-gray-500 bg-gray-800/60 px-1.5 rounded">admin</div>
+      <div class="font-mono text-xs text-bone">Payment/<br>FraudDetection.php</div>
+      <div class="mt-1 inline-block text-[9px] uppercase tracking-wider text-gray-500 bg-gray-800/60 px-1.5 rounded">antifraude</div>
     </div>
   </div>
 </div>
@@ -117,8 +117,8 @@ metaRight: "Q3 · LEAKS"
 "Pega o PaymentGatewayService. Tá lá dentro de Modules/Payment/. Tudo certinho, né? Aparentemente sim. Mas quem CHAMA esse arquivo?"
 
 [click 2 — 3 consumidores aparecem]
-"Checkout chama na hora de fechar o pedido. Subscriptions chama no Job de cobrança recorrente. Admin chama quando faz refund. Três features. Três domínios diferentes. UM arquivo."
+"A cobrança chama. O reembolso chama, pra estornar. O antifraude chama, pra validar o cartão. Lembra que o Checkout já não importa nada daqui? Ótimo — o problema agora é DENTRO de Payment: três features diferentes morando na mesma pasta e penduradas no MESMO arquivo."
 
 [click 3 — ✘ + LEAK + diagnóstico]
-"Isso é leak. O arquivo mora em Payment, mas Payment não é dono dele — 3 features dependem. Ele não é Payment, é Gateway. E enquanto ele tiver esse nome e esse endereço errado, qualquer mudança em Payment vaza pros outros 2 módulos. Q3 falhou. Mas pelo menos agora eu sei onde."
+"Isso é leak. O arquivo mora em Payment, mas Payment não é dono dele — 3 features dependem. Ele não é Payment, é Gateway. E enquanto ele tiver esse nome e esse endereço errado, qualquer mudança na cobrança vaza pro reembolso e pro antifraude. Q3 falhou. Mas pelo menos agora eu sei onde."
 -->

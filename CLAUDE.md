@@ -105,7 +105,7 @@ The same `transition: none` stepper pattern is reused in `02-extracao/` (slides 
 
 The talk uses a fictional ecommerce project as the running example. The opening stepper shows all 18 `app/` folders and 210 PHP files; per-folder counts must add up to that total: Models(45, listing is an excerpt), Http(25), Services(22), Jobs(18), Actions(15), Events(12), Listeners(10), Data(10), Enums(8), Livewire(8), Mail(6), Notifications(6), Observers(5), rest(20: Console, Exceptions, Policies, Providers, Support). Every file the deletion test cites must exist in the stepper.
 
-Module names used from act 02 onward: Cart, Catalog, Checkout, Payment, Shipping, plus Gateway (contract extracted from the Q3 leak) and Subscriptions/Admin as Gateway consumers. Acts 03–04 reuse them (lowercase as internachi `app-modules/*`); `integration-stripe` implements the Gateway contract.
+Module names used from act 02 onward: Cart, Catalog, Checkout, Payment, Shipping. Story of the payment module: Q2 cuts Checkout's import with the `OrderPlaced` event (Checkout never calls Payment again); Q3 finds the leak *inside* Payment — `PaymentGatewayService` is shared by three features living there (cobrança, reembolso, antifraude) — so Gateway becomes a module (contract) and Refunds and Fraud move out of Payment. Acts 03–04 reuse these names (lowercase as internachi `app-modules/*`); `integration-stripe` implements the Gateway contract. The 4 folder structures in `03-estruturas` must show the same 5 Cart files.
 
 The talk's 4th deletion-test question is a reveal at the end of act 02 — don't mention "4 perguntas" before it (agenda, cover).
 

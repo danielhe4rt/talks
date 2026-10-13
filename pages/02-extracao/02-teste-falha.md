@@ -39,7 +39,7 @@ metaRight: "Q1+Q2+Q3 · LEGADÃO"
     <span v-click="4" class="text-red-400 font-bold text-sm">✘</span>
   </div>
   <div class="text-sm mt-1">Algum arquivo <b class="text-red-300">usado</b> por outra feature?</div>
-  <div v-click="4" class="text-[10px] text-red-300/70 mt-1">Actions chamadas por 5 classes</div>
+  <div v-click="4" class="text-[10px] text-red-300/70 mt-1">Usados por pedidos, checkout, reembolso e antifraude</div>
 </div>
 
 <!-- Resultado final -->
@@ -57,8 +57,7 @@ metaRight: "Q1+Q2+Q3 · LEGADÃO"
   <div class="font-mono text-[10px] leading-[1.35]">
     <div class="opacity-30">app/</div>
     <div class="opacity-30">├── Actions/</div>
-    <div class="bg-yellow-500/15 text-yellow-300 rounded px-1 -mx-0.5">│   ├── <b>ProcessPaymentAction.php</b></div>
-    <div class="opacity-30">│   └── CreateOrderAction.php</div>
+    <div class="bg-yellow-500/15 text-yellow-300 rounded px-1 -mx-0.5">│   └── <b>ProcessPaymentAction.php</b></div>
     <div class="opacity-30">├── Jobs/</div>
     <div class="bg-yellow-500/15 text-yellow-300 rounded px-1 -mx-0.5">│   └── <b>ChargePaymentJob.php</b></div>
     <div class="opacity-30">├── Services/</div>
@@ -106,7 +105,7 @@ metaRight: "Q1+Q2+Q3 · LEGADÃO"
       <div class="font-mono text-xs text-gray-300">OrderService</div>
       <div class="flex items-center gap-1.5 ml-4 mt-1">
         <span class="text-gray-500 font-mono text-[10px]">↳ import</span>
-        <span class="font-mono text-xs text-red-300 line-through">PaymentGateway</span>
+        <span class="font-mono text-xs text-red-300 line-through">PaymentGatewayService</span>
         <span class="text-red-500">💥</span>
       </div>
     </div>
@@ -133,13 +132,8 @@ metaRight: "Q1+Q2+Q3 · LEGADÃO"
         </div>
         <div class="flex items-center gap-2 text-xs">
           <span class="text-red-400 font-mono font-bold">←</span>
-          <span class="opacity-80">RetryPaymentJob.php</span>
-          <span class="text-gray-500 text-[10px] bg-gray-700/50 px-1.5 rounded">jobs</span>
-        </div>
-        <div class="flex items-center gap-2 text-xs">
-          <span class="text-red-400 font-mono font-bold">←</span>
-          <span class="opacity-80">AdminRefundController.php</span>
-          <span class="text-gray-500 text-[10px] bg-gray-700/50 px-1.5 rounded">admin</span>
+          <span class="opacity-80">ProcessCheckoutAction.php</span>
+          <span class="text-gray-500 text-[10px] bg-gray-700/50 px-1.5 rounded">checkout</span>
         </div>
       </div>
     </div>
@@ -148,13 +142,13 @@ metaRight: "Q1+Q2+Q3 · LEGADÃO"
       <div class="mt-2 space-y-1.5">
         <div class="flex items-center gap-2 text-xs">
           <span class="text-red-400 font-mono font-bold">←</span>
-          <span class="opacity-80">CheckoutService.php</span>
-          <span class="text-gray-500 text-[10px] bg-gray-700/50 px-1.5 rounded">checkout</span>
+          <span class="opacity-80">RefundService.php</span>
+          <span class="text-gray-500 text-[10px] bg-gray-700/50 px-1.5 rounded">reembolso</span>
         </div>
         <div class="flex items-center gap-2 text-xs">
           <span class="text-red-400 font-mono font-bold">←</span>
-          <span class="opacity-80">SubscriptionJob.php</span>
-          <span class="text-gray-500 text-[10px] bg-gray-700/50 px-1.5 rounded">assinaturas</span>
+          <span class="opacity-80">FraudDetectionService.php</span>
+          <span class="text-gray-500 text-[10px] bg-gray-700/50 px-1.5 rounded">antifraude</span>
         </div>
       </div>
     </div>
@@ -185,10 +179,10 @@ metaRight: "Q1+Q2+Q3 · LEGADÃO"
 "Primeira pergunta: consigo listar todos os arquivos de pagamento? Olha só... ProcessPaymentAction tá em Actions. ChargePaymentJob tá em Jobs. PaymentGatewayService tá em Services. Payment e PaymentTransaction tão em Models. Webhook controller em Http. Notification em Notifications. Enum em Enums. Observer em Observers. São 9 arquivos espalhados em 8 pastas diferentes. Você confia que pegou tudo? Eu não confio."
 
 [click 2 — ✘ P1 + Pergunta 2 + grafo de imports]
-"Falhou. Segunda pergunta: se eu deletar esses 9 arquivos, quanto quebra? CreateOrderAction importa ProcessPaymentAction diretamente. CheckoutController importa ChargePaymentJob. OrderService importa PaymentGateway. Três classes de outros domínios quebram na hora. Pedidos e Checkout dependem diretamente de Pagamento."
+"Falhou. Segunda pergunta: se eu deletar esses 9 arquivos, quanto quebra? CreateOrderAction importa ProcessPaymentAction diretamente. CheckoutController importa ChargePaymentJob. OrderService importa PaymentGatewayService. Três classes de outros domínios quebram na hora. Pedidos e Checkout dependem diretamente de Pagamento."
 
 [click 3 — ✘ P2 + Pergunta 3 + uso compartilhado]
-"Falhou também. Terceira pergunta: algum desses arquivos é usado por outra feature? ProcessPaymentAction é chamada por CreateOrderAction de pedidos, por RetryPaymentJob de jobs, e por AdminRefundController do admin. PaymentGatewayService é chamada por CheckoutService e SubscriptionJob. Tudo acoplado."
+"Falhou também. Terceira pergunta: algum desses arquivos é usado por outra feature? ProcessPaymentAction é chamada por CreateOrderAction, de pedidos, e por ProcessCheckoutAction, do checkout. PaymentGatewayService é chamada pelo RefundService, de reembolso, e pelo FraudDetectionService, do antifraude. Tudo acoplado."
 
 [click 4 — ✘ P3 + FALHOU]
 "Falhou as três. O legadão não passa no Teste da Deleção. E agora? Como a gente resolve isso?"

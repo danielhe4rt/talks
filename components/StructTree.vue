@@ -96,7 +96,7 @@ const VARIANTS: Record<string, { root: string; count: string; tree: Node[] }> = 
   },
   ddd: {
     root: 'app/Modules/Cart/',
-    count: '6 arquivos · 7 subpastas',
+    count: '5 arquivos · 7 subpastas',
     tree: [
       { name: 'Domain/', kind: 'dir', children: [
         { name: 'Models/', kind: 'dir', children: [
@@ -108,15 +108,14 @@ const VARIANTS: Record<string, { root: string; count: string; tree: Node[] }> = 
         ] },
       ] },
       { name: 'Application/', kind: 'dir', children: [
-        { name: 'Actions/', kind: 'dir', children: [
-          { name: 'AddToCartAction.php', kind: 'support' },
-        ] },
-        { name: 'Jobs/', kind: 'dir', children: [
-          { name: 'ClearExpiredCartsJob.php', kind: 'support' },
+        { name: 'Services/', kind: 'dir', children: [
+          { name: 'CartService.php', kind: 'support' },
         ] },
       ] },
       { name: 'Infrastructure/', kind: 'dir', children: [
-        { name: 'EloquentCartRepository.php', kind: 'support' },
+        { name: 'Jobs/', kind: 'dir', children: [
+          { name: 'ClearExpiredCartsJob.php', kind: 'support' },
+        ] },
       ] },
     ],
   },

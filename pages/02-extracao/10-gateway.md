@@ -24,17 +24,15 @@ afterLabel: DEPOIS
     { name: 'Payment/', kind: 'dir', children: [
       { name: 'ProcessPayment.php', kind: 'support' },
       { name: 'PaymentGatewayService.php', kind: 'domain', note: '← leak', noteKind: 'danger' },
-      { name: '…', kind: 'support' },
+      { name: 'ProcessRefund.php', kind: 'support' },
+      { name: 'FraudDetection.php', kind: 'support' },
     ] },
-    { name: 'Subscriptions/', kind: 'dir', children: [ { name: 'RecurringChargeJob.php', kind: 'support' } ] },
-    { name: 'Checkout/', kind: 'dir', children: [ { name: 'PlaceOrder.php', kind: 'support' } ] },
-    { name: 'Admin/', kind: 'dir', children: [ { name: 'RefundController.php', kind: 'support' } ] },
   ]"
 />
 
 <div class="mt-3 p-2 bg-red-900/20 rounded text-xs text-red-300">
-Mora em Payment, mas 3 features importam direto.<br>
-Mudou Payment → quebra Subscriptions <i>e</i> Admin.
+Mora em Payment, mas 3 features usam direto.<br>
+Mexeu na cobrança → quebra reembolso <i>e</i> antifraude.
 </div>
 
 ::after::
@@ -51,20 +49,20 @@ Mudou Payment → quebra Subscriptions <i>e</i> Admin.
       { name: 'StripeGateway.php', kind: 'domain' },
     ] },
     { name: 'Payment/', kind: 'dir', children: [ { name: 'ProcessPayment.php', kind: 'support' } ] },
-    { name: 'Subscriptions/', kind: 'dir', children: [ { name: 'RecurringChargeJob.php', kind: 'support' } ] },
-    { name: 'Admin/', kind: 'dir', children: [ { name: 'RefundController.php', kind: 'support' } ] },
+    { name: 'Refunds/', kind: 'dir', note: '← saiu de Payment', noteKind: 'ok', children: [ { name: 'ProcessRefund.php', kind: 'support' } ] },
+    { name: 'Fraud/', kind: 'dir', note: '← saiu de Payment', noteKind: 'ok', children: [ { name: 'FraudDetection.php', kind: 'support' } ] },
   ]"
 />
 
 <div class="mt-3 p-2 bg-green-900/20 rounded text-xs text-green-300">
-Gateway é o contrato. Payment, Subscriptions e Admin<br>
+Gateway é o contrato. Payment, Refunds e Fraud<br>
 dependem dele — não um do outro.
 </div>
 
 <v-click>
 
 <div class="mt-3 p-2.5 bg-bone/5 rounded border-l-4 border-green-500 text-sm">
-Se <b class="text-green-400">3 módulos usam</b>, não pertence a 1 — <b>vira módulo</b>.
+Se <b class="text-green-400">3 features usam</b>, não pertence a 1 — <b>vira módulo</b>.
 </div>
 
 </v-click>
@@ -72,10 +70,10 @@ Se <b class="text-green-400">3 módulos usam</b>, não pertence a 1 — <b>vira 
 <!--
 "O leak não é um problema de pasta. É um problema de pertencimento. PaymentGatewayService morava em Payment, mas Payment não era dono — só era um dos consumidores."
 
-"A regra é simples: se 3 módulos usam o arquivo, ele não pertence a nenhum dos 3. Vira um módulo novo. Gateway."
+"A regra é simples: se 3 features usam o arquivo, ele não pertence a nenhuma das 3. Vira um módulo novo. Gateway."
 
-"Olha o depois: Gateway vira um módulo de verdade. GatewayContract é a interface. StripeGateway é a implementação. Payment, Subscriptions e Admin todos passam a depender de Gateway — não um do outro. Os 3 ficam acoplados ao MESMO contrato, não a si mesmos."
+"Olha o depois: Gateway vira um módulo de verdade. GatewayContract é a interface. StripeGateway é a implementação. E reembolso e antifraude saem de Payment pra módulos próprios: Refunds e Fraud. Payment, Refunds e Fraud passam a depender de Gateway — não um do outro. Os 3 ficam acoplados ao MESMO contrato, não a si mesmos."
 
 [click — regra]
-"Se 3 módulos usam, não pertence a 1, vira módulo. Anota essa."
+"Se 3 features usam, não pertence a 1, vira módulo. Anota essa."
 -->
