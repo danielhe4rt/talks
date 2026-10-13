@@ -40,3 +40,11 @@ src: ./pages/poc-phpeste/08-legadao-210.md
 ---
 src: ./pages/poc-phpeste/09-virada.md
 ---
+
+---
+src: ./pages/poc-phpeste/10-ato-extracao.md
+---
+
+---
+src: ./pages/poc-phpeste/11-teste-falha.md
+---

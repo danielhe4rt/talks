@@ -345,3 +345,173 @@
 }
 .ph-rule-text::before,
 .ph-rule-text::after { content: ''; flex: 1; border-top: 2px dashed currentColor; opacity: 0.5; }
+
+/* ========================================================================
+   Stage vocabulary — visuals for ph-deletion / ph-split / ph-section.
+   All text on light cards is espresso; all text on espresso is sand-lt.
+   ======================================================================== */
+
+/* steps stacked in one place, swapped with v-click="[a, b]" */
+.ph-step {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.7rem;
+}
+.ph-step--top { justify-content: flex-start; }
+.ph-step__title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ph-sand-lt);
+}
+.ph-slide--sand .ph-step__title,
+.ph-slide--orange .ph-step__title { color: var(--ph-espresso); }
+
+/* file list on paper: .is-hit = yellow marker, .is-ctx = context */
+.ph-files {
+  margin: 0;
+  padding: 0.7rem 0.9rem;
+  background: var(--ph-off-white);
+  color: var(--ph-espresso);
+  border: 2px solid var(--ph-espresso);
+  border-radius: 4px;
+  font-family: var(--ph-font-mono);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  white-space: pre;
+}
+.ph-files > span { display: block; padding: 0 0.35rem; border-radius: 3px; }
+.ph-files .is-ctx { opacity: 0.68; }
+.ph-files .is-hit { background: var(--ph-yellow); font-weight: 600; }
+.ph-files .is-ok { background: #d9e6d0; font-weight: 600; }
+.ph-files .is-gone { text-decoration: line-through; opacity: 0.68; }
+.ph-files--cols { columns: 2; column-gap: 1.4rem; }
+
+/* dependency rows: who imports what */
+.ph-deps { display: flex; flex-direction: column; gap: 0.5rem; }
+.ph-dep {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.8rem;
+  background: var(--ph-off-white);
+  color: var(--ph-espresso);
+  border: 2px solid var(--ph-espresso);
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+.ph-dep code {
+  font-family: var(--ph-font-mono);
+  font-size: 0.85em;
+  font-weight: 600;
+}
+.ph-dep__verb { font-style: italic; }
+.ph-dep .is-broken { text-decoration: line-through; text-decoration-color: var(--ph-crimson); text-decoration-thickness: 2px; }
+.ph-dep__tag {
+  margin-left: auto;
+  padding: 0.05rem 0.45rem;
+  border-radius: 4px;
+  background: var(--ph-espresso);
+  color: var(--ph-sand-lt);
+  font-family: var(--ph-font-ui);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* compact callout */
+.ph-callout {
+  --c: var(--ph-blue);
+  margin: 0;
+  padding: 0.55rem 0.8rem;
+  background: var(--ph-sand-lt);
+  color: var(--ph-espresso);
+  border-left: 6px solid var(--c);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.ph-callout--fail { --c: var(--ph-crimson); }
+.ph-callout--ok { --c: var(--ph-green); }
+.ph-callout--warn { --c: var(--ph-amber); }
+.ph-callout strong { font-weight: 600; }
+.ph-callout code { font-family: var(--ph-font-mono); font-size: 0.85em; }
+
+/* module chips */
+.ph-mods { display: grid; grid-template-columns: repeat(var(--cols, 3), 1fr); gap: 0.6rem; }
+.ph-mod {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.55rem 0.75rem;
+  background: var(--ph-off-white);
+  color: var(--ph-espresso);
+  border: 2px solid var(--ph-espresso);
+  border-top-width: 6px;
+  border-radius: 4px;
+}
+.ph-mod__name { font-family: var(--ph-font-mono); font-size: 0.85rem; font-weight: 600; }
+.ph-mod__state { font-size: 0.85rem; font-style: italic; }
+.ph-mod.is-ok { border-top-color: var(--ph-green); }
+.ph-mod.is-broken { border-top-color: var(--ph-crimson); box-shadow: 4px 4px 0 var(--ph-crimson); }
+.ph-mod.is-deleted { border-style: dashed; opacity: 0.7; }
+.ph-mod.is-focus { border-top-color: var(--ph-yellow); }
+
+/* terminal */
+.ph-term {
+  margin: 0;
+  padding: 0.8rem 1rem;
+  background: var(--ph-black);
+  color: var(--ph-sand-lt);
+  border: 2px solid var(--ph-sand);
+  border-radius: 4px;
+  font-family: var(--ph-font-mono);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+.ph-term .p { color: var(--ph-orange); }        /* prompt, 6.0:1 */
+.ph-term .err { color: var(--ph-yellow); font-weight: 600; } /* 12.9:1 */
+.ph-term .ok { color: #9ccf86; }               /* 9.9:1 */
+.ph-term .dim { color: var(--ph-sand); }
+
+/* big score */
+.ph-score {
+  font-family: var(--ph-font-display);
+  font-size: 7rem;
+  line-height: 0.9;
+  color: var(--ph-yellow);
+  text-shadow: 5px 5px 0 var(--ph-black);
+  text-align: center;
+}
+
+/* code on paper: any Slidev code block inside .ph-ink keeps the light theme */
+.ph-ink .slidev-code-wrapper {
+  margin: 0 !important;
+  padding: 0.7rem 0.9rem;
+  background: var(--ph-off-white);
+  border: 2px solid var(--ph-espresso);
+  border-radius: 4px;
+}
+.ph-ink .slidev-code {
+  background: transparent !important;
+  padding: 0 !important;
+  font-family: var(--ph-font-mono) !important;
+  color: var(--ph-espresso) !important;
+}
+.ph-ink .slidev-code span { color: var(--shiki-light, var(--ph-espresso)) !important; }
+.ph-ink .slidev-code .line.dishonored { opacity: 0.55; }
+.ph-ink .slidev-code .line.highlighted { background: var(--ph-yellow); border-radius: 3px; }
+.ph-file-label {
+  margin: 0 0 0.35rem;
+  font-family: var(--ph-font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ph-sand-lt);
+}
+.ph-slide--sand .ph-file-label { color: var(--ph-espresso); }

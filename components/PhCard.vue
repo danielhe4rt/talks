@@ -21,7 +21,7 @@ withDefaults(defineProps<{
     <span v-if="tag" class="ph-card-x__tag">{{ tag }}</span>
     <h2 class="ph-card-x__name">{{ name }}</h2>
     <div class="ph-card-x__desc"><slot /></div>
-    <div class="ph-card-x__foot">
+    <div v-if="meta || $slots.link" class="ph-card-x__foot">
       <p v-if="meta" class="ph-card-x__meta">{{ meta }}</p>
       <p v-if="$slots.link" class="ph-card-x__link"><slot name="link" /></p>
     </div>

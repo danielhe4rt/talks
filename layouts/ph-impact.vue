@@ -3,19 +3,21 @@
 // paragraph (stats line), then free blocks — `.ph-impact__q` for the
 // question and `.ph-impact__punch` for the stamped answer card.
 withDefaults(defineProps<{
-  tone?: 'orange' | 'espresso' | 'crimson'
+  tone?: 'orange' | 'espresso' | 'crimson' | 'sand'
+  size?: 'number' | 'statement'
   meta?: string
 }>(), {
   tone: 'orange',
+  size: 'number',
 })
 </script>
 
 <template>
-  <div class="ph-slide ph-impact" :class="`ph-slide--${tone}`">
+  <div class="ph-slide ph-impact" :class="[`ph-slide--${tone}`, `ph-impact--${size}`]">
     <header class="ph-topbar">
       <img
         class="ph-topbar__logo"
-        :src="tone === 'orange' ? '/images/phpeste-logo-espresso.png' : '/images/phpeste-logo-cream.png'"
+        :src="tone === 'orange' || tone === 'sand' ? '/images/phpeste-logo-espresso.png' : '/images/phpeste-logo-cream.png'"
         alt="PHPeste 2026"
       >
       <span class="ph-topbar__fill" />
@@ -56,6 +58,20 @@ withDefaults(defineProps<{
 .ph-slide--espresso .ph-impact__body h1,
 .ph-slide--crimson .ph-impact__body h1 { color: var(--ph-yellow); text-shadow: 6px 6px 0 var(--ph-black); }
 
+.ph-impact--statement .ph-impact__body h1 {
+  font-size: 3.8rem;
+  line-height: 1.02;
+  text-shadow: 4px 4px 0 var(--ph-yellow);
+  max-width: 50rem;
+}
+.ph-impact--statement .ph-impact__body > p:first-of-type {
+  font-family: var(--ph-font-body);
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.ph-slide--sand .ph-impact__q strong { text-decoration-color: var(--ph-crimson); }
 .ph-impact__body > p:first-of-type {
   margin: 0;
   font-family: var(--ph-font-ui);
