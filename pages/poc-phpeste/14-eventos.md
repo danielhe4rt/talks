@@ -3,34 +3,33 @@ layout: ph-section
 tone: espresso
 eyebrow: conceito antes do código
 transition: fade
+clicks: 2
 ---
 
 # Import ou evento?
 
-Dois jeitos de um módulo falar com outro. **Um sobrevive** ao Teste da Deleção.
+Apaga o Payment e vê **quem cai junto**.
 
 ::content::
 
-<PhEventCompare />
+<PhCouplingLanes />
 
 <!--
-"Antes de eu mostrar o código, deixa eu te mostrar o CONCEITO visualmente."
+"Antes do código, o CONCEITO. Dois jeitos de um módulo falar com outro."
 
-[apresenta sem clicar — deixa a animação rodar]
+"Em cima: IMPORT. Checkout faz `use App\Modules\Payment` e chama direto. Olha o fio entre os dois — é uma dependência. Checkout CONHECE Payment."
 
-"Esquerda: ACOPLADO. IMPORT. Checkout faz `use App\\Modules\\Payment` e chama direto. Olha o fio entre os dois — sólido, brilhante. É uma dependência."
+"Embaixo: EVENTO. Checkout não importa Payment. Ele dispara `OrderPlaced` — olha as ondas, é um aviso pro ar. Payment escuta, mas Checkout nem sabe disso. Não precisa saber."
 
-"Direita: DESACOPLADO. EVENTO. Checkout não importa Payment. Checkout dispara `OrderPlaced::dispatch()` — olha as ondas, é um broadcast pro nada. Payment está ouvindo, mas Checkout não sabe disso. Não precisa saber."
+[click — Payment some dos dois lados]
 
-[clica em DELETAR PAYMENT — os dois lados reagem simultaneamente]
+"Apaguei Payment nas duas linhas. Em cima: o fio arrebentou. Checkout caiu junto — Class not found. Apagou um módulo, o outro foi junto."
 
-"Apaguei Payment dos dois lados. Olha o que aconteceu."
+"Embaixo: Payment sumiu e Checkout segue funcionando. O evento continua disparando — pro vazio. Ninguém escuta, e tá tudo bem."
 
-"Esquerda: o fio quebrou. Checkout explodiu — fatal error. O import virou linha tracejada vermelha. Você apagou um módulo e o outro caiu junto."
+[click — veredito]
 
-"Direita: Payment sumiu tranquilo. O evento ainda dispara — Checkout não sabe que ninguém tá escutando, e não precisa saber. Sistema intacto."
-
-"Isso é a diferença entre import e evento. Não é só estilo de código — é se o seu boundary sobrevive ao Teste da Deleção. Vamos ver como fica isso no código real."
+"Import é um fio: corta um lado, o outro cai. Evento é um aviso: quem quiser, escuta. Não é estilo de código — é se o seu boundary sobrevive ao Teste da Deleção. Bora ver no código."
 -->
 
 ---

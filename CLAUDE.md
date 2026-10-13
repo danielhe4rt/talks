@@ -82,7 +82,7 @@ Shared tokens and helpers live in `styles/phpeste.css` (palette, Rubik Dirt + Lo
 | `ph-deletion` | Teste da Deleção: `questions`/`result` in frontmatter react to clicks; set `clicks: N`; stage in `::visual::` |
 | `ph-split` | Before/after with `::before::`, `::after::`, `::footer::` |
 
-Components: `PhCard`, `PhTicket`, `PhActs` (agenda bar), `PhEventCompare` (import vs evento toggle). Inside raw `<pre>` blocks never leave an empty line (markdown closes the HTML block) — use `&nbsp;`. Pages imported via `src:` sometimes miss HMR; restart the dev server before trusting a screenshot.
+Components: `PhCard`, `PhTicket`, `PhActs` (agenda bar), `PhCouplingLanes` (import vs evento, click-driven). Inside raw `<pre>` blocks never leave an empty line (markdown closes the HTML block) — use `&nbsp;`. Pages imported via `src:` sometimes miss HMR; restart the dev server before trusting a screenshot.
 
 ### Components (`components/`)
 
