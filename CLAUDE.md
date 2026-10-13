@@ -68,6 +68,22 @@ pages/
 | `split-compare` | `split-compare.vue` | `default` (title), `::before::`, `::after::` | `beforeLabel`, `afterLabel` | Before/after with colored tints |
 | `deletion-test` | `deletion-test.vue` | `default` (title), `::questions::`, `::visual::` | — | Title row + questions/visual split (32%/68%) for interactive deletion test |
 
+### PHPeste 2026 layouts (`ph-*`, used by `poc-phpeste.md`)
+
+Shared tokens and helpers live in `styles/phpeste.css` (palette, Rubik Dirt + Lora, azulejo stripe, stamped badges, stage classes `.ph-step/.ph-files/.ph-dep/.ph-callout/.ph-mods/.ph-term/.ph-score/.ph-ink`). Only the colour pairs listed at the top of that file are allowed for text (WCAG AA).
+
+| Layout | Use |
+|--------|-----|
+| `ph-cover`, `ph-whoami` | Opening slides |
+| `ph-section` | Generic content slide (`tone: espresso/orange/sand`, eyebrow, h1 + note, `::content::`, hint) |
+| `ph-act` | Act divider (crimson, act number, tracker) |
+| `ph-tree` | Folder stepper (same slots as `tree-explorer`) |
+| `ph-impact` | Big number or statement (`size: number/statement`) |
+| `ph-deletion` | Teste da Deleção: `questions`/`result` in frontmatter react to clicks; set `clicks: N`; stage in `::visual::` |
+| `ph-split` | Before/after with `::before::`, `::after::`, `::footer::` |
+
+Components: `PhCard`, `PhTicket`, `PhActs` (agenda bar), `PhEventCompare` (import vs evento toggle). Inside raw `<pre>` blocks never leave an empty line (markdown closes the HTML block) — use `&nbsp;`. Pages imported via `src:` sometimes miss HMR; restart the dev server before trusting a screenshot.
+
 ### Components (`components/`)
 
 | Component | Purpose |

@@ -113,6 +113,7 @@ withDefaults(defineProps<{
 .ph-psplit__content { display: flex; flex-direction: column; gap: 0.6rem; min-height: 0; }
 .ph-psplit__content > p { margin: 0; }
 .ph-psplit__content .slidev-code { font-size: 0.8rem !important; line-height: 1.5 !important; }
+.ph-psplit__content .ph-code-sm .slidev-code { font-size: 0.68rem !important; }
 .ph-psplit__content .slidev-code-wrapper { border-left: 6px solid var(--k) !important; }
 .ph-psplit__content .ph-files { border-left: 6px solid var(--k); }
 

@@ -46,6 +46,13 @@ const rows = computed(() => (props.questions ?? []).map((q, i) => {
 }))
 
 const anyActive = computed(() => rows.value.some(r => r.active))
+// with 4 questions the panel runs out of room: only the question that just
+// resolved keeps its detail line
+const dense = computed(() => rows.value.length > 3)
+const latest = computed(() => {
+  const done = rows.value.filter(r => r.resolved && r.at !== undefined)
+  return done.length ? done.reduce((a, b) => ((b.at ?? 0) >= (a.at ?? 0) ? b : a)).n : -1
+})
 const showResult = computed(() => !!props.result && clicks.value >= (props.result.at ?? 0))
 const marks = { pass: '✓', fail: '✘', pending: '?' }
 const labels = { pass: 'passou', fail: 'falhou', pending: 'pendente' }
@@ -73,7 +80,7 @@ const labels = { pass: 'passou', fail: 'falhou', pending: 'pendente' }
             <span class="ph-del__q-body">
               <span class="ph-del__q-n">pergunta {{ q.n }}</span>
               <span class="ph-del__q-text">{{ q.text }}</span>
-              <span v-if="q.detail && q.resolved" class="ph-del__q-detail">{{ q.detail }}</span>
+              <span v-if="q.detail && q.resolved && (!dense || q.n === latest)" class="ph-del__q-detail">{{ q.detail }}</span>
             </span>
           </li>
         </ol>
