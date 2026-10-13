@@ -58,6 +58,10 @@
   background: var(--ph-texture), var(--ph-orange);
   color: var(--ph-espresso);
 }
+.ph-slide--crimson {
+  background: var(--ph-texture), var(--ph-crimson);
+  color: var(--ph-off-white); /* 6.6:1; yellow on crimson is 4.5:1, display sizes only */
+}
 .ph-slide--sand {
   background: var(--ph-texture), var(--ph-sand-lt);
   color: var(--ph-espresso);
@@ -140,6 +144,7 @@
 }
 /* on orange/sand slides the stripe needs an espresso edge to stay readable */
 .ph-slide--orange .ph-azulejo,
+.ph-slide--crimson .ph-azulejo,
 .ph-slide--sand .ph-azulejo { border-top: 3px solid var(--ph-espresso); }
 
 /* -------- footer -------- */
