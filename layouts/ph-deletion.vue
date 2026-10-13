@@ -97,6 +97,8 @@ const labels = { pass: 'passou', fail: 'falhou', pending: 'pendente' }
 
 <style>
 .ph-del__title h1 {
+  text-transform: none;
+  letter-spacing: 0;
   margin: 0 0 0 0.6rem;
   font-family: var(--ph-font-display);
   font-weight: 400;
@@ -176,9 +178,10 @@ const labels = { pass: 'passou', fail: 'falhou', pending: 'pendente' }
   color: var(--stamp);
   background: var(--ph-off-white);
   font-family: var(--ph-font-display);
-  font-size: 1.7rem;
+  font-size: 1.45rem;
   line-height: 1.1;
   letter-spacing: 0.04em;
+  white-space: nowrap;
   transform: rotate(-4deg);
   -webkit-mask-image: var(--ph-stamp-mask);
   mask-image: var(--ph-stamp-mask);
@@ -193,6 +196,7 @@ const labels = { pass: 'passou', fail: 'falhou', pending: 'pendente' }
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ph-sand-lt);
+  white-space: nowrap;
 }
 
 /* -------- visual stage -------- */

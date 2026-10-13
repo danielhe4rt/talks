@@ -52,3 +52,11 @@ src: ./pages/poc-phpeste/11-teste-falha.md
 ---
 src: ./pages/poc-phpeste/12-estruturas.md
 ---
+
+---
+src: ./pages/poc-phpeste/13-q1-q2.md
+---
+
+---
+src: ./pages/poc-phpeste/14-eventos.md
+---

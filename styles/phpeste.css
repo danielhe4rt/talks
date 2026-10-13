@@ -504,9 +504,13 @@
   font-family: var(--ph-font-mono) !important;
   color: var(--ph-espresso) !important;
 }
-.ph-ink .slidev-code span { color: var(--shiki-light, var(--ph-espresso)) !important; }
-.ph-ink .slidev-code .line.dishonored { opacity: 0.55; }
-.ph-ink .slidev-code .line.highlighted { background: var(--ph-yellow); border-radius: 3px; }
+/* one ink colour: syntax themes wash out on a projector; highlighted
+   lines carry the emphasis instead */
+.ph-slide .ph-ink .slidev-code .line,
+.ph-slide .ph-ink .slidev-code .line span { color: var(--ph-espresso) !important; }
+.ph-ink .slidev-code .line { display: inline-block; width: 100%; padding: 0 0.3rem; border-radius: 3px; }
+.ph-ink .slidev-code .line.dishonored { opacity: 0.62; }
+.ph-ink .slidev-code .line.highlighted { background: var(--ph-yellow); font-weight: 600; }
 .ph-file-label {
   margin: 0 0 0.35rem;
   font-family: var(--ph-font-mono);
