@@ -529,3 +529,70 @@
 .ph-hub { align-self: center; min-width: 19rem; text-align: center; box-shadow: 5px 5px 0 var(--ph-yellow); }
 .ph-hub .ph-mod__name { font-size: 1.05rem; }
 .ph-mod__lines { margin: 0.2rem 0 0; padding: 0; list-style: none; font-size: 0.85rem; line-height: 1.45; }
+
+/* -------- Q1 retest: antes × agora, the count is the message -------- */
+.ph-q1 { display: grid; grid-template-columns: minmax(0, 1.42fr) auto minmax(0, 1fr); gap: 0.7rem; gap: 1rem; align-items: stretch; }
+.ph-q1__arrow { align-self: center; font-family: var(--ph-font-display); font-size: 2.4rem; color: var(--ph-orange); }
+.ph-q1__card {
+  --k: var(--ph-crimson);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.9rem 1rem 1rem;
+  background: var(--ph-off-white);
+  color: var(--ph-espresso);
+  border: 2px solid var(--ph-espresso);
+  border-top: 8px solid var(--k);
+  border-radius: 4px;
+  box-shadow: 6px 6px 0 var(--ph-black);
+}
+.ph-q1__card.is-ok { --k: var(--ph-green); box-shadow: 6px 6px 0 var(--ph-green); }
+.ph-q1__label {
+  font-family: var(--ph-font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.ph-q1__count { display: flex; align-items: baseline; gap: 0.6rem; }
+.ph-q1__num { font-family: var(--ph-font-display); font-size: 4rem; line-height: 0.9; color: var(--k); }
+.ph-q1__unit { font-size: 1.15rem; font-weight: 600; }
+.ph-q1__card .ph-files { border: 0; padding: 0; background: transparent; font-size: 0.68rem; line-height: 1.6; overflow: hidden; }
+.ph-q1__card { min-width: 0; }
+
+/* -------- Q2: dependency map, only Checkout is wired to Payment -------- */
+.ph-depmap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 0.8rem; }
+.ph-depmap .ph-mod { padding: 0.7rem 0.85rem; box-shadow: 4px 4px 0 var(--ph-black); transition: all 0.3s; }
+.ph-depmap .ph-mod__name { font-size: 1.1rem; }
+.ph-depmap .ph-mod__state { font-size: 0.92rem; }
+.ph-depmap .ph-mod.is-broken { box-shadow: 4px 4px 0 var(--ph-crimson); transform: rotate(-1.5deg); }
+.ph-depmap .ph-mod.is-broken .ph-mod__state { font-style: normal; font-weight: 700; color: var(--ph-crimson); }
+.ph-depmap__code { grid-column: 1 / 3; align-self: end; margin-top: 1rem; }
+.ph-depmap__code .ph-file-label { margin-bottom: 0.3rem; }
+.ph-depmap__code .ph-files { font-size: 0.7rem; white-space: pre-wrap; }
+.ph-depmap__pay { grid-column: 3; display: flex; flex-direction: column; align-items: stretch; }
+.ph-depmap__wire { position: relative; height: 4.2rem; display: grid; place-items: center; }
+.ph-depmap__wire::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0; left: 50%;
+  border-left: 6px solid var(--ph-sand-lt);
+  transform: translateX(-50%);
+}
+.ph-depmap__wire span {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  background: var(--ph-sand-lt);
+  color: var(--ph-espresso);
+  font-family: var(--ph-font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.ph-depmap.is-deleted .ph-depmap__wire::before { border-left: 6px dashed var(--ph-yellow); }
+.ph-depmap.is-deleted .ph-depmap__wire span { background: var(--ph-yellow); }
+.ph-depmap .ph-mod.is-gone { background: transparent; color: var(--ph-sand-lt); border: 2px dashed var(--ph-sand); box-shadow: none; }
