@@ -36,13 +36,13 @@ contentAlign: "center"
 
   <div class="diff-keep-label" v-click="1">e o domínio?</div>
   <div class="diff-line diff-line--keep" v-click="1">
-    <span class="diff-check">✓</span><span class="diff-keep">sales/</span><span class="diff-keep-state">nem fica sabendo</span>
+    <span class="diff-check">✓</span><span class="diff-keep">checkout/</span><span class="diff-keep-state">nem fica sabendo</span>
   </div>
   <div class="diff-line diff-line--keep" v-click="1">
     <span class="diff-check">✓</span><span class="diff-keep">payment/</span><span class="diff-keep-state">intacto</span>
   </div>
   <div class="diff-line diff-line--keep" v-click="1">
-    <span class="diff-check">✓</span><span class="diff-keep">fulfillment/</span><span class="diff-keep-state">intacto</span>
+    <span class="diff-check">✓</span><span class="diff-keep">gateway/</span><span class="diff-keep-state">mesmo contrato</span>
   </div>
 </div>
 
@@ -224,7 +224,7 @@ contentAlign: "center"
 "Cliente decidiu trocar de gateway: sai Stripe, entra Pagar.me. Em vez de uma cirurgia de dias caçando referências espalhadas, é isso: apaga a pasta integration-stripe inteira, adiciona integration-pagarme. Duas operações."
 
 [click 1 — os módulos de domínio]
-"E o domínio? Sales nem fica sabendo. Payment, intacto. Fulfillment, intacto. Ninguém quebra, porque ninguém importava a integração direto — o boundary segurou."
+"E o domínio? Checkout nem fica sabendo. Payment, intacto. E o Gateway? Mesmo contrato — só mudou quem implementa. Ninguém quebra, porque ninguém importava a integração direto — o boundary segurou."
 
 [click 2 — bônus]
 "Todo o resto — merge sem conflito, teste isolado, cada coisa num lugar — isso vem de brinde no dia a dia. Importante, mas é consequência."

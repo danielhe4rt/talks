@@ -392,7 +392,7 @@ app-modules/panel-guest/
 
 "Repara: três pastas. Três composer.json. Três ServiceProviders. Três namespaces. Cada audiência tem o stack QUE ELA precisa — não o stack que o app inteiro usa. E NENHUM dos três sabe que os outros existem."
 
-"O backend? Os mesmos módulos de domínio: sales, payment, fulfillment. Só muda a casca."
+"O backend? Os mesmos módulos de domínio do Teste da Deleção: checkout, payment, shipping. Só muda a casca."
 
 [transição] "Uma última coisa antes de fechar essa parte."
 -->

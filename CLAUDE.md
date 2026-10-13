@@ -40,35 +40,22 @@ Pages are organized in numbered subfolders matching the talk's narrative section
 
 ```
 pages/
-├── 00-intro/              # Cover, whoami, agenda
-│   ├── 01-cover.md
-│   ├── 02-whoami.md
-│   └── 03-toctree.md
-├── 01-abertura/           # Storytelling opening: legadão, meme, virada
-│   ├── 01-legadao.md          # Section intro
-│   ├── 02-legadao-pastas.md   # Stepper: ALL 19 folders expanded (tree-explorer layout)
-│   ├── 03-meme.md             # index.php humor
-│   └── 04-virada.md           # Emotional turn
-├── 02-extracao/           # Conceptual: boundaries, deletion test, folder structures
-│   ├── 01-boundaries.md       # Section intro + deletion test concept
-│   ├── 02-teste-falha.md      # Deletion test Q1: scattered files → fails (deletion-test layout)
-│   ├── 03-estruturas.md       # 4 folder patterns for same module (core message)
-│   ├── 04-reteste.md          # Deletion test Q1 retest: modular → passes
-│   ├── 05-teste-p2.md         # Deletion test Q2: cross-module coupling
-│   ├── 06-evento-visual.md    # Interactive EventFlow diagram (coupled vs decoupled)
-│   ├── 07-eventos.md          # Before/after: imports vs events (split-compare)
-│   ├── 08-teste-p2-passa.md   # Deletion test Q2 retest: events → passes
-│   ├── 09-caso-shop.md        # Real-world shop module (100+ files)
-│   └── 10-resultado.md        # Mermaid: 1 shop → sales, payment, fulfillment
-├── 03-implementacao/      # Technical: modular, code, errors, patterns
-│   ├── 01-modular.md      # internachi/modular + AI as devil's advocate
-│   ├── 02-before-after.md # Magic-move code diffs
-│   ├── 03-erros.md        # 3 real errors intercalated with story
-│   └── 04-padroes.md      # 3 patterns: Identity, Integration-*, Panel
-├── 04-fechamento/         # Closing: numbers, rules, CTA
-│   ├── 01-antes-depois.md
-│   ├── 02-regras.md       # 4 rules (improved)
-│   └── 03-cta.md
+├── 00-intro/              # Cover, whoami, comunidades, recruit (3Pontos QR), agenda (4 atos)
+├── 01-abertura/           # Ato 01 · O legadão (~5 min)
+│   ├── 01-legadao.md          # Act divider
+│   ├── 02-legadao-pastas.md   # Stepper: all 18 folders, 210 files (tree-explorer layout) → impact
+│   └── 04-virada.md           # Emotional turn ("isolar em pedaços")
+├── 02-extracao/           # Ato 02 · Teste da Deleção (~22 min)
+│   ├── 01-boundaries.md       # Act divider + the 3 questions
+│   ├── 02-teste-falha.md      # Q1-Q3 fail on the legadão (payment: 9 files in 8 folders)
+│   ├── 03-estruturas.md       # 4 folder patterns for the same module (core message)
+│   ├── 04…08                  # Q1 passes (app/Modules), Q2 fails → events → passes
+│   ├── 09…11                  # Q3 leak → Gateway module → 3/3
+│   └── 12…16                  # Q4 (framework) → internachi/modular → 4/4
+├── 03-convencoes/         # Ato 03 · Convenções (~7 min): 00-ato, integration-*, panel-*, disclaimer
+├── 04-fechamento/         # Ato 04 · Fechamento (~6 min): 00-ato, payoff (pivot), monólito modular, CTA
+├── poc-phpeste/           # PHPeste 2026 identity POC (entry: poc-phpeste.md, ph-* layouts)
+└── _archive/              # Unused older slides (not in slides.md)
 ```
 
 ### Custom layouts (`layouts/`)
@@ -98,7 +85,7 @@ The folder walkthrough uses `tree-explorer` layout with `transition: none` on ev
 <!-- ============================================ -->
 ```
 
-Order follows the tree top-to-bottom: Actions → Data → Enums → Events → Http → Jobs → Listeners → Livewire → Mail → Models → Notifications → Observers → Services → Rest → Impact(487).
+Order follows the tree top-to-bottom: Actions → Data → Enums → Events → Http → Jobs → Listeners → Livewire → Mail → Models → Notifications → Observers → Services → Rest → Impact(210).
 
 The same `transition: none` stepper pattern is reused in `02-extracao/` (slides `02-teste-falha` through `08-teste-p2-passa`) with the `deletion-test` layout — each slide progresses the interactive deletion test while keeping the questions panel stable. Note that `03-estruturas.md` is a separate topic interleaved in this range, not part of the stepper.
 
@@ -116,7 +103,11 @@ The same `transition: none` stepper pattern is reused in `02-extracao/` (slides 
 
 ## Ecommerce example data
 
-The talk uses a fictional ecommerce project as the running example. The tree shown in the opening stepper has 487 PHP files across 19 directories. Key folder counts: Models(45), Services(22), Http(25), Jobs(18), Actions(15), Events(12), Listeners(10), Data(10), Enums(8), Livewire(8), Mail(6), Notifications(6), Observers(5). The extraction splits a monolithic `shop` module into: sales, payment, fulfillment.
+The talk uses a fictional ecommerce project as the running example. The opening stepper shows all 18 `app/` folders and 210 PHP files; per-folder counts must add up to that total: Models(45, listing is an excerpt), Http(25), Services(22), Jobs(18), Actions(15), Events(12), Listeners(10), Data(10), Enums(8), Livewire(8), Mail(6), Notifications(6), Observers(5), rest(20: Console, Exceptions, Policies, Providers, Support). Every file the deletion test cites must exist in the stepper.
+
+Module names used from act 02 onward: Cart, Catalog, Checkout, Payment, Shipping, plus Gateway (contract extracted from the Q3 leak) and Subscriptions/Admin as Gateway consumers. Acts 03–04 reuse them (lowercase as internachi `app-modules/*`); `integration-stripe` implements the Gateway contract.
+
+The talk's 4th deletion-test question is a reveal at the end of act 02 — don't mention "4 perguntas" before it (agenda, cover).
 
 ## Deployment
 

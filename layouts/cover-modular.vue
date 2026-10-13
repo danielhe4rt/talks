@@ -121,12 +121,12 @@
     <!-- stat strip -->
     <div class="stat-strip">
       <div class="stat">
-        <span class="stat-num">19</span>
+        <span class="stat-num">18</span>
         <span class="stat-label">pastas</span>
       </div>
       <span class="stat-sep" />
       <div class="stat">
-        <span class="stat-num">487</span>
+        <span class="stat-num">210</span>
         <span class="stat-label">arquivos</span>
       </div>
       <span class="stat-sep" />

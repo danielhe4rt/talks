@@ -6,13 +6,13 @@ Domain language and key decisions for this presentation project.
 
 ### Talk concepts
 
-- **Legadão**: The monolithic Laravel project used as the opening hook. A fictional ecommerce with 487 PHP files in 19 directories organized by technical type. NOT a real project name — it's the colloquial term for "legacy mess" used in the narrative.
+- **Legadão**: The monolithic Laravel project used as the opening hook. A fictional ecommerce with 210 PHP files in 18 directories organized by technical type. NOT a real project name — it's the colloquial term for "legacy mess" used in the narrative.
 
 - **Organização por tipo técnico**: The anti-pattern the talk argues against. Grouping files by what they ARE (Models/, Services/, Jobs/) instead of what they DO. The Laravel default that `artisan make:*` enforces.
 
 - **Boundary**: The natural separation between groups of code that don't know about each other's existence. Found via the Deletion Test.
 
-- **Teste da Deleção™**: The talk's framework for finding boundaries. Three questions: (1) Can you list all files for a feature? (2) How much breaks if you delete them? (3) Are any used by other features?
+- **Teste da Deleção™**: The talk's framework for finding boundaries. Three questions: (1) Can you list all files for a feature? (2) How much breaks if you delete them? (3) Are any used by other features? A fourth — (4) does deleting the module delete EVERYTHING, including framework registration? — is revealed only after modules exist (end of act 02).
 
 - **Extração**: The process of moving code from a monolithic `app/` into isolated modules. The talk distinguishes "extração conceitual" (understanding WHAT to extract) from "extração técnica" (HOW to extract with tooling).
 

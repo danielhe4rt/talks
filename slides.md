@@ -110,6 +110,10 @@ src: ./pages/02-extracao/16-teste-p4-passa.md
 ---
 
 ---
+src: ./pages/03-convencoes/00-ato.md
+---
+
+---
 src: ./pages/03-convencoes/01-integrations.md
 ---
 
@@ -119,6 +123,10 @@ src: ./pages/03-convencoes/02-panels.md
 
 ---
 src: ./pages/03-convencoes/03-disclaimer.md
+---
+
+---
+src: ./pages/04-fechamento/00-ato.md
 ---
 
 ---

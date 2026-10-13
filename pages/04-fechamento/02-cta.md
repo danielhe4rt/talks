@@ -3,7 +3,7 @@ layout: obrigado-modular
 ---
 
 <!--
-"E é isso, gente. 40 minutos. Uma história. Quatro convenções. Um Teste da Deleção."
+"E é isso, gente. 40 minutos. Uma história. Duas convenções. Um Teste da Deleção."
 
 [pausa]
 
