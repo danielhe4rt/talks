@@ -72,3 +72,7 @@ src: ./pages/poc-phpeste/16-q4.md
 ---
 src: ./pages/poc-phpeste/17-convencoes.md
 ---
+
+---
+src: ./pages/poc-phpeste/18-fechamento.md
+---

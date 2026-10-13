@@ -677,3 +677,22 @@
 /* git-style diff on paper */
 .ph-diff .is-del { background: #f3d2d4; }
 .ph-diff .is-add { background: #d9e6d0; }
+
+/* compact gain rows (icon · title + line · source) */
+.ph-gains { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+.ph-gain {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.15rem 0.75rem;
+  align-items: center;
+  padding: 0.6rem 0.8rem;
+  background: var(--ph-off-white);
+  color: var(--ph-espresso);
+  border: 2px solid var(--ph-espresso);
+  border-radius: 4px;
+  box-shadow: 4px 4px 0 var(--ph-black);
+}
+.ph-gain .ph-badge { grid-row: span 3; width: 2.3rem; height: 2.3rem; padding: 0.35rem; }
+.ph-gain__title { font-size: 1.05rem; font-weight: 600; line-height: 1.2; }
+.ph-gain__text { font-size: 0.88rem; line-height: 1.35; }
+.ph-gain .ph-src { color: var(--ph-crimson); }
