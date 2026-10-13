@@ -1,0 +1,256 @@
+/* ========================================================================
+   PHPeste 2026 — identidade "confluência" (sertão + Amazônia, xilogravura)
+
+   Tokens copiados de phpmaranhao.com.br/phpeste. Shared by every ph-*
+   layout via <style src>. Unscoped on purpose: slot content and the Ph*
+   components use these classes too.
+
+   Contrast (WCAG 2.1) — only these text pairs are allowed:
+     sand-lt / sand / orange / yellow on espresso  14.6 / 7.5 / 5.5 / 11.3
+     espresso on orange / sand-lt / yellow           5.5 / 14.6 / 11.3
+     crimson on sand-lt / off-white                  5.8 / 6.2
+   Never: crimson on espresso (2.5), orange on cream (2.7),
+   white on orange (3.1, large text only).
+   ======================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=JetBrains+Mono:wght@400;600&display=swap');
+
+.ph-slide {
+  --ph-orange: #d4743a;
+  --ph-orange-lt: #e08a55;
+  --ph-black: #0d0906;
+  --ph-espresso: #231208;
+  --ph-sand: #c4a07a;
+  --ph-sand-lt: #f0e6d3;
+  --ph-off-white: #faf6ef;
+  --ph-crimson: #a52830;
+  --ph-yellow: #f5c828;
+
+  /* community colours, earthed to the woodcut palette. Off-white on each:
+     purple 6.9, blue 7.0 (PHPeste's own --blue), amber 5.2, steel 5.9 */
+  --ph-purple: #6b3fa0; /* He4rt */
+  --ph-blue: #2845c8;   /* PHPSP */
+  --ph-amber: #a94e12;  /* Filament */
+  --ph-steel: #57606b;  /* 3Pontos, "prata" */
+
+  --ph-font-display: 'Rubik Dirt', 'Lora', Georgia, serif;
+  --ph-font-body: 'Lora', Georgia, serif;
+  --ph-font-ui: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --ph-font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --ph-texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--ph-font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.ph-slide--espresso {
+  background: var(--ph-texture), radial-gradient(70% 90% at 70% 45%, #3a1d0e 0%, var(--ph-espresso) 70%);
+  color: var(--ph-sand-lt);
+}
+.ph-slide--orange {
+  background: var(--ph-texture), var(--ph-orange);
+  color: var(--ph-espresso);
+}
+.ph-slide--sand {
+  background: var(--ph-texture), var(--ph-sand-lt);
+  color: var(--ph-espresso);
+}
+
+/* -------- top bar: logo + event metadata -------- */
+.ph-topbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.4rem 2.6rem 0;
+  font-family: var(--ph-font-ui);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.ph-topbar__logo { height: 2.6rem; width: auto; display: block; }
+.ph-topbar__fill { flex: 1; }
+.ph-topbar__meta { display: inline-flex; align-items: center; gap: 0.4rem; }
+
+/* -------- chips -------- */
+.ph-stamp {
+  display: inline-block;
+  margin: 0;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  background: var(--ph-orange);
+  color: var(--ph-black);
+  font-family: var(--ph-font-ui);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.ph-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border: 1.5px solid currentColor;
+  border-radius: 4px;
+  font-family: var(--ph-font-ui);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* -------- type -------- */
+.ph-display {
+  margin: 0;
+  font-family: var(--ph-font-display);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.01em;
+  text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.4);
+}
+.ph-slide--orange .ph-display,
+.ph-slide--sand .ph-display { text-shadow: none; }
+
+.ph-eyebrow {
+  margin: 0;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--ph-sand);
+}
+
+/* -------- "azulejo" stripe (the edition's signature) -------- */
+.ph-azulejo {
+  height: 7px;
+  flex: none;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--ph-orange) 0 26px, var(--ph-espresso) 26px 32px,
+    var(--ph-yellow) 32px 58px, var(--ph-espresso) 58px 64px,
+    var(--ph-crimson) 64px 90px, var(--ph-espresso) 90px 96px
+  );
+}
+/* on orange/sand slides the stripe needs an espresso edge to stay readable */
+.ph-slide--orange .ph-azulejo,
+.ph-slide--sand .ph-azulejo { border-top: 3px solid var(--ph-espresso); }
+
+/* -------- footer -------- */
+.ph-footer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 2.6rem 1rem;
+}
+.ph-footer__name {
+  margin: 0;
+  font-family: var(--ph-font-ui);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.ph-footer__sub { margin: 0.1rem 0 0; font-size: 0.9rem; font-style: italic; }
+.ph-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--ph-font-ui);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.ph-kbd {
+  padding: 0.2rem 0.55rem;
+  border: 1.5px solid currentColor;
+  border-bottom-width: 3px;
+  border-radius: 4px;
+  font-family: var(--ph-font-ui);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+}
+
+/* -------- card (off-white, espresso border — site's stats/ticket cards) -------- */
+.ph-card {
+  background: var(--ph-off-white);
+  color: var(--ph-espresso);
+  border: 2px solid var(--ph-espresso);
+  border-radius: 4px;
+}
+
+.ph-mono { font-family: var(--ph-font-mono); }
+
+/* -------- motion: gentle entrances, off when the OS asks -------- */
+@keyframes ph-rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+.ph-rise { animation: ph-rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.ph-rise--1 { animation-delay: 0.1s; }
+.ph-rise--2 { animation-delay: 0.25s; }
+.ph-rise--3 { animation-delay: 0.4s; }
+.ph-rise--4 { animation-delay: 0.55s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ph-slide *,
+  .ph-slide *::before,
+  .ph-slide *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* -------- iconografia: list item that starts with an icon gets a "carimbo"
+   badge — crimson block, off-white glyph (6.6:1), stamped speckle mask and a
+   slight hand-set tilt. Usage in markdown: `- <mdi-trophy-outline /> texto`.
+   Slidev icons are already aria-hidden, so the text carries the meaning. */
+.ph-slide li:has(> .slidev-icon:first-child) {
+  position: relative;
+  padding-left: 2.9rem;
+}
+.ph-slide li > .slidev-icon:first-child {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 2.1rem;
+  height: 2.1rem;
+  margin-top: -1.05rem;
+  transform: rotate(-3deg);
+}
+/* the stamp look itself — also usable standalone: <span class="ph-badge"><mdi-x /></span> */
+.ph-slide li > .slidev-icon:first-child,
+.ph-badge {
+  padding: 0.32rem;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: var(--ph-crimson);
+  color: var(--ph-off-white);
+  -webkit-mask-image: var(--ph-stamp-mask);
+  mask-image: var(--ph-stamp-mask);
+  mask-size: 120px 120px;
+}
+.ph-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  padding: 0.4rem;
+}
+.ph-badge > .slidev-icon { width: 100%; height: 100%; }
+.ph-slide li:nth-child(even) > .slidev-icon:first-child { transform: rotate(2.5deg); }
+.ph-slide li:has(> .slidev-icon:first-child)::before { display: none; }
+
+.ph-slide {
+  --ph-stamp-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -9 0 0 0 7.2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+}
