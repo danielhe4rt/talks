@@ -120,7 +120,7 @@ The talk uses a fictional ecommerce project as the running example. The tree sho
 
 ## Deployment
 
-Configured for both Netlify (`netlify.toml`) and Vercel (`vercel.json`). Build output goes to `dist/`. Node 20 required.
+Configured for both Netlify (`netlify.toml`) and Vercel (`vercel.json`). Build output goes to `dist/`. Node >= 22.12 required (Slidev 53).
 
 ## Agent skills
 
