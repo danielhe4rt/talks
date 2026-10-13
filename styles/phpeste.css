@@ -524,3 +524,8 @@
 .ph-ticket--tree { padding: 0.8rem 1rem 0.9rem; }
 .ph-ticket--tree .ph-ticket__title { font-size: 1.15rem; margin: 0.2rem 0 0.5rem; }
 .ph-ticket--tree pre { font-size: 0.8rem !important; line-height: 1.42 !important; }
+
+/* the one file everybody leans on */
+.ph-hub { align-self: center; min-width: 19rem; text-align: center; box-shadow: 5px 5px 0 var(--ph-yellow); }
+.ph-hub .ph-mod__name { font-size: 1.05rem; }
+.ph-mod__lines { margin: 0.2rem 0 0; padding: 0; list-style: none; font-size: 0.85rem; line-height: 1.45; }
