@@ -79,7 +79,7 @@ metaRight: "Q3 · 3 DE 3"
     </div>
     <div class="p-3 bg-green-900/15 rounded border border-green-500/25">
       <div class="text-[10px] text-gray-400 uppercase tracking-wider mb-1">Modules/</div>
-      <div class="text-green-300 font-mono text-sm font-bold mb-2">Subscriptions</div>
+      <div class="text-green-300 font-mono text-sm font-bold mb-2">Refunds</div>
       <div class="space-y-1 text-[11px] font-mono opacity-80">
         <div>✓ listo</div>
         <div>✓ não quebra</div>
@@ -116,7 +116,7 @@ metaRight: "Q3 · 3 DE 3"
 "E Q3?"
 
 [click 3 — P3 ✓ + 3/3 + rug-pull P4]
-"Q3 passou quando o arquivo que servia 3 features virou um módulo próprio: Gateway. Três de três. O teste passou."
+"Q3 passou quando o arquivo que servia 3 features virou um módulo próprio, o Gateway — e reembolso e antifraude ganharam casa própria. Três de três. O teste passou."
 
 [pausa de meio segundo, deixa a plateia respirar]
 

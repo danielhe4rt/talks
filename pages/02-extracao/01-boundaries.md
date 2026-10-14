@@ -6,7 +6,7 @@ eyebrow: "ato 2 · extração"
 outlined: "ACHAR OS"
 solid: "BOUNDARIES"
 accent: "."
-tail: "~12 min · conceitual"
+tail: "~22 min · do conceito ao framework"
 ---
 
 ## o teste da deleção · como achar os limites do seu código

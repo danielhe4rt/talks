@@ -224,7 +224,7 @@ contentAlign: "top"
 
 <div class="struct-card struct-card--orange">
 <div class="struct-card-tag">o que é</div>
-<div class="struct-card-body">Clean Architecture + padrões táticos: Actions, Aggregates, separação rígida por responsabilidade.</div>
+<div class="struct-card-body">Clean Architecture + padrões táticos: Aggregates, serviços de domínio, separação rígida por responsabilidade.</div>
 </div>
 
 <v-click>
@@ -250,7 +250,7 @@ contentAlign: "top"
 
 
 <!--
-"DDD-like. Parecido com Clean, mas vai mais fundo: Domain tem subpastas próprias separando Models de Services. Application separa Actions de Jobs. Cada coisa no seu lugar."
+"DDD-like. Parecido com Clean, mas vai mais fundo: cada camada ganha subpastas. Domain separa Models de Services, Application tem os seus Services, Infrastructure guarda os Jobs. Os mesmos 5 arquivos — só que cada um no seu escaninho."
 
 [click] "Quando usar? Quando o módulo é grande e complexo. Quando o time já tem experiência e a separação por camada simples não é suficiente. Se o time nunca trabalhou com essa granularidade, vai mais atrapalhar do que ajudar."
 
@@ -335,5 +335,5 @@ O que importa é o <b class="impact-foot-strong">boundary</b>, não a <span clas
 
 [click] "Não existe padrão certo. Flat file funciona. Laravel padrão funciona. Clean Architecture funciona. DDD funciona. COMO você organiza dentro do módulo é decisão do SEU time."
 
-[click] "O que importa é o boundary, não a pasta. Agora que a gente sabe disso... vamos ver como encontrar esses boundaries num caso real."
+[click] "O que importa é o boundary, não a pasta. Então bora: junta tudo de pagamento num lugar só e roda o teste de novo."
 -->

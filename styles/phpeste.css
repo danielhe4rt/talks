@@ -1,0 +1,698 @@
+/* ========================================================================
+   PHPeste 2026 — identidade "confluência" (sertão + Amazônia, xilogravura)
+
+   Tokens copiados de phpmaranhao.com.br/phpeste. Shared by every ph-*
+   layout via <style src>. Unscoped on purpose: slot content and the Ph*
+   components use these classes too.
+
+   Contrast (WCAG 2.1) — only these text pairs are allowed:
+     sand-lt / sand / orange / yellow on espresso  14.6 / 7.5 / 5.5 / 11.3
+     espresso on orange / sand-lt / yellow           5.5 / 14.6 / 11.3
+     crimson on sand-lt / off-white                  5.8 / 6.2
+   Never: crimson on espresso (2.5), orange on cream (2.7),
+   white on orange (3.1, large text only).
+   ======================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=JetBrains+Mono:wght@400;600&display=swap');
+
+.ph-slide {
+  --ph-orange: #d4743a;
+  --ph-orange-lt: #e08a55;
+  --ph-black: #0d0906;
+  --ph-espresso: #231208;
+  --ph-sand: #c4a07a;
+  --ph-sand-lt: #f0e6d3;
+  --ph-off-white: #faf6ef;
+  --ph-crimson: #a52830;
+  --ph-yellow: #f5c828;
+
+  /* community colours, earthed to the woodcut palette. Off-white on each:
+     purple 6.9, blue 7.0 (PHPeste's own --blue), amber 5.2, steel 5.9 */
+  --ph-purple: #6b3fa0; /* He4rt */
+  --ph-blue: #2845c8;   /* PHPSP */
+  --ph-amber: #a94e12;  /* Filament */
+  --ph-steel: #57606b;  /* 3Pontos, "prata" */
+  --ph-green: #3a6e28;  /* site token; off-white on it 6.2 */
+
+  --ph-font-display: 'Rubik Dirt', 'Lora', Georgia, serif;
+  --ph-font-body: 'Lora', Georgia, serif;
+  --ph-font-ui: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --ph-font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --ph-texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--ph-font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.ph-slide--espresso {
+  background: var(--ph-texture), radial-gradient(70% 90% at 70% 45%, #3a1d0e 0%, var(--ph-espresso) 70%);
+  color: var(--ph-sand-lt);
+}
+.ph-slide--orange {
+  background: var(--ph-texture), var(--ph-orange);
+  color: var(--ph-espresso);
+}
+.ph-slide--crimson {
+  background: var(--ph-texture), var(--ph-crimson);
+  color: var(--ph-off-white); /* 6.6:1; yellow on crimson is 4.5:1, display sizes only */
+}
+.ph-slide--sand {
+  background: var(--ph-texture), var(--ph-sand-lt);
+  color: var(--ph-espresso);
+}
+
+/* -------- top bar: logo + event metadata -------- */
+.ph-topbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.4rem 2.6rem 0;
+  font-family: var(--ph-font-ui);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.ph-topbar__logo { height: 2.6rem; width: auto; display: block; }
+.ph-topbar__fill { flex: 1; }
+.ph-topbar__meta { display: inline-flex; align-items: center; gap: 0.4rem; }
+
+/* -------- chips -------- */
+.ph-stamp {
+  display: inline-block;
+  margin: 0;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  background: var(--ph-orange);
+  color: var(--ph-black);
+  font-family: var(--ph-font-ui);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.ph-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border: 1.5px solid currentColor;
+  border-radius: 4px;
+  font-family: var(--ph-font-ui);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* -------- type -------- */
+.ph-display {
+  margin: 0;
+  font-family: var(--ph-font-display);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.01em;
+  text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.4);
+}
+.ph-slide--orange .ph-display,
+.ph-slide--sand .ph-display { text-shadow: none; }
+
+.ph-eyebrow {
+  margin: 0;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--ph-sand);
+}
+
+/* -------- "azulejo" stripe (the edition's signature) -------- */
+.ph-azulejo {
+  height: 7px;
+  flex: none;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--ph-orange) 0 26px, var(--ph-espresso) 26px 32px,
+    var(--ph-yellow) 32px 58px, var(--ph-espresso) 58px 64px,
+    var(--ph-crimson) 64px 90px, var(--ph-espresso) 90px 96px
+  );
+}
+/* on orange/sand slides the stripe needs an espresso edge to stay readable */
+.ph-slide--orange .ph-azulejo,
+.ph-slide--crimson .ph-azulejo,
+.ph-slide--sand .ph-azulejo { border-top: 3px solid var(--ph-espresso); }
+
+/* -------- footer -------- */
+.ph-footer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 2.6rem 1rem;
+}
+.ph-footer__name {
+  margin: 0;
+  font-family: var(--ph-font-ui);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.ph-footer__sub { margin: 0.1rem 0 0; font-size: 0.9rem; font-style: italic; }
+.ph-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--ph-font-ui);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.ph-kbd {
+  padding: 0.2rem 0.55rem;
+  border: 1.5px solid currentColor;
+  border-bottom-width: 3px;
+  border-radius: 4px;
+  font-family: var(--ph-font-ui);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+}
+
+/* -------- card (off-white, espresso border — site's stats/ticket cards) -------- */
+.ph-card {
+  background: var(--ph-off-white);
+  color: var(--ph-espresso);
+  border: 2px solid var(--ph-espresso);
+  border-radius: 4px;
+}
+
+.ph-mono { font-family: var(--ph-font-mono); }
+
+/* -------- painel de lista: stamped off-white panel (site's ticket card +
+   woodcut hard shadow), crimson "losango" markers or icon badges.
+   ph-whoami applies it to its list automatically; elsewhere wrap the
+   markdown list in <div class="ph-panel">. -------- */
+.ph-panel ul,
+.ph-whoami__content ul {
+  margin: 0;
+  padding: 0.4rem 1.3rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  background: var(--ph-off-white);
+  color: var(--ph-espresso);
+  border: 2px solid var(--ph-espresso);
+  border-top: 6px solid var(--ph-yellow);
+  border-radius: 4px;
+  box-shadow: 6px 6px 0 var(--ph-espresso);
+}
+.ph-panel li,
+.ph-whoami__content li {
+  position: relative;
+  padding: 0.5rem 0 0.5rem 1.6rem;
+  font-size: 1.12rem;
+  line-height: 1.4;
+}
+.ph-panel li + li,
+.ph-whoami__content li + li { border-top: 1.5px dashed var(--ph-sand); }
+.ph-panel li::before,
+.ph-whoami__content li::before {
+  content: '';
+  position: absolute;
+  left: 0.15rem;
+  top: calc(0.5rem + 0.5em);
+  width: 0.6rem;
+  height: 0.6rem;
+  background: var(--ph-crimson);
+  transform: rotate(45deg);
+}
+.ph-panel li strong { font-weight: 600; }
+.ph-slide--espresso .ph-panel ul { box-shadow: 6px 6px 0 var(--ph-orange); }
+
+/* two-column helper: content + narrow aside (QR, ticket…) */
+.ph-split {
+  display: grid;
+  grid-template-columns: 1fr var(--aside, 15rem);
+  gap: 2.2rem;
+  align-items: center;
+}
+
+.ph-split .ph-ticket { padding: 0.9rem 1rem 1rem; }
+.ph-split .ph-ticket__title { font-size: 1.35rem; margin-bottom: 0.5rem; }
+
+/* -------- motion: gentle entrances, off when the OS asks -------- */
+@keyframes ph-rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+.ph-rise { animation: ph-rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.ph-rise--1 { animation-delay: 0.1s; }
+.ph-rise--2 { animation-delay: 0.25s; }
+.ph-rise--3 { animation-delay: 0.4s; }
+.ph-rise--4 { animation-delay: 0.55s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ph-slide *,
+  .ph-slide *::before,
+  .ph-slide *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* -------- iconografia: list item that starts with an icon gets a "carimbo"
+   badge — crimson block, off-white glyph (6.6:1), stamped speckle mask and a
+   slight hand-set tilt. Usage in markdown: `- <mdi-trophy-outline /> texto`.
+   Slidev icons are already aria-hidden, so the text carries the meaning. */
+.ph-slide li:has(> .slidev-icon:first-child) {
+  position: relative;
+  padding-left: 2.9rem;
+}
+.ph-slide li > .slidev-icon:first-child {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 2.1rem;
+  height: 2.1rem;
+  margin-top: -1.05rem;
+  transform: rotate(-3deg);
+}
+/* the stamp look itself — also usable standalone: <span class="ph-badge"><mdi-x /></span> */
+.ph-slide li > .slidev-icon:first-child,
+.ph-badge {
+  padding: 0.32rem;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: var(--ph-crimson);
+  color: var(--ph-off-white);
+  -webkit-mask-image: var(--ph-stamp-mask);
+  mask-image: var(--ph-stamp-mask);
+  mask-size: 120px 120px;
+}
+.ph-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  padding: 0.4rem;
+}
+.ph-badge > .slidev-icon { width: 100%; height: 100%; }
+.ph-slide li:nth-child(even) > .slidev-icon:first-child { transform: rotate(2.5deg); }
+.ph-slide li:has(> .slidev-icon:first-child)::before { display: none; }
+
+.ph-slide {
+  --ph-stamp-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -9 0 0 0 7.2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* -------- verdict card: crimson block for the one idea a slide lands on -------- */
+.ph-verdict {
+  padding: 1.1rem 1.2rem 1.2rem;
+  background: var(--ph-texture), var(--ph-crimson);
+  color: var(--ph-off-white);
+  border: 2px solid var(--ph-espresso);
+  border-radius: 4px;
+  box-shadow: 6px 6px 0 var(--ph-espresso);
+}
+.ph-verdict .ph-badge { background: var(--ph-yellow); color: var(--ph-espresso); }
+.ph-verdict__title {
+  display: block;
+  margin: 0.6rem 0 0.4rem;
+  font-family: var(--ph-font-display);
+  font-size: 2.1rem;
+  line-height: 1;
+  color: var(--ph-yellow); /* 4.5:1 on crimson, display size only */
+}
+.ph-verdict p { margin: 0; font-size: 1rem; line-height: 1.4; }
+.ph-verdict strong { font-weight: 600; }
+
+/* a "rule with words" — closes a list before the turn */
+.ph-rule-text {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 0.9rem 0 0;
+  font-style: italic;
+  font-size: 1.15rem;
+}
+.ph-rule-text::before,
+.ph-rule-text::after { content: ''; flex: 1; border-top: 2px dashed currentColor; opacity: 0.5; }
+
+/* ========================================================================
+   Stage vocabulary — visuals for ph-deletion / ph-split / ph-section.
+   All text on light cards is espresso; all text on espresso is sand-lt.
+   ======================================================================== */
+
+/* steps stacked in one place, swapped with v-click="[a, b]" */
+.ph-step {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.7rem;
+}
+.ph-step--top { justify-content: flex-start; }
+.ph-step__title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ph-sand-lt);
+}
+.ph-slide--sand .ph-step__title,
+.ph-slide--orange .ph-step__title { color: var(--ph-espresso); }
+
+/* file list on paper: .is-hit = yellow marker, .is-ctx = context */
+.ph-files {
+  margin: 0;
+  padding: 0.7rem 0.9rem;
+  background: var(--ph-off-white);
+  color: var(--ph-espresso);
+  border: 2px solid var(--ph-espresso);
+  border-radius: 4px;
+  font-family: var(--ph-font-mono);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  white-space: pre;
+}
+.ph-files > span { display: block; padding: 0 0.35rem; border-radius: 3px; }
+.ph-files .is-ctx { opacity: 0.68; }
+.ph-files .is-hit { background: var(--ph-yellow); font-weight: 600; }
+.ph-files .is-ok { background: #d9e6d0; font-weight: 600; }
+.ph-files .is-gone { text-decoration: line-through; opacity: 0.68; }
+.ph-files--cols { columns: 2; column-gap: 1.4rem; }
+
+/* dependency rows: who imports what */
+.ph-deps { display: flex; flex-direction: column; gap: 0.5rem; }
+.ph-dep {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.8rem;
+  background: var(--ph-off-white);
+  color: var(--ph-espresso);
+  border: 2px solid var(--ph-espresso);
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+.ph-dep code {
+  font-family: var(--ph-font-mono);
+  font-size: 0.85em;
+  font-weight: 600;
+}
+.ph-dep__verb { font-style: italic; }
+.ph-dep .is-broken { text-decoration: line-through; text-decoration-color: var(--ph-crimson); text-decoration-thickness: 2px; }
+.ph-dep__tag {
+  margin-left: auto;
+  padding: 0.05rem 0.45rem;
+  border-radius: 4px;
+  background: var(--ph-espresso);
+  color: var(--ph-sand-lt);
+  font-family: var(--ph-font-ui);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* compact callout */
+.ph-callout {
+  --c: var(--ph-blue);
+  margin: 0;
+  padding: 0.55rem 0.8rem;
+  background: var(--ph-sand-lt);
+  color: var(--ph-espresso);
+  border-left: 6px solid var(--c);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.ph-callout--fail { --c: var(--ph-crimson); }
+.ph-callout--ok { --c: var(--ph-green); }
+.ph-callout--warn { --c: var(--ph-amber); }
+.ph-callout strong { font-weight: 600; }
+.ph-callout code { font-family: var(--ph-font-mono); font-size: 0.85em; }
+
+/* module chips */
+.ph-mods { display: grid; grid-template-columns: repeat(var(--cols, 3), 1fr); gap: 0.6rem; }
+.ph-mod {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.55rem 0.75rem;
+  background: var(--ph-off-white);
+  color: var(--ph-espresso);
+  border: 2px solid var(--ph-espresso);
+  border-top-width: 6px;
+  border-radius: 4px;
+}
+.ph-mod__name { font-family: var(--ph-font-mono); font-size: 0.85rem; font-weight: 600; }
+.ph-mod__state { font-size: 0.85rem; font-style: italic; }
+.ph-mod.is-ok { border-top-color: var(--ph-green); }
+.ph-mod.is-broken { border-top-color: var(--ph-crimson); box-shadow: 4px 4px 0 var(--ph-crimson); }
+.ph-mod.is-deleted { border-style: dashed; opacity: 0.7; }
+.ph-mod.is-focus { border-top-color: var(--ph-yellow); }
+
+/* terminal */
+.ph-term {
+  margin: 0;
+  padding: 0.8rem 1rem;
+  background: var(--ph-black);
+  color: var(--ph-sand-lt);
+  border: 2px solid var(--ph-sand);
+  border-radius: 4px;
+  font-family: var(--ph-font-mono);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+.ph-term .p { color: var(--ph-orange); }        /* prompt, 6.0:1 */
+.ph-term .err { color: var(--ph-yellow); font-weight: 600; } /* 12.9:1 */
+.ph-term .ok { color: #9ccf86; }               /* 9.9:1 */
+.ph-term .dim { color: var(--ph-sand); }
+
+/* big score */
+.ph-score {
+  font-family: var(--ph-font-display);
+  font-size: 7rem;
+  line-height: 0.9;
+  color: var(--ph-yellow);
+  text-shadow: 5px 5px 0 var(--ph-black);
+  text-align: center;
+}
+
+/* code on paper: any Slidev code block inside .ph-ink keeps the light theme */
+.ph-ink .slidev-code-wrapper {
+  margin: 0 !important;
+  padding: 0.7rem 0.9rem;
+  background: var(--ph-off-white);
+  border: 2px solid var(--ph-espresso);
+  border-radius: 4px;
+}
+.ph-ink .slidev-code {
+  background: transparent !important;
+  padding: 0 !important;
+  font-family: var(--ph-font-mono) !important;
+  color: var(--ph-espresso) !important;
+}
+/* one ink colour: syntax themes wash out on a projector; highlighted
+   lines carry the emphasis instead */
+.ph-slide .ph-ink .slidev-code .line,
+.ph-slide .ph-ink .slidev-code .line span { color: var(--ph-espresso) !important; }
+.ph-ink .slidev-code .line { display: inline-block; width: 100%; padding: 0 0.3rem; border-radius: 3px; }
+.ph-ink .slidev-code .line.dishonored { opacity: 0.62; }
+.ph-ink .slidev-code .line.highlighted { background: var(--ph-yellow); font-weight: 600; }
+.ph-file-label {
+  margin: 0 0 0.35rem;
+  font-family: var(--ph-font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ph-sand-lt);
+}
+.ph-slide--sand .ph-file-label { color: var(--ph-espresso); }
+
+/* ticket holding a file tree: compact title + dense mono */
+.ph-ticket--tree { padding: 0.8rem 1rem 0.9rem; }
+.ph-ticket--tree .ph-ticket__title { font-size: 1.15rem; margin: 0.2rem 0 0.5rem; }
+.ph-ticket--tree pre { font-size: 0.8rem !important; line-height: 1.42 !important; }
+
+/* the one file everybody leans on */
+.ph-hub { align-self: center; min-width: 19rem; text-align: center; box-shadow: 5px 5px 0 var(--ph-yellow); }
+.ph-hub .ph-mod__name { font-size: 1.05rem; }
+.ph-mod__lines { margin: 0.2rem 0 0; padding: 0; list-style: none; font-size: 0.85rem; line-height: 1.45; }
+
+/* -------- Q1 retest: antes × agora, the count is the message -------- */
+.ph-q1 { display: grid; grid-template-columns: minmax(0, 1.42fr) auto minmax(0, 1fr); gap: 0.7rem; gap: 1rem; align-items: stretch; }
+.ph-q1__arrow { align-self: center; font-family: var(--ph-font-display); font-size: 2.4rem; color: var(--ph-orange); }
+.ph-q1__card {
+  --k: var(--ph-crimson);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.9rem 1rem 1rem;
+  background: var(--ph-off-white);
+  color: var(--ph-espresso);
+  border: 2px solid var(--ph-espresso);
+  border-top: 8px solid var(--k);
+  border-radius: 4px;
+  box-shadow: 6px 6px 0 var(--ph-black);
+}
+.ph-q1__card.is-ok { --k: var(--ph-green); box-shadow: 6px 6px 0 var(--ph-green); }
+.ph-q1__label {
+  font-family: var(--ph-font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.ph-q1__count { display: flex; align-items: baseline; gap: 0.6rem; }
+.ph-q1__num { font-family: var(--ph-font-display); font-size: 4rem; line-height: 0.9; color: var(--k); }
+.ph-q1__unit { font-size: 1.15rem; font-weight: 600; }
+.ph-q1__card .ph-files { border: 0; padding: 0; background: transparent; font-size: 0.68rem; line-height: 1.6; overflow: hidden; }
+.ph-q1__card { min-width: 0; }
+
+/* -------- Q2: dependency map, only Checkout is wired to Payment -------- */
+.ph-depmap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 0.8rem; }
+.ph-depmap .ph-mod { padding: 0.7rem 0.85rem; box-shadow: 4px 4px 0 var(--ph-black); transition: all 0.3s; }
+.ph-depmap .ph-mod__name { font-size: 1.1rem; }
+.ph-depmap .ph-mod__state { font-size: 0.92rem; }
+.ph-depmap .ph-mod.is-broken { box-shadow: 4px 4px 0 var(--ph-crimson); transform: rotate(-1.5deg); }
+.ph-depmap .ph-mod.is-broken .ph-mod__state { font-style: normal; font-weight: 700; color: var(--ph-crimson); }
+.ph-depmap__code { grid-column: 1 / 3; align-self: end; margin-top: 1rem; }
+.ph-depmap__code .ph-file-label { margin-bottom: 0.3rem; }
+.ph-depmap__code .ph-files { font-size: 0.7rem; white-space: pre-wrap; }
+.ph-depmap__pay { grid-column: 3; display: flex; flex-direction: column; align-items: stretch; }
+.ph-depmap__wire { position: relative; height: 4.2rem; display: grid; place-items: center; }
+.ph-depmap__wire::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0; left: 50%;
+  border-left: 6px solid var(--ph-sand-lt);
+  transform: translateX(-50%);
+}
+.ph-depmap__wire span {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  background: var(--ph-sand-lt);
+  color: var(--ph-espresso);
+  font-family: var(--ph-font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.ph-depmap.is-deleted .ph-depmap__wire::before { border-left: 6px dashed var(--ph-yellow); }
+.ph-depmap.is-deleted .ph-depmap__wire span { background: var(--ph-yellow); }
+.ph-depmap .ph-mod.is-gone { background: transparent; color: var(--ph-sand-lt); border: 2px dashed var(--ph-sand); box-shadow: none; }
+
+/* -------- tabs driven by $clicks (panel-* convention) -------- */
+.ph-tabs { display: flex; flex-direction: column; gap: 0.6rem; }
+.ph-tab {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.1rem 0.8rem;
+  align-items: center;
+  padding: 0.65rem 0.85rem;
+  background: rgba(240, 230, 211, 0.08);
+  color: var(--ph-sand-lt);
+  border: 2px solid rgba(240, 230, 211, 0.25);
+  border-radius: 4px;
+  transition: all 0.25s;
+}
+.ph-tab__num { grid-row: span 3; font-family: var(--ph-font-display); font-size: 2rem; line-height: 1; color: var(--ph-sand); }
+.ph-tab__name { font-family: var(--ph-font-mono); font-size: 1rem; font-weight: 700; }
+.ph-tab__sub { font-size: 0.9rem; font-style: italic; }
+.ph-tab__stack {
+  justify-self: start;
+  padding: 0.05rem 0.45rem;
+  border-radius: 4px;
+  background: rgba(240, 230, 211, 0.15);
+  font-family: var(--ph-font-ui);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.ph-tab.is-active {
+  background: var(--ph-off-white);
+  color: var(--ph-espresso);
+  border-color: var(--ph-espresso);
+  box-shadow: 5px 5px 0 var(--ph-orange);
+  transform: translateX(6px);
+}
+.ph-tab.is-active .ph-tab__num { color: var(--ph-crimson); }
+.ph-tab.is-active .ph-tab__stack { background: var(--ph-espresso); color: var(--ph-sand-lt); }
+.ph-tabpane { display: flex; flex-direction: column; gap: 0.5rem; }
+.ph-tabpane__head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+.ph-tabpane .ph-files { font-size: 0.8rem; line-height: 1.45; }
+
+/* -------- spectrum (monólito ↔ microsserviços) -------- */
+.ph-spectrum { display: grid; grid-template-columns: 1fr 1.3fr 1fr; align-items: center; gap: 0; }
+.ph-spectrum__node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.55rem 0.6rem;
+  text-align: center;
+  color: var(--ph-sand-lt);
+}
+.ph-spectrum__node::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; top: 50%;
+  border-top: 3px dashed rgba(240, 230, 211, 0.35);
+  z-index: 0;
+}
+.ph-spectrum__node > * { position: relative; z-index: 1; background: var(--ph-espresso); padding: 0 0.4rem; }
+.ph-spectrum__name { font-family: var(--ph-font-ui); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+.ph-spectrum__sub { font-size: 0.85rem; font-style: italic; }
+.ph-spectrum__node.is-win > * { background: transparent; }
+.ph-spectrum__node.is-win {
+  background: var(--ph-yellow);
+  color: var(--ph-espresso);
+  border: 2px solid var(--ph-espresso);
+  border-radius: 4px;
+  box-shadow: 5px 5px 0 var(--ph-orange);
+}
+.ph-spectrum__node.is-win::before { display: none; }
+.ph-spectrum__node.is-win .ph-spectrum__name { font-family: var(--ph-font-display); font-size: 1.4rem; letter-spacing: 0; text-transform: none; font-weight: 400; }
+
+/* source tag at the end of a card */
+.ph-src { font-family: var(--ph-font-ui); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* git-style diff on paper */
+.ph-diff .is-del { background: #f3d2d4; }
+.ph-diff .is-add { background: #d9e6d0; }
+
+/* compact gain rows (icon · title + line · source) */
+.ph-gains { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+.ph-gain {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.15rem 0.75rem;
+  align-items: center;
+  padding: 0.6rem 0.8rem;
+  background: var(--ph-off-white);
+  color: var(--ph-espresso);
+  border: 2px solid var(--ph-espresso);
+  border-radius: 4px;
+  box-shadow: 4px 4px 0 var(--ph-black);
+}
+.ph-gain .ph-badge { grid-row: span 3; width: 2.3rem; height: 2.3rem; padding: 0.35rem; }
+.ph-gain__title { font-size: 1.05rem; font-weight: 600; line-height: 1.2; }
+.ph-gain__text { font-size: 0.88rem; line-height: 1.35; }
+.ph-gain .ph-src { color: var(--ph-crimson); }

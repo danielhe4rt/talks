@@ -4,7 +4,7 @@ transition: none
 noteType: warning
 metaNumber: "06"
 metaSection: "ABERTURA"
-metaSubtitle: "stepper · 487 arquivos"
+metaSubtitle: "stepper · 210 arquivos"
 metaRight: "app/Actions/"
 ---
 
@@ -48,6 +48,7 @@ app/
 ├── CreateProductAction.php
 ├── CreateRefundAction.php
 ├── ProcessCheckoutAction.php
+├── ProcessPaymentAction.php
 ├── ProcessRefundAction.php
 ├── SyncInventoryAction.php
 ├── UpdateOrderStatusAction.php
@@ -622,7 +623,8 @@ app/
 ├── Tax.php
 ├── User.php
 ├── Warehouse.php
-└── Wishlist.php
+├── Wishlist.php
+└── … +16 arquivos
 ```
 
 ::note::
@@ -730,8 +732,8 @@ app/
 ├── CartObserver.php
 ├── InventoryObserver.php
 ├── OrderObserver.php
-├── ProductObserver.php
-└── ReviewObserver.php
+├── PaymentObserver.php
+└── ProductObserver.php
 ```
 
 ::note::
@@ -801,7 +803,8 @@ app/
 ├── SearchService.php
 ├── ShippingService.php
 ├── StockService.php
-└── TaxService.php
+├── TaxService.php
+└── WishlistService.php
 ```
 
 ::note::
@@ -890,7 +893,7 @@ Até as exceptions misturadas: `InsufficientStockException` e `PaymentDeclinedEx
 <!-- "O resto: Console, Exceptions, Policies, Providers, Support. Tudo separado por tipo técnico." -->
 
 <!-- ============================================ -->
-<!-- SLIDE FINAL: 487 (layout: impact-modular)    -->
+<!-- SLIDE FINAL: 210 (layout: impact-modular)    -->
 <!-- ============================================ -->
 ---
 layout: impact-modular
@@ -902,9 +905,9 @@ metaSubtitle: "the verdict"
 metaRight: "0 boundaries"
 ---
 
-# 487
+# 210
 
-arquivos PHP · 19 diretórios · 0 boundaries
+arquivos PHP · 18 diretórios · 0 boundaries
 
 <v-click>
 
@@ -924,4 +927,4 @@ Não <span class="text-red-400 font-bold">O QUÊ</span> ele faz.
 
 </v-click>
 
-<!-- "Passamos por TODAS as 19 pastas. 487 arquivos PHP. Olhando pra isso tudo, você consegue me dizer que esse é um ecommerce? Não." -->
+<!-- "Passamos por TODAS as 18 pastas. 210 arquivos PHP. Olhando pra isso tudo, você consegue me dizer que esse é um ecommerce? Não." -->

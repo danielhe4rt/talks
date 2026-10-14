@@ -382,7 +382,7 @@ app-modules/panel-guest/
 "O frontend fatia por AUDIÊNCIA. Cada painel vira módulo próprio — mesma régua de qualquer outro módulo: composer.json no topo, src/, resources/, ServiceProvider. Mas o STACK muda conforme o público. Olha só."
 
 [estado inicial — panel-admin ativo]
-"01: panel-admin. Stack: Filament. Quem mexe aqui é operação, suporte, financeiro — gente que trabalha NO produto, não COM o produto. Resources de Product, Order. Páginas de Dashboard. Widgets de overview. Tudo dentro de src/Filament/. namespace Shop\\PanelAdmin."
+"01: panel-admin. Stack: Filament. Quem mexe aqui é operação, suporte, financeiro — gente que trabalha NO produto, não COM o produto. Resources de Product, Order. Páginas de Dashboard. Widgets de overview. Tudo dentro de src/Resources/, src/Pages/ e src/Widgets/. namespace Shop\\PanelAdmin."
 
 [click 1 — panel-app ativo]
 "02: panel-app. Cliente logado. Stack: Livewire. Dashboard interativo, histórico de pedido, timeline. As pages de auth ficam em src/Pages/. Views em resources/views/livewire/. namespace Shop\\PanelApp. Quem já comprou e voltou."
@@ -392,7 +392,7 @@ app-modules/panel-guest/
 
 "Repara: três pastas. Três composer.json. Três ServiceProviders. Três namespaces. Cada audiência tem o stack QUE ELA precisa — não o stack que o app inteiro usa. E NENHUM dos três sabe que os outros existem."
 
-"O backend? Os mesmos módulos de domínio: sales, payment, fulfillment. Só muda a casca."
+"O backend? Os mesmos módulos de domínio do Teste da Deleção: checkout, payment, shipping. Só muda a casca."
 
 [transição] "Uma última coisa antes de fechar essa parte."
 -->

@@ -61,21 +61,21 @@
       </li>
       <li class="act" style="--act-delay: 0.5s">
         <span class="act-num">02</span>
-        <span class="act-title">EXTRAÇÃO</span>
+        <span class="act-title">TESTE DA DELEÇÃO</span>
         <span class="act-leader" />
-        <span class="act-eta">~12 min</span>
+        <span class="act-eta">~22 min</span>
       </li>
       <li class="act" style="--act-delay: 0.6s">
         <span class="act-num">03</span>
-        <span class="act-title">IMPLEMENTAÇÃO</span>
+        <span class="act-title">CONVENÇÕES</span>
         <span class="act-leader" />
-        <span class="act-eta">~15 min</span>
+        <span class="act-eta">~7 min</span>
       </li>
       <li class="act act--final" style="--act-delay: 0.7s">
         <span class="act-num">04</span>
         <span class="act-title">FECHAMENTO</span>
         <span class="act-leader" />
-        <span class="act-eta">~8 min</span>
+        <span class="act-eta">~6 min</span>
       </li>
     </ol>
 

@@ -29,5 +29,5 @@ projeto/
 
 [click] "14.000 linhas. Um arquivo. Fácil de achar tudo — é só dar Ctrl+F."
 
-"Brincadeira. Mas o ponto é: nem 487 arquivos bagunçados nem 1 arquivo gigante é a resposta."
+"Brincadeira. Mas o ponto é: nem 210 arquivos bagunçados nem 1 arquivo gigante é a resposta."
 -->

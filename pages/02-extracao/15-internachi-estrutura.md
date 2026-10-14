@@ -25,7 +25,7 @@ afterLabel: ENCAPSULADO
       { name: 'Services/', kind: 'support' },
       { name: 'Models/', kind: 'support' },
     ] },
-    { name: 'resources/views/payment/checkout.blade.php', kind: 'domain', note: '← view', noteKind: 'danger' },
+    { name: 'resources/views/payment/payment-form.blade.php', kind: 'domain', note: '← view', noteKind: 'danger' },
     { name: 'config/payment.php', kind: 'domain', note: '← config', noteKind: 'danger' },
     { name: 'database/migrations/2024_01_payment.php', kind: 'domain', note: '← migration', noteKind: 'danger' },
     { name: 'routes/payment.php', kind: 'domain', note: '← rotas', noteKind: 'danger' },
@@ -54,7 +54,7 @@ View, config, migration, rota estão <b>fora</b>.
     ] },
     { name: 'resources/', kind: 'dir', children: [
       { name: 'views/', kind: 'dir', children: [
-        { name: 'checkout.blade.php', kind: 'support' },
+        { name: 'payment-form.blade.php', kind: 'support' },
       ] },
     ] },
     { name: 'config/', kind: 'dir', children: [

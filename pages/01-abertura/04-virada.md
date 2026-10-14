@@ -172,7 +172,7 @@ accent: "?"
 
 [pausa dramática]
 
-[click 1] "Já desisti. Saí do projeto por uns 3 meses. Voltei. Mesmo problema, mesma pasta app/, mesmo 487 arquivos."
+[click 1] "Já desisti. Saí do projeto por uns 3 meses. Voltei. Mesmo problema, mesma pasta app/, mesmos 210 arquivos."
 
 [click 2] "Já troquei de empresa. Adivinha? Mesmo legado. CNPJ diferente."
 

@@ -22,7 +22,7 @@ contentAlign: "top"
 
 <p class="conv-lede">Todo serviço externo vira <b>módulo próprio</b>. Mesmo se for só um SDK e três chamadas — ele tem casa.</p>
 
-<p class="conv-aside"><i>nenhum domínio importa fornecedor direto. quem fala com o mundo lá fora vive sozinho na sua pasta.</i></p>
+<p class="conv-aside"><i>nenhum domínio importa fornecedor direto. lembra do <b>Gateway</b>? ele fica só com o contrato — o <b>StripeGateway</b> mora em <b>integration-stripe</b>.</i></p>
 
 </div>
 
@@ -186,13 +186,13 @@ app-modules/
 </style>
 
 <!--
-"Convenção número um — e antes que alguém grite no chat: essas não são regras de modularização. São as MINHAS. Funcionam pro meu time. Talvez encaixem no seu, talvez não."
+"Convenção número um — e antes que alguém levante a mão: essas não são regras de modularização. São as MINHAS. Funcionam pro meu time. Talvez encaixem no seu, talvez não."
 
 "Primeira: todo serviço externo vira módulo próprio. Stripe? `integration-stripe`. Correios? `integration-correios`. Slack pra alertas? `integration-slack`. Mesmo que seja só um SDK e três chamadas — ele tem casa."
 
 "Por quê? Porque fornecedor quebra. SDK lança breaking change. Endpoint deprecia. Quando isso acontecer — e vai acontecer — você sabe onde ir. Você não vai sair caçando `Stripe::charge` em 30 arquivos pelo projeto."
 
-"E o domínio nunca importa o fornecedor direto. O módulo `sales` não conhece Stripe. Ele dispara um evento. Quem ouve é `integration-stripe`. Trocou de gateway? Mexe num módulo. Só."
+"E o domínio nunca importa o fornecedor direto. Lembra do Gateway do Teste da Deleção? Ele fica só com o contrato. O StripeGateway sai de lá e vira `integration-stripe`, que implementa esse contrato. Payment fala com o Gateway — nunca com a Stripe. Trocou de gateway? Mexe num módulo. Só."
 
 [transição] "Próxima convenção."
 -->

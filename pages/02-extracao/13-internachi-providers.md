@@ -28,7 +28,8 @@ return [
     App\Modules\Checkout\CheckoutServiceProvider::class,
     App\Modules\Payment\PaymentServiceProvider::class,
     App\Modules\Shipping\ShippingServiceProvider::class,
-    App\Modules\Admin\AdminServiceProvider::class,
+    App\Modules\Refunds\RefundsServiceProvider::class,
+    App\Modules\Fraud\FraudServiceProvider::class,
     App\Modules\Gateway\GatewayServiceProvider::class,
     // ... 1 linha pra CADA módulo novo
 ];

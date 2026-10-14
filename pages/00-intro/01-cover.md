@@ -9,7 +9,7 @@ layout: cover-modular
 
 [pausa]
 
-"Em 40 minutos eu vou contar uma história real. Um projeto com 487 arquivos espalhados em 19 pastas. Um `app/Services/` que parecia organizado mas era uma mentira. E como sair disso sem reescrever nada — só reorganizando o que já existia."
+"Em 40 minutos eu vou contar uma história real. Um projeto com 210 arquivos espalhados em 18 pastas. Um `app/Services/` que parecia organizado mas era uma mentira. E como sair disso sem reescrever nada — só reorganizando o que já existia."
 
 [transição] "Mas antes, rapidinho — quem que tá falando aqui na frente?"
 -->
