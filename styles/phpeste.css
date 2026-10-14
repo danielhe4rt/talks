@@ -9,6 +9,8 @@
      sand-lt / sand / orange / yellow on espresso  14.6 / 7.5 / 5.5 / 11.3
      espresso on orange / sand-lt / yellow           5.5 / 14.6 / 11.3
      crimson on sand-lt / off-white                  5.8 / 6.2
+   On black (terminal): sand-lt 16.0, yellow 12.4, #9ccf86 11.0,
+   sand 8.2, orange 6.0.
    Never: crimson on espresso (2.5), orange on cream (2.7),
    white on orange (3.1, large text only).
    ======================================================================== */
@@ -476,8 +478,8 @@
   white-space: pre-wrap;
 }
 .ph-term .p { color: var(--ph-orange); }        /* prompt, 6.0:1 */
-.ph-term .err { color: var(--ph-yellow); font-weight: 600; } /* 12.9:1 */
-.ph-term .ok { color: #9ccf86; }               /* 9.9:1 */
+.ph-term .err { color: var(--ph-yellow); font-weight: 600; } /* 12.4:1 */
+.ph-term .ok { color: #9ccf86; }               /* 11.0:1 */
 .ph-term .dim { color: var(--ph-sand); }
 
 /* big score */
@@ -531,7 +533,7 @@
 .ph-mod__lines { margin: 0.2rem 0 0; padding: 0; list-style: none; font-size: 0.85rem; line-height: 1.45; }
 
 /* -------- Q1 retest: antes × agora, the count is the message -------- */
-.ph-q1 { display: grid; grid-template-columns: minmax(0, 1.42fr) auto minmax(0, 1fr); gap: 0.7rem; gap: 1rem; align-items: stretch; }
+.ph-q1 { display: grid; grid-template-columns: minmax(0, 1.42fr) auto minmax(0, 1fr); gap: 1rem; align-items: stretch; }
 .ph-q1__arrow { align-self: center; font-family: var(--ph-font-display); font-size: 2.4rem; color: var(--ph-orange); }
 .ph-q1__card {
   --k: var(--ph-crimson);

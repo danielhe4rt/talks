@@ -56,7 +56,7 @@ contentAlign: "top"
   <mdi-trending-down class="gain-icon" />
   <div class="gain-body">
     <div class="gain-title">distribuir cedo cobra caro</div>
-    <div class="gain-text">rede + orquestração têm conta. in-process não tem — por isso voltaram.</div>
+    <div class="gain-text">rede + orquestração têm conta. in-process não tem — por isso consolidaram.</div>
   </div>
   <span class="gain-src">Prime Video · 2023</span>
 </div>
@@ -303,7 +303,7 @@ do seu legado ao catálogo da Shopify, a régua é a mesma: <b>modulariza primei
 
 [click 1] "Deploy único. Um pipeline de build, test e deploy. A Shopify roda um dos maiores monólitos Rails do mundo, milhares de devs num codebase só — modular, com boundaries impostos por ferramenta."
 
-[click 2] "Distribuir cedo cobra caro: rede e orquestração têm conta. In-process não tem. Por isso a Prime Video voltou."
+[click 2] "Distribuir cedo cobra caro: rede e orquestração têm conta. In-process não tem. Por isso a Prime Video consolidou."
 
 [click 3] "Boundary que o time respeita de verdade. Interface pública, implementação encapsulada, e o enforce vem de ferramenta — Packwerk na Shopify, internachi no nosso caso. É o mesmo boundary que segurou meu pivot no slide anterior."
 

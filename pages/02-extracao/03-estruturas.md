@@ -87,7 +87,7 @@ contentAlign: "top"
 </div>
 
 <!--
-"Flat file. Sem pastas, sem subdiretórios. Todos os arquivos na raiz do módulo. Parece bagunçado? Com 6 arquivos, não tem nada de bagunçado. Você abre a pasta e vê TUDO."
+"Flat file. Sem pastas, sem subdiretórios. Todos os arquivos na raiz do módulo. Parece bagunçado? Com 5 arquivos, não tem nada de bagunçado. Você abre a pasta e vê TUDO."
 
 [click] "Quando usar? Quando o módulo é pequeno — menos de 15 arquivos. Time pequeno. Ou quando você tá começando a extrair e não quer se preocupar com estrutura ainda."
 

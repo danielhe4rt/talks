@@ -844,7 +844,7 @@ app/
 ├── Policies/          ← 👈
 ├── Providers/         ← 👈
 ├── Services/
-├── Support/           ← 👈
+└── Support/           ← 👈
 ```
 
 ::content::
