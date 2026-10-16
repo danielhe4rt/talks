@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Slidev presentation for a ~40min talk titled "Como eu descobri que meu app/Services/ era uma mentira" — a Portuguese BR talk about Laravel modularization, targeting Laravel devs who have never modularized.
+Slidev presentation for a ~40min talk at PHPeste 2026 titled "Laravel Modular na Prática: como organizar um monolito sem virar uma bomba" (originally "Como eu descobri que meu app/Services/ era uma mentira") — a Portuguese BR talk about Laravel modularization, targeting Laravel devs who have never modularized.
 
 **Core message**: "Não existe padrão certo de pastas. Existe o que encaixa pro seu time." — the talk argues that the important thing is extracting responsibilities into modules with clear boundaries, not which folder structure you use (flat, clean arch, DDD, Laravel default).
 
@@ -24,7 +24,8 @@ pnpm run export   # Export to PDF (requires playwright-chromium)
 
 ### Main files
 
-- **slides.md** — Only frontmatter (theme, title, transitions) + `src:` imports to pages. No inline slide content.
+- **slides.md** — The official deck (PHPeste 2026 identity, `pages/poc-phpeste/` + `ph-*` layouts). Only frontmatter + `src:` imports to pages; no inline slide content. This is what `pnpm run build` and Netlify/Vercel publish.
+- **slides-legado.md** — The previous deck (seriph/brutalist layouts, `pages/00-intro/` … `04-fechamento/`). Run with `pnpm slidev slides-legado.md`.
 - **layouts/** — Custom Vue layouts (see below)
 - **components/** — Vue components usable directly in slides (e.g. `<Counter />`)
 - **snippets/** — External code files importable via `<<< @/snippets/file.ts#region`
@@ -54,8 +55,8 @@ pages/
 │   └── 12…16                  # Q4 (framework) → internachi/modular → 4/4
 ├── 03-convencoes/         # Ato 03 · Convenções (~7 min): 00-ato, integration-*, panel-*, disclaimer
 ├── 04-fechamento/         # Ato 04 · Fechamento (~6 min): 00-ato, payoff (pivot), monólito modular, CTA
-├── poc-phpeste/           # PHPeste 2026 identity POC (entry: poc-phpeste.md, ph-* layouts)
-└── _archive/              # Unused older slides (not in slides.md)
+├── poc-phpeste/           # PHPeste 2026 deck — the official one (entry: slides.md, ph-* layouts)
+└── _archive/              # Unused older slides (in neither deck)
 ```
 
 ### Custom layouts (`layouts/`)
@@ -68,7 +69,7 @@ pages/
 | `split-compare` | `split-compare.vue` | `default` (title), `::before::`, `::after::` | `beforeLabel`, `afterLabel` | Before/after with colored tints |
 | `deletion-test` | `deletion-test.vue` | `default` (title), `::questions::`, `::visual::` | — | Title row + questions/visual split (32%/68%) for interactive deletion test |
 
-### PHPeste 2026 layouts (`ph-*`, used by `poc-phpeste.md`)
+### PHPeste 2026 layouts (`ph-*`, used by `slides.md`)
 
 Shared tokens and helpers live in `styles/phpeste.css` (palette, Rubik Dirt + Lora, azulejo stripe, stamped badges, stage classes `.ph-step/.ph-files/.ph-dep/.ph-callout/.ph-mods/.ph-term/.ph-score/.ph-ink`). Only the colour pairs listed at the top of that file are allowed for text (WCAG AA).
 
