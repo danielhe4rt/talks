@@ -3,7 +3,7 @@ layout: ph-section
 tone: sand
 transition: fade-out
 eyebrow: antes de começar
-hint: o roteiro
+hint: bora pro grupo
 ---
 
 # Onde eu troco ideia
@@ -42,5 +42,5 @@ As **3 comunidades** que eu faço parte hoje.
 "E a terceira é a Filament BR, a comunidade brasileira de FilamentPHP — que aparece mais pra frente, no painel admin."
 
 
-[transição] "Beleza. Deixa eu te mostrar o roteiro."
+[transição] "E falando em He4rt…"
 -->

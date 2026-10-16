@@ -18,6 +18,10 @@ src: ./pages/poc-phpeste/03-comunidades.md
 ---
 
 ---
+src: ./pages/poc-phpeste/03b-he4rt-convite.md
+---
+
+---
 src: ./pages/poc-phpeste/05-agenda.md
 ---
 
