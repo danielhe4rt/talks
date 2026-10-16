@@ -129,20 +129,9 @@ when: Sexta · 16/10
 
 Módulo a módulo. **Boundary a boundary.**
 
-<div class="ph-split" style="--aside: 11.5rem; gap: 1.4rem">
-<div>
-
 - <mdi-heart /> **heartdevs.com** · comunidade, mentoria, open source
 - <mdi-twitch /> **twitch.tv/danielhe4rt** · livecoding, 6 anos no ar
 - <mdi-github /> **github.com/danielhe4rt** · o código
-
-</div>
-
-<PhTicket label="vagas · 3pontos" title="Entra no radar">
-  <img class="ph-qr" src="/images/recruit-qr.png" alt="QR code para o banco de talentos em recrutamento.3pontos.com">
-  <p class="ph-mono ph-qr-url">recrutamento.<wbr>3pontos.com</p>
-</PhTicket>
-</div>
 
 <!--
 "E é isso, gente. 40 minutos. Uma história. Duas convenções. Um Teste da Deleção."
@@ -153,7 +142,6 @@ Módulo a módulo. **Boundary a boundary.**
 
 "Se quiser continuar a conversa: He4rt Developers em heartdevs.com — comunidade de devs br, mentoria, open source. Livecoding na Twitch, twitch.tv/danielhe4rt, 6 anos no ar. E o código tá no github.com/danielhe4rt."
 
-"E se você (ou alguém do seu time) tá a fim de uma vaga: aponta a câmera nesse QR — é o banco de talentos da 3Pontos, recrutamento.3pontos.com. Cadastra teu perfil e fica no radar."
 
 [pausa]
 

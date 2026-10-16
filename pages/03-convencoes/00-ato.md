@@ -12,5 +12,5 @@ tail: "~7 min · dia a dia do time"
 ## integration-* · panel-* · o que funciona pro meu time
 
 <!--
-"O teste passou. Isso é o método. Agora: como isso fica no dia a dia do meu time? Duas convenções que a gente usa na 3Pontos."
+"O teste passou. Isso é o método. Agora: como isso fica no dia a dia do meu time? Duas convenções que eu levo de time em time."
 -->

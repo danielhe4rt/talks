@@ -1,7 +1,7 @@
 <!--
   comunidades-modular — "as comunidades que eu faço parte hoje".
 
-  A 4-card brutalist grid (He4rt · PHPSP · Filament BR · 3Pontos), each card
+  A 3-card brutalist grid (He4rt · PHPSP · Filament BR), each card
   color-coded with one accent from the deck palette. Replaces the earlier
   he4rt-solo slide. Self-contained (inline bg/meta/footer + shared keyframes)
   so it renders identically to whoami-modular without prop wiring.
@@ -39,7 +39,7 @@
       <div class="head-note">
         <span class="head-rule" />
         <p class="head-sub">
-          as <b>4 comunidades</b> que eu<br>
+          as <b>3 comunidades</b> que eu<br>
           <span class="g g-a">faço parte</span> hoje.
         </p>
       </div>
@@ -108,25 +108,6 @@
         </div>
       </div>
 
-      <!-- 04 · 3Pontos -->
-      <div class="card card--silver">
-        <div class="card-top">
-          <span class="card-idx">04</span>
-          <span class="card-tag">tech lead</span>
-        </div>
-        <div class="card-glyph">
-          <mdi-dots-horizontal class="glyph-icon" />
-        </div>
-        <div class="card-name">3Pontos</div>
-        <p class="card-desc">comunidade <b>+ banco de talentos</b> tech — onde eu trabalho hoje.</p>
-        <div class="card-foot">
-          <div class="card-meta">talento br pro mundo</div>
-          <div class="card-link">
-            <mdi-rocket-launch class="link-icon" />
-            <span>recrutamento.<b>3pontos.com</b></span>
-          </div>
-        </div>
-      </div>
 
     </div>
 
@@ -135,7 +116,7 @@
       <div class="footer-right">
         <span class="prompt-label">press</span>
         <kbd class="key">SPACE</kbd>
-        <span class="next-label">→ a 3pontos tá de olho</span>
+        <span class="next-label">→ o roteiro</span>
       </div>
     </div>
   </div>
@@ -304,7 +285,7 @@
   min-height: 0;
   margin-top: 0.7rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 
@@ -334,7 +315,7 @@
   mix-blend-mode: multiply;
   opacity: 0.25;
 }
-/* He4rt → roxo profundo · 3Pontos → prata · Filament → âmbar · PHPSP → azul */
+/* He4rt → roxo profundo · Filament → âmbar · PHPSP → azul */
 .card--purple  { --accent: #8b5cf6;             --accent-glow: rgba(139, 92, 246, 0.15); }
 .card--blue    { --accent: var(--accent-blue);  --accent-glow: rgba(96, 165, 250, 0.12); }
 .card--orange  { --accent: var(--accent-orange); --accent-glow: rgba(255, 165, 58, 0.12); }

@@ -12,7 +12,7 @@ withDefaults(defineProps<{
   track: 'Arquitetura',
   speaker: 'Daniel Reis',
   handle: '@danielhe4rt',
-  role: 'tech lead @ 3pontos',
+  role: 'senior swe @ scopeyonsite',
 })
 </script>
 

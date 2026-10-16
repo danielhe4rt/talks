@@ -40,7 +40,7 @@ Pages are organized in numbered subfolders matching the talk's narrative section
 
 ```
 pages/
-├── 00-intro/              # Cover, whoami, comunidades, recruit (3Pontos QR), agenda (4 atos)
+├── 00-intro/              # Cover, whoami, comunidades, agenda (4 atos)
 ├── 01-abertura/           # Ato 01 · O legadão (~5 min)
 │   ├── 01-legadao.md          # Act divider
 │   ├── 02-legadao-pastas.md   # Stepper: all 18 folders, 210 files (tree-explorer layout) → impact

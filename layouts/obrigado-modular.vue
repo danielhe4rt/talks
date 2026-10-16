@@ -1,11 +1,11 @@
 <!--
   obrigado-modular — closing "thank you" screen in the whoami visual language
-  (terminal + glitchy avatar + social pills) PLUS the 3Pontos recruitment QR
+  (terminal + glitchy avatar + social pills)
   on the same screen.
 
   Self-contained (inline bg/meta/avatar/terminal/qr + shared keyframes), like
   whoami-modular.vue and recruit-modular.vue, so it renders identically without
-  prop wiring. QR points to recrutamento.3pontos.com (public/images/recruit-qr.png).
+  prop wiring.
 -->
 <template>
   <div class="obrigado-modular">
@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <!-- body: avatar · terminal · qr -->
+    <!-- body: avatar · terminal -->
     <div class="ob-body">
 
       <!-- avatar -->
@@ -53,7 +53,7 @@
         </div>
         <div class="avatar-cap">
           <span class="cap-name">DANIEL REIS</span>
-          <span class="cap-role">tech lead @ 3pontos</span>
+          <span class="cap-role">senior swe @ scopeyonsite</span>
         </div>
       </div>
 
@@ -120,19 +120,6 @@
         </div>
       </div>
 
-      <!-- recruitment QR -->
-      <div class="qr-col">
-        <div class="qr-frame">
-          <img class="qr-img" src="/images/recruit-qr.png" alt="QR · recrutamento.3pontos.com" />
-          <div class="qr-scanlines" />
-          <div class="qr-corner qr-corner--tl">★ SCAN</div>
-          <div class="qr-corner qr-corner--br">vaga</div>
-        </div>
-        <div class="qr-cap">
-          <span class="qr-cap-tag">banco de talentos</span>
-          <span class="qr-cap-url">recrutamento.<b>3pontos.com</b></span>
-        </div>
-      </div>
 
     </div>
   </div>
@@ -267,7 +254,7 @@
   flex: 1;
   min-height: 0;
   display: grid;
-  grid-template-columns: 11rem 1fr 12.5rem;
+  grid-template-columns: 11rem 1fr;
   gap: 1.6rem;
   align-items: stretch;
   padding-top: 0.8rem;

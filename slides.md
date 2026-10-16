@@ -25,10 +25,6 @@ src: ./pages/00-intro/02b-comunidades.md
 ---
 
 ---
-src: ./pages/00-intro/02c-recruit.md
----
-
----
 src: ./pages/00-intro/03-toctree.md
 ---
 

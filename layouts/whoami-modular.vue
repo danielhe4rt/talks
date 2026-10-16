@@ -77,10 +77,6 @@
               <span class="term-arrow">→</span>
               <span class="term-value">
                 <span class="role-line">
-                  <mdi-account-tie class="term-icon" />
-                  Tech Lead <span class="term-at-sym">@</span> <b>3Pontos</b>
-                </span>
-                <span class="role-line">
                   <mdi-rocket-launch class="term-icon" />
                   Senior SWE <span class="term-at-sym">@</span> <b>ScopeyOnSite</b>
                 </span>
@@ -194,7 +190,7 @@
           DANIEL REIS
           <span class="footer-aka">a.k.a <b>@danielhe4rt</b></span>
         </div>
-        <div class="footer-sub">tech lead @ 3pontos · senior swe @ scopeyonsite</div>
+        <div class="footer-sub">senior swe @ scopeyonsite</div>
       </div>
       <div class="footer-right">
         <span class="prompt-label">press</span>

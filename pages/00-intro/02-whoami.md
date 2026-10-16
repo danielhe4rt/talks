@@ -6,7 +6,7 @@ layout: whoami-modular
 <!--
 Apresentação rápida. Não gasta mais que 2 minutos aqui.
 
-"Sou Daniel He4rt. Tech Lead na 3Pontos hoje, mas comecei como Fullstack em 2018 na W1 Finance. Antes disso, em 2011, eu mexia em servidores de SA:MP em C++ — foi assim que aprendi a programar."
+"Sou Daniel He4rt. Senior SWE na ScopeyOnSite hoje, mas comecei como Fullstack em 2018 na W1 Finance. Antes disso, em 2011, eu mexia em servidores de SA:MP em C++ — foi assim que aprendi a programar."
 
 "Faço livecoding na Twitch há 6 anos, fui Microsoft MVP por 3 anos. Stack do dia-a-dia é PHP/Laravel, mas também codo Rust, JS e brinco com banco — MySQL, ScyllaDB, Postgres."
 

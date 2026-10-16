@@ -140,7 +140,7 @@
     <div class="footer-bar">
       <div class="footer-left">
         <div class="footer-name">DANIEL HE4RT</div>
-        <div class="footer-sub">@danielhe4rt · tech lead @ 3pontos</div>
+        <div class="footer-sub">@danielhe4rt · senior swe @ scopeyonsite</div>
       </div>
       <div class="footer-right">
         <span class="prompt-label">press</span>

@@ -10,7 +10,7 @@ duration: ~7 min · dia a dia do time
 integration-* e panel-*: o que funciona pro meu time.
 
 <!--
-"O teste passou. Isso é o método. Agora: como isso fica no dia a dia do meu time? Duas convenções que a gente usa na 3Pontos."
+"O teste passou. Isso é o método. Agora: como isso fica no dia a dia do meu time? Duas convenções que eu levo de time em time."
 -->
 
 ---
@@ -144,7 +144,7 @@ eyebrow: antes de você copiar isso pro seu projeto
 
 "Elas não são regras. Não saíram de um livro, não tô fundando uma escola, ninguém vai te dar nota baixa em code review por não seguir."
 
-[click] "Elas são as MINHAS. E funcionam porque eu sei explicar pro meu time. Eu consigo justificar cada decisão. Quando entra dev novo na 3Pontos, eu desenho no quadro por que `integration-stripe` é um módulo separado — e isso faz sentido pra ele."
+[click] "Elas são as MINHAS. E funcionam porque eu sei explicar pro meu time. Eu consigo justificar cada decisão. Quando entra dev novo no time, eu desenho no quadro por que `integration-stripe` é um módulo separado — e isso faz sentido pra ele."
 
 [click] "As suas vão diferir. Talvez seu time prefira `vendors/` em vez de `integration-*`. Talvez vocês usem um painel só. Talvez tenham seis painéis. Tá tudo bem. De verdade."
 

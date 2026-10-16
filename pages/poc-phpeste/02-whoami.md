@@ -5,7 +5,7 @@ transition: fade-out
 
 # Quem sou eu?
 
-- <mdi-briefcase-outline /> **Tech Lead** na 3Pontos · **Senior SWE** na ScopeyOnSite
+- <mdi-briefcase-outline /> **Senior SWE** na ScopeyOnSite
 - <mdi-gamepad-variant-outline /> Programando desde **2011**, com servidores de SA:MP
 - <mdi-language-php /> **PHP e Laravel** no dia a dia, com Rust, JS, MySQL, ScyllaDB e PostgreSQL
 - <mdi-twitch /> Livecoding na **Twitch** há 6 anos
@@ -23,7 +23,7 @@ transition: fade-out
 <!--
 Apresentação rápida. Não gasta mais que 2 minutos aqui.
 
-"Sou Daniel Reis, o He4rt. Tech Lead na 3Pontos hoje, mas comecei como Fullstack em 2018 na W1 Finance. Antes disso, em 2011, eu mexia em servidores de SA:MP em C++ — foi assim que aprendi a programar."
+"Sou Daniel Reis, o He4rt. Senior SWE na ScopeyOnSite hoje, mas comecei como Fullstack em 2018 na W1 Finance. Antes disso, em 2011, eu mexia em servidores de SA:MP em C++ — foi assim que aprendi a programar."
 
 "Faço livecoding na Twitch há 6 anos, fui Microsoft MVP por 3 anos. Stack do dia-a-dia é PHP/Laravel, mas também codo Rust, JS e brinco com banco — MySQL, ScyllaDB, Postgres."
 
